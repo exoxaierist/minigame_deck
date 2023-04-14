@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// 플레이어의 인풋에 대한 대리자를 관리
 [DefaultExecutionOrder(-50)]
 public class InputHandler : MonoBehaviour
 {
