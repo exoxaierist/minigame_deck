@@ -8,6 +8,9 @@ using UnityEngine.Events;
 public static class Global
 {
     //// 시스템
+    // 이벤트
+    public static Action OnRoundStart;
+
     // 입력 핸들러
     public static Action P1UpAction;
     public static Action P1DownAction;

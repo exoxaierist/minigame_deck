@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // 그리드에 고정되며 움직이는 모든 오브젝트의 상위클래스
-public class GridObject : MonoBehaviour
+public class GridObject : EventObject
 {
     [HideInInspector] public Vector2 offset = Vector2.zero;
     private float gridIncrement;
@@ -20,7 +20,7 @@ public class GridObject : MonoBehaviour
         SnapToGrid();
     }
 
-    // 상대적인 움직임
+    // 상대적으로 이동
     public void MoveRelative(Vector2 dest)
     {
         if (isMoving) return;
@@ -34,7 +34,7 @@ public class GridObject : MonoBehaviour
         }
     }
 
-    // 애니매이션 없이 움직임
+    // 애니매이션 없이 이동
     public void Teleport(Vector2 dest)
     {
         transform.position = dest;

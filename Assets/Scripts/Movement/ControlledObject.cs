@@ -60,19 +60,19 @@ public class ControlledObject : GridObject
         }
     }
 
-    protected void MoveUp()
+    protected virtual void MoveUp()
     {
         if(!Global.CheckOverlap(transform.position*Vector2.one + new Vector2(0,1),collisionLayer)) MoveRelative(new Vector2(0, 1));
     }
-    protected void MoveDown()
+    protected virtual void MoveDown()
     {
         if (!Global.CheckOverlap(transform.position * Vector2.one + new Vector2(0, -1), collisionLayer)) MoveRelative(new Vector2(0, -1));
     }
-    protected void MoveRight()
+    protected virtual void MoveRight()
     {
         if (!Global.CheckOverlap(transform.position * Vector2.one + new Vector2(1, 0), collisionLayer)) MoveRelative(new Vector2(1, 0));
     }
-    protected void MoveLeft()
+    protected virtual void MoveLeft()
     {
         if (!Global.CheckOverlap(transform.position * Vector2.one + new Vector2(-1,0), collisionLayer)) MoveRelative(new Vector2(-1, 0));
     }

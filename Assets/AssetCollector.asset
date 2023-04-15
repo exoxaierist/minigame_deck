@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a77afe966c705694f8d484b9d0a1b118, type: 3}
+  m_Script: {fileID: 11500000, guid: ba9944464f4fa4b4f8b703c3fae4c180, type: 3}
   m_Name: AssetCollector
   m_EditorClassIdentifier: 
   hpUI: {fileID: 8703906369888561978, guid: 2777edec9ca8ff243aca5d11d597d86b, type: 3}
