@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a77afe966c705694f8d484b9d0a1b118, type: 3}
+  m_Name: AssetCollector
+  m_EditorClassIdentifier: 
+  hpUI: {fileID: 8703906369888561978, guid: 2777edec9ca8ff243aca5d11d597d86b, type: 3}
+  hpCounterUI: {fileID: 5943234233941188421, guid: 78cf247edfff3c640a649aaf3de41fda, type: 3}
+  hpCounterSpriteFull: {fileID: -1631777319, guid: f2fbc0dc495be044faa74051e055d059, type: 3}
+  hpCounterSpriteEmpty: {fileID: -993504304, guid: f2fbc0dc495be044faa74051e055d059, type: 3}

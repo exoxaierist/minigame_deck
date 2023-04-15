@@ -4,9 +4,11 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 
 // 기본적으로 한칸씩 움직이는 컨트롤 가능한 오브젝트 클래스
-public class DefaultController : GridObject
+public class ControlledObject : GridObject
 {
+    [Header("플레이어")]
     public Player player = Player.Player1;
+    [Header("충돌 레이어")]
     public LayerMask collisionLayer;
 
     private void Awake()
@@ -58,19 +60,19 @@ public class DefaultController : GridObject
         }
     }
 
-    private void MoveUp()
+    protected void MoveUp()
     {
         if(!Global.CheckOverlap(transform.position*Vector2.one + new Vector2(0,1),collisionLayer)) MoveRelative(new Vector2(0, 1));
     }
-    private void MoveDown()
+    protected void MoveDown()
     {
         if (!Global.CheckOverlap(transform.position * Vector2.one + new Vector2(0, -1), collisionLayer)) MoveRelative(new Vector2(0, -1));
     }
-    private void MoveRight()
+    protected void MoveRight()
     {
         if (!Global.CheckOverlap(transform.position * Vector2.one + new Vector2(1, 0), collisionLayer)) MoveRelative(new Vector2(1, 0));
     }
-    private void MoveLeft()
+    protected void MoveLeft()
     {
         if (!Global.CheckOverlap(transform.position * Vector2.one + new Vector2(-1,0), collisionLayer)) MoveRelative(new Vector2(-1, 0));
     }

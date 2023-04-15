@@ -184,6 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 469977791}
   - component: {fileID: 469977790}
+  - component: {fileID: 469977793}
   - component: {fileID: 469977792}
   m_Layer: 0
   m_Name: SampleP2
@@ -252,6 +253,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &469977793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469977789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05868f502a9713e49b84947165c4b337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showHpUI: 1
+  hpUIOffset: {x: 0, y: 1}
+  customUIParent: {fileID: 890322380}
+  hpUIType: 0
+  maxHp: 10
+  hp: 0
 --- !u!1 &890322379
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,10 +546,6 @@ PrefabInstance:
     - target: {fileID: 189325257746783334, guid: ff283aecd57a6904884739b2d42f1f9f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6817822231527129637, guid: ff283aecd57a6904884739b2d42f1f9f, type: 3}
-      propertyPath: m_Icon
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6817822231527129637, guid: ff283aecd57a6904884739b2d42f1f9f, type: 3}
       propertyPath: m_Name

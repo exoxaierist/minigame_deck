@@ -7,7 +7,8 @@ using UnityEngine.Events;
 //레퍼런스용
 public static class Global
 {
-    //// 입력 핸들러
+    //// 시스템
+    // 입력 핸들러
     public static Action P1UpAction;
     public static Action P1DownAction;
     public static Action P1RightAction;
@@ -19,6 +20,9 @@ public static class Global
     public static Action P2RightAction;
     public static Action P2LeftAction;
     public static Action P2SpecialAction;
+
+    //// 에셋 참조
+    public static AssetCollector assets;
 
 
     //// 매치 전역 설정
