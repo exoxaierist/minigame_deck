@@ -33,6 +33,7 @@ public class Hp : MonoBehaviour
 
     private void Update()
     {
+        // 테스트용
         if (Input.GetKeyDown(KeyCode.Comma)) AddToHP(-3);
         if (Input.GetKeyDown(KeyCode.Period)) AddToHP(2);
     }
@@ -50,17 +51,20 @@ public class Hp : MonoBehaviour
         CheckDeath();
     }
 
+    // 죽었는지 확인
     private void CheckDeath()
     {
         if (hp <= 0) Death();
     }
 
+    // 죽임
     private void Death()
     {
         hp = 0;
         OnDeath?.Invoke();
     }
 
+    // HP UI오브젝트 생성
     private HpUI CreateHpBar()
     {
         GameObject instance = Instantiate(Global.assets.hpUI, customUIParent==null?transform:customUIParent);

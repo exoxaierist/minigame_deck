@@ -6,6 +6,5 @@ public class PerkBase
 {
     public virtual void Test()
     {
-        Debug.Log("perkbase");
     }
 }

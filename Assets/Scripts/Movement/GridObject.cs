@@ -11,6 +11,7 @@ public class GridObject : EventObject
 
     protected bool isMoving = false;
 
+    [Header("모션입힐 오브젝트")]
     [SerializeField] protected Transform visual;
 
 
@@ -32,6 +33,7 @@ public class GridObject : EventObject
             visual.DOLocalJump(Vector2.zero, 0.2f, 1, 0.1f).SetEase(Ease.OutQuad).OnComplete(() => isMoving = false);
             visual.DOShakeScale(0.13f, new Vector3(0.1f, -0.1f, 0), 20);
         }
+        else { isMoving = false; }
     }
 
     // 애니매이션 없이 이동

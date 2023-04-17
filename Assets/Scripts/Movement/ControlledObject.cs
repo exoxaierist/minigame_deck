@@ -11,53 +11,9 @@ public class ControlledObject : GridObject
     [Header("충돌 레이어")]
     public LayerMask collisionLayer;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         SubscribeToInput();
-    }
-
-    // 컨트롤 종속 대리자 설정
-    private void SubscribeToInput()
-    {
-        if (player == Player.None)
-        {
-            Global.P2UpAction -= MoveUp;
-            Global.P2DownAction -= MoveDown;
-            Global.P2RightAction -= MoveRight;
-            Global.P2LeftAction -= MoveLeft;
-
-            Global.P1UpAction -= MoveUp;
-            Global.P1DownAction -= MoveDown;
-            Global.P1RightAction -= MoveRight;
-            Global.P1LeftAction -= MoveLeft;
-            //Global.P1SpecialAction -= MoveSpecial;
-        }
-        else if(player == Player.Player1)
-        {
-            Global.P2UpAction -= MoveUp;
-            Global.P2DownAction -= MoveDown;
-            Global.P2RightAction -= MoveRight;
-            Global.P2LeftAction -= MoveLeft;
-
-            Global.P1UpAction += MoveUp;
-            Global.P1DownAction += MoveDown;
-            Global.P1RightAction += MoveRight;
-            Global.P1LeftAction += MoveLeft;
-            //Global.P1SpecialAction += MoveSpecial;
-        }
-        else if(player==Player.Player2)
-        {
-            Global.P1UpAction -= MoveUp;
-            Global.P1DownAction -= MoveDown;
-            Global.P1RightAction -= MoveRight;
-            Global.P1LeftAction -= MoveLeft;
-
-            Global.P2UpAction += MoveUp;
-            Global.P2DownAction += MoveDown;
-            Global.P2RightAction += MoveRight;
-            Global.P2LeftAction += MoveLeft;
-            //Global.P2SpecialAction += MoveSpecial;
-        }
     }
 
     protected virtual void MoveUp()
@@ -76,4 +32,42 @@ public class ControlledObject : GridObject
     {
         if (!Global.CheckOverlap(transform.position * Vector2.one + new Vector2(-1,0), collisionLayer)) MoveRelative(new Vector2(-1, 0));
     }
+
+    // 인풋 대리자에서 제거
+    protected void UnsubscribeToInput()
+    {
+        Global.P2UpAction -= MoveUp;
+        Global.P2DownAction -= MoveDown;
+        Global.P2RightAction -= MoveRight;
+        Global.P2LeftAction -= MoveLeft;
+
+        Global.P1UpAction -= MoveUp;
+        Global.P1DownAction -= MoveDown;
+        Global.P1RightAction -= MoveRight;
+        Global.P1LeftAction -= MoveLeft;
+        //Global.P1SpecialAction -= MoveSpecial;
+    }
+
+    // 인풋 대리자에 추가
+    protected void SubscribeToInput()
+    {
+        UnsubscribeToInput();
+        if (player == Player.Player1)
+        {
+            Global.P1UpAction += MoveUp;
+            Global.P1DownAction += MoveDown;
+            Global.P1RightAction += MoveRight;
+            Global.P1LeftAction += MoveLeft;
+            //Global.P1SpecialAction += MoveSpecial;
+        }
+        else if (player == Player.Player2)
+        {
+            Global.P2UpAction += MoveUp;
+            Global.P2DownAction += MoveDown;
+            Global.P2RightAction += MoveRight;
+            Global.P2LeftAction += MoveLeft;
+            //Global.P2SpecialAction += MoveSpecial;
+        }
+    }
+
 }

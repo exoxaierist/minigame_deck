@@ -1,0 +1,10 @@
+.button {
+    font-size: 30px;
+}
+
+.button:focus {
+    border-left-color: rgba(243, 45, 45, 255);
+    border-right-color: rgba(243, 45, 45, 255);
+    border-top-color: rgba(243, 45, 45, 255);
+    border-bottom-color: rgba(243, 45, 45, 255);
+}
