@@ -8,6 +8,8 @@ public class Hp : MonoBehaviour
     [Header("UI")]
     public bool showHpUI = true;
     public Vector2 hpUIOffset = new(0, 0.8f);
+    public bool autoParent = true;
+    private Transform autoParentTransform;
     public Transform customUIParent;
     public HpUIType hpUIType;
     private HpUI hpUI;
@@ -25,10 +27,8 @@ public class Hp : MonoBehaviour
     private void Start()
     {
         hp = maxHp;
-        if (showHpUI)
-        {
-            hpUI = CreateHpBar();
-        }
+        if (autoParent && TryGetComponent(out GridObject gridobj)) autoParentTransform = gridobj.visual;
+        if (showHpUI) hpUI = CreateHpBar();
     }
 
     private void Update()
@@ -67,7 +67,8 @@ public class Hp : MonoBehaviour
     // HP UI오브젝트 생성
     private HpUI CreateHpBar()
     {
-        GameObject instance = Instantiate(Global.assets.hpUI, customUIParent==null?transform:customUIParent);
+        print(autoParentTransform);
+        GameObject instance = Instantiate(Global.assets.hpUI, autoParent?autoParentTransform:customUIParent);
         instance.transform.localPosition = hpUIOffset;
         instance.GetComponent<HpUI>().Set(maxHp,hp,hpUIType);
         return instance.GetComponent<HpUI>();

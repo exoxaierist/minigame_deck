@@ -12,7 +12,7 @@ public class GridObject : EventObject
     protected bool isMoving = false;
 
     [Header("모션입힐 오브젝트")]
-    [SerializeField] protected Transform visual;
+    public Transform visual;
 
 
     private void Start()

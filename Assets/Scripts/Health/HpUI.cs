@@ -10,9 +10,11 @@ public class HpUI : MonoBehaviour
     private int maxHp = 10;
     private int hp;
     private List<HpCounterUI> counters = new();
+    private Vector3 origin;
 
     public void Set(int _maxHP, int _hp, HpUIType _type)
     {
+        origin = transform.localPosition;
         maxHp = _maxHP;
         hp = _maxHP;
         type = _type;
@@ -47,7 +49,7 @@ public class HpUI : MonoBehaviour
         if (newHp == hp) return;
         if(type == HpUIType.Counter)
         {
-            transform.DOShakePosition(0.1f, new Vector3(0.05f,0.05f,0), 20).OnComplete(() => transform.localRotation = Quaternion.Euler(Vector3.zero));
+            transform.DOShakePosition(0.1f, new Vector3(0.05f,0.05f,0), 20).OnComplete(() => transform.localPosition = origin);
             if (newHp > hp)
             {
                 for (int i = 0; i < newHp-hp; i++)
