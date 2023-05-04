@@ -31,7 +31,7 @@ public class GridObject : EventObject
         {
             visual.localPosition = -dest;
             visual.DOLocalJump(Vector2.zero, 0.2f, 1, 0.1f).SetEase(Ease.OutQuad).OnComplete(() => isMoving = false);
-            visual.DOShakeScale(0.13f, new Vector3(0.1f, -0.1f, 0), 20);
+            visual.DOShakeScale(0.13f, new Vector3(0.1f, -0.1f, 0), 20).OnComplete(()=>transform.localScale = Vector3.one);
         }
         else { isMoving = false; }
     }

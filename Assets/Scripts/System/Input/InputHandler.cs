@@ -15,13 +15,13 @@ public class InputHandler : MonoBehaviour
     public KeyCode p1Down = KeyCode.S;
     public KeyCode p1Right = KeyCode.D;
     public KeyCode p1Left = KeyCode.A;
-    public KeyCode p1Special = KeyCode.LeftControl;
+    public KeyCode p1Select = KeyCode.LeftShift;
     [Header("2P")]
     public KeyCode p2Up = KeyCode.UpArrow;
     public KeyCode p2Down = KeyCode.DownArrow;
     public KeyCode p2Right = KeyCode.RightArrow;
     public KeyCode p2Left = KeyCode.LeftArrow;
-    public KeyCode p2Special = KeyCode.RightShift;
+    public KeyCode p2Select = KeyCode.Return;
 
     private void Update()
     {
@@ -32,7 +32,7 @@ public class InputHandler : MonoBehaviour
             if (Input.GetKeyDown(p1Down)) Global.P1DownAction?.Invoke();
             if (Input.GetKeyDown(p1Right)) Global.P1RightAction?.Invoke();
             if (Input.GetKeyDown(p1Left)) Global.P1LeftAction?.Invoke();
-            if (Input.GetKeyDown(p1Special)) Global.P1SpecialAction?.Invoke();  
+            if (Input.GetKeyDown(p1Select)) Global.P1SelectAction?.Invoke();  
         }
         // 2P
         if (enableP2)
@@ -41,7 +41,7 @@ public class InputHandler : MonoBehaviour
             if (Input.GetKeyDown(p2Down)) Global.P2DownAction?.Invoke();
             if (Input.GetKeyDown(p2Right)) Global.P2RightAction?.Invoke();
             if (Input.GetKeyDown(p2Left)) Global.P2LeftAction?.Invoke();
-            if (Input.GetKeyDown(p2Special)) Global.P2SpecialAction?.Invoke();
+            if (Input.GetKeyDown(p2Select)) Global.P2SelectAction?.Invoke();
         }
     }
 }

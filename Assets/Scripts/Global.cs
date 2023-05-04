@@ -16,13 +16,16 @@ public static class Global
     public static Action P1DownAction;
     public static Action P1RightAction;
     public static Action P1LeftAction;
-    public static Action P1SpecialAction;
+    public static Action P1SelectAction;
 
     public static Action P2UpAction;
     public static Action P2DownAction;
     public static Action P2RightAction;
     public static Action P2LeftAction;
-    public static Action P2SpecialAction;
+    public static Action P2SelectAction;
+
+    // UI Navigation
+    public static UINavigationManager uiNavManager;
 
     //// 에셋 참조
     public static AssetCollector assets;
