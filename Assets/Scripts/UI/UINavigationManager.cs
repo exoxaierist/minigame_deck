@@ -23,6 +23,7 @@ public class UINavigationManager : MonoBehaviour
     {
         Global.uiNavManager = this;
         navList = FindObjectsOfType<UINavigatable>().ToList();
+        if (navList.Count == 0 || p1StartNav == null || p2StartNav == null) { this.enabled = false; return; }
         foreach (UINavigatable nav in navList) nav.SearchNavigatable();
         currentSelected.Add(p1StartNav);
         currentSelected.Add(p2StartNav);
