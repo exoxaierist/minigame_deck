@@ -36,15 +36,15 @@ public class ControlledObject : GridObject
     // 인풋 대리자에서 제거
     protected void UnsubscribeToInput()
     {
-        Global.P2UpAction -= MoveUp;
-        Global.P2DownAction -= MoveDown;
-        Global.P2RightAction -= MoveRight;
-        Global.P2LeftAction -= MoveLeft;
+        Global.OnP2Up -= MoveUp;
+        Global.OnP2Down -= MoveDown;
+        Global.OnP2Right -= MoveRight;
+        Global.OnP2Left -= MoveLeft;
 
-        Global.P1UpAction -= MoveUp;
-        Global.P1DownAction -= MoveDown;
-        Global.P1RightAction -= MoveRight;
-        Global.P1LeftAction -= MoveLeft;
+        Global.OnP1Up -= MoveUp;
+        Global.OnP1Down -= MoveDown;
+        Global.OnP1Right -= MoveRight;
+        Global.OnP1Left -= MoveLeft;
         //Global.P1SpecialAction -= MoveSpecial;
     }
 
@@ -54,18 +54,18 @@ public class ControlledObject : GridObject
         UnsubscribeToInput();
         if (player == Player.Player1)
         {
-            Global.P1UpAction += MoveUp;
-            Global.P1DownAction += MoveDown;
-            Global.P1RightAction += MoveRight;
-            Global.P1LeftAction += MoveLeft;
+            Global.OnP1Up += MoveUp;
+            Global.OnP1Down += MoveDown;
+            Global.OnP1Right += MoveRight;
+            Global.OnP1Left += MoveLeft;
             //Global.P1SpecialAction += MoveSpecial;
         }
         else if (player == Player.Player2)
         {
-            Global.P2UpAction += MoveUp;
-            Global.P2DownAction += MoveDown;
-            Global.P2RightAction += MoveRight;
-            Global.P2LeftAction += MoveLeft;
+            Global.OnP2Up += MoveUp;
+            Global.OnP2Down += MoveDown;
+            Global.OnP2Right += MoveRight;
+            Global.OnP2Left += MoveLeft;
             //Global.P2SpecialAction += MoveSpecial;
         }
     }

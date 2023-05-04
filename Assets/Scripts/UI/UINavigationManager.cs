@@ -23,22 +23,22 @@ public class UINavigationManager : MonoBehaviour
     {
         Global.uiNavManager = this;
         navList = FindObjectsOfType<UINavigatable>().ToList();
-        if (navList.Count == 0 || p1StartNav == null || p2StartNav == null) { this.enabled = false; return; }
+        if (navList.Count == 0 || p1StartNav == null || p2StartNav == null) { print("UINavigationManager 비활성화"); this.enabled = false; return; }
         foreach (UINavigatable nav in navList) nav.SearchNavigatable();
         currentSelected.Add(p1StartNav);
         currentSelected.Add(p2StartNav);
 
-        Global.P1UpAction += OnP1MoveUp;
-        Global.P1DownAction += OnP1MoveDown;
-        Global.P1RightAction += OnP1MoveRight;
-        Global.P1LeftAction += OnP1MoveLeft;
-        Global.P1SelectAction += OnP1Select;
+        Global.OnP1Up += OnP1MoveUp;
+        Global.OnP1Down += OnP1MoveDown;
+        Global.OnP1Right += OnP1MoveRight;
+        Global.OnP1Left += OnP1MoveLeft;
+        Global.OnP1Select += OnP1Select;
 
-        Global.P2UpAction += OnP2MoveUp;
-        Global.P2DownAction += OnP2MoveDown;
-        Global.P2RightAction += OnP2MoveRight;
-        Global.P2LeftAction += OnP2MoveLeft;
-        Global.P2SelectAction += OnP2Select;
+        Global.OnP2Up += OnP2MoveUp;
+        Global.OnP2Down += OnP2MoveDown;
+        Global.OnP2Right += OnP2MoveRight;
+        Global.OnP2Left += OnP2MoveLeft;
+        Global.OnP2Select += OnP2Select;
 
         p1Selector = Instantiate(p1Selector);
         p2Selector = Instantiate(p2Selector);

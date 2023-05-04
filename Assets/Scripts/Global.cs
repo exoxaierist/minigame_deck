@@ -7,28 +7,39 @@ using UnityEngine.Events;
 //레퍼런스용
 public static class Global
 {
+    //// 에셋 참조
+    public static AssetCollector assets;
+
     //// 시스템
-    // 이벤트
-    public static Action OnRoundStart;
-
-    // 입력 핸들러
-    public static Action P1UpAction;
-    public static Action P1DownAction;
-    public static Action P1RightAction;
-    public static Action P1LeftAction;
-    public static Action P1SelectAction;
-
-    public static Action P2UpAction;
-    public static Action P2DownAction;
-    public static Action P2RightAction;
-    public static Action P2LeftAction;
-    public static Action P2SelectAction;
-
     // UI Navigation
     public static UINavigationManager uiNavManager;
 
-    //// 에셋 참조
-    public static AssetCollector assets;
+    // 턴 매니저
+    public static TurnManager turnManager;
+
+    //// 이벤트
+    // 라운드 이벤트
+    public static Action OnRoundStart;
+
+    // 턴 이벤트
+    public static Action OnTurnStart;
+    public static Action OnP1NoInput;
+    public static Action OnP2NoInput;
+
+    // 입력 이벤트
+    public static Action OnP1Up;
+    public static Action OnP1Down;
+    public static Action OnP1Right;
+    public static Action OnP1Left;
+    public static Action OnP1Select; // 공격
+    public static Action OnP1Any; // 아무키나
+
+    public static Action OnP2Up;
+    public static Action OnP2Down;
+    public static Action OnP2Right;
+    public static Action OnP2Left;
+    public static Action OnP2Select; // 공격
+    public static Action OnP2Any; // 아무키나
 
 
     //// 매치 전역 설정

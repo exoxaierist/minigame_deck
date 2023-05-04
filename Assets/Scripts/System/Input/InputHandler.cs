@@ -28,20 +28,22 @@ public class InputHandler : MonoBehaviour
         // 1P
         if (enableP1)
         {
-            if (Input.GetKeyDown(p1Up)) Global.P1UpAction?.Invoke();
-            if (Input.GetKeyDown(p1Down)) Global.P1DownAction?.Invoke();
-            if (Input.GetKeyDown(p1Right)) Global.P1RightAction?.Invoke();
-            if (Input.GetKeyDown(p1Left)) Global.P1LeftAction?.Invoke();
-            if (Input.GetKeyDown(p1Select)) Global.P1SelectAction?.Invoke();  
+            if (Input.GetKeyDown(p1Up)) Global.OnP1Up?.Invoke();
+            if (Input.GetKeyDown(p1Down)) Global.OnP1Down?.Invoke();
+            if (Input.GetKeyDown(p1Right)) Global.OnP1Right?.Invoke();
+            if (Input.GetKeyDown(p1Left)) Global.OnP1Left?.Invoke();
+            if (Input.GetKeyDown(p1Select)) Global.OnP1Select?.Invoke();
+            if (Input.GetKeyDown(p1Up) && Input.GetKeyDown(p1Down) && Input.GetKeyDown(p1Right) && Input.GetKeyDown(p1Left) && Input.GetKeyDown(p1Select)) Global.OnP1Any?.Invoke();
         }
         // 2P
         if (enableP2)
         {
-            if (Input.GetKeyDown(p2Up)) Global.P2UpAction?.Invoke();
-            if (Input.GetKeyDown(p2Down)) Global.P2DownAction?.Invoke();
-            if (Input.GetKeyDown(p2Right)) Global.P2RightAction?.Invoke();
-            if (Input.GetKeyDown(p2Left)) Global.P2LeftAction?.Invoke();
-            if (Input.GetKeyDown(p2Select)) Global.P2SelectAction?.Invoke();
+            if (Input.GetKeyDown(p2Up)) Global.OnP2Up?.Invoke();
+            if (Input.GetKeyDown(p2Down)) Global.OnP2Down?.Invoke();
+            if (Input.GetKeyDown(p2Right)) Global.OnP2Right?.Invoke();
+            if (Input.GetKeyDown(p2Left)) Global.OnP2Left?.Invoke();
+            if (Input.GetKeyDown(p2Select)) Global.OnP2Select?.Invoke();
+            if (Input.GetKeyDown(p2Up) && Input.GetKeyDown(p2Down) && Input.GetKeyDown(p2Right) && Input.GetKeyDown(p2Left) && Input.GetKeyDown(p2Select)) Global.OnP2Any?.Invoke();
         }
     }
 }
