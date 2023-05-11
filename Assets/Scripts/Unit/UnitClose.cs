@@ -9,14 +9,12 @@ public class UnitClose : UnitBase
 {
     public List<UnitBase> ValidUnits = new List<UnitBase>();
     public List<UnitBase> AllyUnits = new List<UnitBase>();
-    [SerializeField]
     private List<UnitBase> lastAllyUnits = new List<UnitBase>();
     public List<UnitBase> EnemyUnits = new List<UnitBase>();
-    [SerializeField]
     private List<UnitBase> lastEnemyUnits = new List<UnitBase>();
 
     /// <summary>
-    /// ±ÙÃ³¿¡ ÀÖ´Â À¯´ÖÀ» ¹İÈ¯ÇØÁÖ´Â ÇÔ¼ö
+    /// ê·¼ì²˜ì— ìˆëŠ” ìœ ë‹›ì„ ë°˜í™˜í•´ì£¼ëŠ” í•¨ìˆ˜
     /// </summary>
     private void getCloseUnit()
     {
@@ -35,9 +33,9 @@ public class UnitClose : UnitBase
         Gizmos.DrawWireCube(transform.position, new Vector3(2.9f, 2.9f, 0));
     }
     /// <summary>
-    /// ÁÖº¯¿¡ ¾Æ±ºÀÌ ÀÖ´ÂÁö È®ÀÎÇÏ´Â ÇÔ¼ö
+    /// ì£¼ë³€ì— ì•„êµ°ì´ ìˆëŠ”ì§€ í™•ì¸í•˜ëŠ” í•¨ìˆ˜
     /// </summary>
-    /// <returns>ÁÖº¯¿¡ ¾Æ±ºÀÌ ÀÖ´ÂÁö true/false</returns>
+    /// <returns>ì£¼ë³€ì— ì•„êµ°ì´ ìˆëŠ”ì§€ true/false</returns>
     public bool GetCloseAllys()
     {
         if(AllyUnits.Count > 0) lastAllyUnits = AllyUnits.GetRange(0, AllyUnits.Count);
@@ -63,9 +61,9 @@ public class UnitClose : UnitBase
         else return false;
     }
     /// <summary>
-    /// ÁÖº¯¿¡ Àû±ºÀÌ ÀÖ´ÂÁö È®ÀÎÇÏ´Â ÇÔ¼ö
+    /// ì£¼ë³€ì— ì êµ°ì´ ìˆëŠ”ì§€ í™•ì¸í•˜ëŠ” í•¨ìˆ˜
     /// </summary>
-    /// <returns>ÁÖº¯¿¡ Àû±ºÀÌ ÀÖ´ÂÁö true/false</returns>
+    /// <returns>ì£¼ë³€ì— ì êµ°ì´ ìˆëŠ”ì§€ true/false</returns>
     public bool GetCloseEnemys()
     {
         if(EnemyUnits.Count > 0) lastEnemyUnits = EnemyUnits.GetRange(0, EnemyUnits.Count);
@@ -91,9 +89,9 @@ public class UnitClose : UnitBase
         else return false;
     }
     /// <summary>
-    /// ¾Æ±º°ú ¶³¾îÁ³´ÂÁö È®ÀÎÇÏ´Â ÇÔ¼ö
+    /// ì•„êµ°ê³¼ ë–¨ì–´ì¡ŒëŠ”ì§€ í™•ì¸í•˜ëŠ” í•¨ìˆ˜
     /// </summary>
-    /// <returns>¶³¾îÁ³´ÂÁö true/false</returns>
+    /// <returns>ë–¨ì–´ì¡ŒëŠ”ì§€ true/false</returns>
     public bool SeperatedFromAlly()
     {
         GetCloseAllys();
@@ -105,15 +103,43 @@ public class UnitClose : UnitBase
         return false;
     }
     /// <summary>
-    /// Àû±º°ú ¶³¾îÁ³´ÂÁö È®ÀÎÇÏ´Â ÇÔ¼ö
+    /// ì êµ°ê³¼ ë–¨ì–´ì¡ŒëŠ”ì§€ í™•ì¸í•˜ëŠ” í•¨ìˆ˜
     /// </summary>
-    /// <returns>¶³¾îÁ³´ÂÁö true/false</returns>
+    /// <returns>ë–¨ì–´ì¡ŒëŠ”ì§€ true/false</returns>
     public bool SeperatedFromEnemy()
     {
         GetCloseEnemys();
         foreach (UnitBase unitBase in lastEnemyUnits)
         {
             if (EnemyUnits.Contains(unitBase)) continue;
+            else return true;
+        }
+        return false;
+    }
+    /// <summary>
+    /// ì•„êµ°ê³¼ ë¶™ì—ˆëŠ”ì§€ í™•ì¸í•˜ëŠ” í•¨ìˆ˜
+    /// </summary>
+    /// <returns>ë¶™ì—ˆëŠ”ì§€ true/false</returns>
+    public bool AttatchedToAlly()
+    {
+        GetCloseAllys();
+        foreach (UnitBase unitBase in AllyUnits)
+        {
+            if (lastAllyUnits.Contains(unitBase)) continue;
+            else return true;
+        }
+        return false;
+    }
+    /// <summary>
+    /// ì êµ°ê³¼ ë¶™ì—ˆëŠ”ì§€ í™•ì¸í•˜ëŠ” í•¨ìˆ˜
+    /// </summary>
+    /// <returns>ë¶™ì—ˆëŠ”ì§€ true/false</returns>
+    public bool AttachedToEnemy()
+    {
+        GetCloseEnemys();
+        foreach (UnitBase unitBase in EnemyUnits)
+        {
+            if (lastEnemyUnits.Contains(unitBase)) continue;
             else return true;
         }
         return false;
