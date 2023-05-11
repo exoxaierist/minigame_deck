@@ -50,6 +50,7 @@ public class MoveGrid : UnitBase
         {
             MovedGrids = 0;
             OnGridMove();
+            Debug.Log("moved");
         }
     }
 }

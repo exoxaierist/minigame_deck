@@ -23,7 +23,7 @@ public class TimeNoDamage : UnitBase
     protected void Update()
     {
         
-        if( prevTurn <= Global.turnManager.GetTurn()) 
+        if( prevTurn < Global.turnManager.GetTurn()) 
         {
             prevTurn = Global.turnManager.GetTurn();
 
@@ -32,6 +32,7 @@ public class TimeNoDamage : UnitBase
         if (deltaTurn == TimeoutTurn)
         {
             OnNoDamageTimeout();
+            Debug.Log("nodamage");
             deltaTurn = 0;
         }
 
