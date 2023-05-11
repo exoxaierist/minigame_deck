@@ -13,6 +13,11 @@ public class UnitPool : MonoBehaviour
     public List<UnitBase> P1Unit;
     [SerializeField]
     public List<UnitBase> P2Unit;
+
+    // 인접한 아군 유닛들 반환(int 인덱스)
+    // 인접한 적군 유닛들 반환(int 인덱스)
+    // 가장 가까운 아군 유닛 반환(int 인덱스)
+
     private void singletoneCheck()
     {
         if (Instance == null)
