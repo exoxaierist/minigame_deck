@@ -25,7 +25,7 @@ public enum NavType
 // 상점 모드
 public enum ShopState
 {
-    Deactivated,
+    Closed,
     Select,
     Place,
     Upgrade,

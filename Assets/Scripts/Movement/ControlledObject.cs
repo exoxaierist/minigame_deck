@@ -10,6 +10,7 @@ public class ControlledObject : GridObject
     public Player player = Player.Player1;
     [Header("충돌 레이어")]
     public LayerMask collisionLayer;
+    [HideInInspector] public bool canMove = true;
 
     protected virtual void Awake()
     {
@@ -18,19 +19,19 @@ public class ControlledObject : GridObject
 
     protected virtual void MoveUp()
     {
-        if(!Global.CheckOverlap(transform.position*Vector2.one + new Vector2(0,1),collisionLayer)) MoveRelative(new Vector2(0, 1));
+        if (canMove) MoveRelative(new(0, 1), collisionLayer);
     }
     protected virtual void MoveDown()
     {
-        if (!Global.CheckOverlap(transform.position * Vector2.one + new Vector2(0, -1), collisionLayer)) MoveRelative(new Vector2(0, -1));
+        if (canMove) MoveRelative(new(0, -1), collisionLayer);
     }
     protected virtual void MoveRight()
     {
-        if (!Global.CheckOverlap(transform.position * Vector2.one + new Vector2(1, 0), collisionLayer)) MoveRelative(new Vector2(1, 0));
+        if (canMove) MoveRelative(new(1, 0), collisionLayer);
     }
     protected virtual void MoveLeft()
     {
-        if (!Global.CheckOverlap(transform.position * Vector2.one + new Vector2(-1,0), collisionLayer)) MoveRelative(new Vector2(-1, 0));
+        if (canMove) MoveRelative(new(-1, 0),collisionLayer);
     }
 
     // 인풋 대리자에서 제거
@@ -49,7 +50,7 @@ public class ControlledObject : GridObject
     }
 
     // 인풋 대리자에 추가
-    protected void SubscribeToInput()
+    public void SubscribeToInput()
     {
         UnsubscribeToInput();
         if (player == Player.Player1)

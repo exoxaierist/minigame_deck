@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // À¯´Ö °³¹ß ±â¹Ý
+//[RequireComponent(typeof(ShopFieldUnitPlacer))]
 public class UnitBase : ControlledObject
 {
     [Header("À¯´Ö Á¤º¸")]

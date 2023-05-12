@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,14 +6,16 @@ using UnityEngine;
 public class ShopManager : MonoBehaviour
 {
     public float shopTime = 30; // 상점 지속시간
-    public int shopUnitCount = 5;
-    public int coinPerRound = 10;
+    public int shopUnitCount = 5; // 한번에 보여주는 유닛수
+    public int coinPerRound = 10; // 라운드당 코인
 
     [HideInInspector] public float currentShopTimer;
     [HideInInspector] public ShopState state;
 
     private List<UnitSet> p1Shop = new();
     private List<UnitSet> p2Shop = new();
+
+    public UnitDataHolder unitData;
 
     public int p1Coins = 0;
     public int p2Coins = 0;
@@ -22,13 +25,24 @@ public class ShopManager : MonoBehaviour
         Global.shopManager = this;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (state != ShopState.Closed) CloseShop();
+            else OpenShop();
+        }
+    }
+
+    // 상점모드 오픈
     public void OpenShop()
     {
+        print("Shop Open");
         GetShopUnits();
+        CreateShopCards();
         ShowShopUI();
         SetP1Coin(coinPerRound);
         SetP2Coin(coinPerRound);
-        ResetUnitPosition();
         state = ShopState.Select;
 
         for (int i = 0; i < shopUnitCount; i++)
@@ -36,15 +50,20 @@ public class ShopManager : MonoBehaviour
             // p1Shop.Add(UnitManager.allUnits[Random()]);
             // p1Shop.Add(UnitManager.allUnits[Random()]);
         }
+        Global.OnShopOpen?.Invoke();
     }
 
+    // 상점 종료
     public void CloseShop()
     {
         HideShopUI();
-        state = ShopState.Deactivated;
+        state = ShopState.Closed;
         // 상점모드 끝
+        float temp = 0;
+        DOTween.To(() => temp, x => temp = x, 1, 0.5f).OnComplete(() => Global.OnShopClose?.Invoke());
     }
 
+    // 유닛 판매
     public void Sell(Player player, int sellIndex)
     {
         if (player == Player.Player1)
@@ -59,34 +78,46 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-    public void Buy(Player player, int buyIndex)
+    // 유닛 구매
+    public bool Buy(Player player, int buyIndex)
     {
         if (player == Player.Player1)
         {
-            UnitSet set = new(); // 정보 받아쓰기
-            if(set.price > p2Coins) { } // 살 수 없음 
+            //덱이 꽉차있을경우 return false
+            UnitSet set = p1Shop[buyIndex];
+            if(set.price > p1Coins) 
+            {
+                return false;
+            } // 살 수 없음 
             else
             {
                 ChangeP1Coin(-set.price);
-            //p1deck.Add(p1Shop[buyIndex])
+                //p1deck.Add(p1Shop[buyIndex])
+                return true;
             }
         }
         else if (player == Player.Player2)
         {
-            UnitSet set = new(); // 정보 받아쓰기
-            if (set.price > p1Coins) { } // 살 수 없음
+            //덱이 꽉차있을경우 return false
+            UnitSet set = p2Shop[buyIndex];
+            if (set.price > p2Coins) 
+            {
+                return false;
+            } // 살 수 없음
             else
             {
                 ChangeP2Coin(-set.price);
-            //p2deck.Add(p2Shop[buyIndex])
+                //p2deck.Add(p2Shop[buyIndex])
+                return true;
             }
         }
+        return false;
     }
 
-    public void SetP1Coin(int coin) => p1Coins = coin;
-    public void SetP2Coin(int coin) => p2Coins = coin;
-    public void ChangeP1Coin(int amount) => p1Coins = Mathf.Clamp(p1Coins + amount, 0, 50);
-    public void ChangeP2Coin(int amount) => p2Coins = Mathf.Clamp(p2Coins + amount, 0, 50);
+    public void SetP1Coin(int coin) { p1Coins = coin; Global.OnP1CoinChange?.Invoke(); }
+    public void SetP2Coin(int coin) { p2Coins = coin; Global.OnP2CoinChange?.Invoke(); }
+    public void ChangeP1Coin(int amount) => SetP1Coin(Mathf.Clamp(p1Coins + amount, 0, 50));
+    public void ChangeP2Coin(int amount) => SetP2Coin(Mathf.Clamp(p2Coins + amount, 0, 50));
 
     private void StartShopTimer()
     {
@@ -104,14 +135,21 @@ public class ShopManager : MonoBehaviour
         CloseShop();
     }
 
+    // 상점에 띄울 유닛 선택
     private void GetShopUnits()
     {
-
+        p1Shop.Clear();
+        for (int i = 0; i < shopUnitCount; i++)
+        {
+            p1Shop.Add(unitData.unitList[Random.Range(0, unitData.unitList.Count - 1)]);
+            p2Shop.Add(unitData.unitList[Random.Range(0, unitData.unitList.Count - 1)]);
+        }
     }
 
     private void ShowShopUI()
     {
         // 상점관련 ui보이게
+
     }
 
     private void HideShopUI()
@@ -119,8 +157,16 @@ public class ShopManager : MonoBehaviour
         // 상점 ui 지움
     }
 
-    private void ResetUnitPosition()
+    private void CreateShopCards()
     {
-        // 모든 유닛 원위치로
+        for (int p = 0; p < 2; p++)
+        {
+            for (int i = 0; i < p1Shop.Count; i++)
+            {
+                UnitSet unit = p==0?p1Shop[i]:p2Shop[i];
+                ShopCard instance = Instantiate(Global.assets.shopCard, Global.uiParent).GetComponent<ShopCard>();
+                instance.SetCard(unit, p == 0 ? Player.Player1 : Player.Player2,i);
+            }
+        }
     }
 }

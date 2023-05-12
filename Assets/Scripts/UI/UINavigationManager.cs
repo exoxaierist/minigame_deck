@@ -11,11 +11,10 @@ public class UINavigationManager : MonoBehaviour
     private List<UINavigatable> p2NavList = new();
 
     public List<UINavigatable> GetAllNavigatable() { return navList; }
-    [HideInInspector] public List<UINavigatable> currentSelected = new();
+    [HideInInspector] public UINavigatable p1Selected;
+    [HideInInspector] public UINavigatable p2Selected;
 
     [Header("Selector")]
-    public GameObject p1Selector;
-    public GameObject p2Selector;
     public Transform parent;
 
     [HideInInspector] public bool freezeP1 = false;
@@ -28,8 +27,6 @@ public class UINavigationManager : MonoBehaviour
 
     private void Start()
     {
-        if (navList.Count == 0) { print("UINavigationManager 비활성화"); this.enabled = false; return; }
-
         Global.OnP1Up += OnP1MoveUp;
         Global.OnP1Down += OnP1MoveDown;
         Global.OnP1Right += OnP1MoveRight;
@@ -46,8 +43,8 @@ public class UINavigationManager : MonoBehaviour
     public void AddNavigatable(UINavigatable nav)
     {
         if (navList.Contains(nav)) return;
-        if (nav.player == Player.Player1 && currentSelected[0] == null) FocusOn(nav, 0);
-        else if (nav.player == Player.Player2 && currentSelected[1] == null) FocusOn(nav, 1);
+        if (nav.player == Player.Player1 && p1Selected == null) FocusOn(nav, nav.player);
+        else if (nav.player == Player.Player2 && p2Selected == null) FocusOn(nav, nav.player);
         if (nav.player == Player.Player1) p1NavList.Add(nav);
         else if (nav.player == Player.Player2) p2NavList.Add(nav);
         navList.Add(nav);
@@ -60,80 +57,97 @@ public class UINavigationManager : MonoBehaviour
         if (nav.player == Player.Player1)
         {
             p1NavList.Remove(nav);
-            if (p1NavList.Count == 0) FocusOn(null, 0);
-            else if (currentSelected[0] == nav) FocusOn(p1NavList[0], 0);
+            if (p1NavList.Count == 0) FocusOn(null, nav.player);
+            else if (p1Selected == nav) FocusOn(p1NavList[0], nav.player);
         }
         if(nav.player == Player.Player2)
         {
             p2NavList.Remove(nav);
-            if (p2NavList.Count == 0) FocusOn(null, 1);
-            else if (currentSelected[1] == nav) FocusOn(p2NavList[0], 1);
+            if (p2NavList.Count == 0) FocusOn(null, nav.player);
+            else if (p2Selected == nav) FocusOn(p2NavList[0], nav.player);
         }
         navList.Remove(nav);
         SearchNavigation();
     }
 
     // 각 navigatable에서 연결되는 navigatable연결
-    private void SearchNavigation()
+    public void SearchNavigation()
     {
         foreach (UINavigatable nav in navList) nav.SearchNavigatable();
     }
 
-    private void FocusOn(UINavigatable nav, int player)
+    private void FocusOn(UINavigatable nav, Player _player)
     {
-        if (currentSelected[player] != null) currentSelected[player].OnFocusOut();
-        currentSelected[player] = nav;
-        if (currentSelected[player] != null) currentSelected[player].OnFocusIn();
+        if (_player == Player.Player1)
+        {
+            if (p1Selected != null) p1Selected.OnFocusOut();
+            p1Selected = nav;
+            if (p1Selected != null) p1Selected.OnFocusIn();
+        }
+        if (_player == Player.Player2)
+        {
+            if (p2Selected != null) p2Selected.OnFocusOut();
+            p2Selected = nav;
+            if (p2Selected != null) p2Selected.OnFocusIn();
+        }
     }
 
     private void OnP1MoveUp()
     {
-        if (freezeP1 || currentSelected[0].up == null) return;
-        FocusOn(currentSelected[0].up, 0);
+        if (freezeP1 || p1Selected == null) return;
+        if (p1Selected.up == null) return;
+        FocusOn(p1Selected.up, Player.Player1);
     }
     private void OnP1MoveDown()
     {
-        if (freezeP1 || currentSelected[0].down == null) return;
-        FocusOn(currentSelected[0].down, 0);
+        if (freezeP1 || p1Selected == null) return;
+        if (p1Selected.down == null) return;
+        FocusOn(p1Selected.down, Player.Player1);
     }
     private void OnP1MoveRight()
     {
-        if (freezeP1 || currentSelected[0].right == null) return;
-        FocusOn(currentSelected[0].right, 0);
+        if (freezeP1 || p1Selected == null) return;
+        if (p1Selected.right == null) return;
+        FocusOn(p1Selected.right, Player.Player1);
     }
     private void OnP1MoveLeft()
     {
-        if (freezeP1 || currentSelected[0].left == null) return;
-        FocusOn(currentSelected[0].left, 0);
+        if (freezeP1 || p1Selected == null) return;
+        if (p1Selected.left == null) return;
+        FocusOn(p1Selected.left, Player.Player1);
     }
     private void OnP1Select()
     {
-        if (freezeP1) return;
-        currentSelected[0].OnSelect();
+        if (freezeP1 || p1Selected == null) return;
+        p1Selected.OnSelect();
     }
     private void OnP2MoveUp()
     {
-        if (freezeP2 || currentSelected[1].up == null) return;
-        FocusOn(currentSelected[1].up, 1);
+        if (freezeP2 || p2Selected == null) return;
+        if (p2Selected.up == null) return;
+        FocusOn(p2Selected.up, Player.Player2);
     }
     private void OnP2MoveDown()
     {
-        if (freezeP2 || currentSelected[1].down == null) return;
-        FocusOn(currentSelected[1].down, 1);
+        if (freezeP2 || p2Selected == null) return;
+        if (p2Selected.down == null) return;
+        FocusOn(p2Selected.down, Player.Player2);
     }
     private void OnP2MoveRight()
     {
-        if (freezeP2 || currentSelected[1].right == null) return;
-        FocusOn(currentSelected[1].right, 1);
+        if (freezeP2 || p2Selected == null) return;
+        if (p2Selected.right == null) return;
+        FocusOn(p2Selected.right, Player.Player2);
     }
     private void OnP2MoveLeft()
     {
-        if (freezeP2 || currentSelected[1].left == null) return;
-        FocusOn(currentSelected[1].left, 1);
+        if (freezeP2 || p2Selected == null) return;
+        if (p2Selected.left == null) return;
+        FocusOn(p2Selected.left, Player.Player2);
     }
     private void OnP2Select()
     {
-        if (freezeP2) return;
-        currentSelected[1].OnSelect();
+        if (freezeP2 || p2Selected == null) return;
+        p2Selected.OnSelect();
     }
 }

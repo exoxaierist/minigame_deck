@@ -5,7 +5,6 @@ using UnityEngine;
 public class UINavigatable : MonoBehaviour
 {
     public Player player = Player.Player1;
-    public NavType type;
 
     [HideInInspector] public UINavigatable right;
     [HideInInspector] public UINavigatable left;

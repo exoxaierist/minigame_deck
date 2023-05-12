@@ -22,18 +22,28 @@ public class GridObject : EventObject
     }
 
     // 상대적으로 이동
-    public void MoveRelative(Vector2 dest)
+    public void MoveRelative(Vector2 dest) => MoveRelative(dest, 0);
+
+    public void MoveRelative(Vector2 dest, LayerMask collisionMask)
     {
+        if (Global.CheckOverlap(transform.position * Vector2.one + dest, collisionMask)) { StartCoroutine(MoveRelativeRecheck(dest, collisionMask)); return; }
         if (isMoving) return;
         isMoving = true;
         transform.position = transform.position * Vector2.one + dest;
         if (visual != null)
         {
             visual.localPosition = -dest;
+            visual.DOComplete();
             visual.DOLocalJump(Vector2.zero, 0.2f, 1, 0.1f).SetEase(Ease.OutQuad).OnComplete(() => isMoving = false);
-            visual.DOShakeScale(0.13f, new Vector3(0.1f, -0.1f, 0), 20).OnComplete(()=>transform.localScale = Vector3.one);
+            visual.DOShakeScale(0.13f, new Vector3(0.1f, -0.1f, 0), 20);
         }
         else { isMoving = false; }
+    }
+
+    private IEnumerator MoveRelativeRecheck(Vector2 dest, LayerMask collisionMask)
+    {
+        yield return new WaitForEndOfFrame();
+        MoveRelative(dest, collisionMask);
     }
 
     // 애니매이션 없이 이동

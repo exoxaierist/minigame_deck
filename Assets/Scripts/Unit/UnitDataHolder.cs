@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName ="UnitManager")]
-public class UnitManager : ScriptableObject
+public class UnitDataHolder : ScriptableObject
 {
     public List<UnitSet> unitList;
 

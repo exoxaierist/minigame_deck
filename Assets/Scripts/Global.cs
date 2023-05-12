@@ -20,9 +20,19 @@ public static class Global
     // 상점 매니저
     public static ShopManager shopManager;
 
+
+    //// UI 참조들
+    public static Transform uiParent;
+
+
     //// 이벤트
     // 라운드 이벤트
     public static Action OnRoundStart;
+    public static Action OnShopOpen;
+    public static Action OnShopClose;
+
+    public static Action OnP1CoinChange;
+    public static Action OnP2CoinChange;
 
     // 턴 이벤트
     public static Action OnTurnStart;
