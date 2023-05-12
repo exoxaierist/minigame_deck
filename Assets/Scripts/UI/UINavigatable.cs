@@ -5,13 +5,23 @@ using UnityEngine;
 public class UINavigatable : MonoBehaviour
 {
     public Player player = Player.Player1;
+    public NavType type;
 
-    public UINavigatable right;
-    public UINavigatable left;
-    public UINavigatable up;
-    public UINavigatable down;
+    [HideInInspector] public UINavigatable right;
+    [HideInInspector] public UINavigatable left;
+    [HideInInspector] public UINavigatable up;
+    [HideInInspector] public UINavigatable down;
 
-    private NewButton btn;
+    // 버튼이 활성화될때 불러야됨
+    public void Activate()
+    {
+        Global.uiNavManager.AddNavigatable(this);
+    }
+
+    public void Deactivate()
+    {
+        Global.uiNavManager.RemoveNavigatable(this);
+    }
 
     public void SearchNavigatable()
     {
@@ -21,29 +31,11 @@ public class UINavigatable : MonoBehaviour
         down = SearchDown();
     }
 
-    public void OnFocusIn()
-    {
-        if(TryGetComponent(out btn))
-        {
-            btn.OnHoverEnter();
-        }
-    }
+    public virtual void OnFocusIn() { }
 
-    public void OnFocusOut()
-    {
-        if(TryGetComponent(out btn))
-        {
-            btn.OnHoverExit();
-        }
-    }
+    public virtual void OnFocusOut() { }
 
-    public void OnSelect()
-    {
-        if(TryGetComponent(out btn))
-        {
-            btn.OnClick();
-        }
-    } 
+    public virtual void OnSelect() { }
 
     private UINavigatable SearchRight()
     {

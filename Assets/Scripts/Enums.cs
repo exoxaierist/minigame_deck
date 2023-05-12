@@ -13,3 +13,20 @@ public enum HpUIType
     Counter,
     Slider,
 }
+
+// Navigatable 이 붙은 버튼의 종류
+public enum NavType
+{
+    Button,
+    ShopCard,
+    FieldUnit,
+}
+
+// 상점 모드
+public enum ShopState
+{
+    Deactivated,
+    Select,
+    Place,
+    Upgrade,
+}

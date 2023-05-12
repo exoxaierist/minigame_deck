@@ -17,6 +17,9 @@ public static class Global
     // 턴 매니저
     public static TurnManager turnManager;
 
+    // 상점 매니저
+    public static ShopManager shopManager;
+
     //// 이벤트
     // 라운드 이벤트
     public static Action OnRoundStart;

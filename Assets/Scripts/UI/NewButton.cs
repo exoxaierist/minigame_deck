@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(Image))]
 [RequireComponent(typeof(AudioSource))]
-public class NewButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+public class NewButton : UINavigatable, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     private Image image;
     private AudioSource audioSrc;
@@ -35,6 +35,12 @@ public class NewButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
         audioSrc.playOnAwake = false;
         audioSrc.bypassListenerEffects = true;
         audioSrc.bypassReverbZones = true;
+        Activate();
+    }
+
+    private void OnDestroy()
+    {
+        Deactivate();
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -50,6 +56,21 @@ public class NewButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
     public void OnPointerExit(PointerEventData eventData)
     {
         OnHoverExit();
+    }
+
+    public override void OnFocusIn()
+    {
+        OnHoverEnter();
+    }
+
+    public override void OnFocusOut()
+    {
+        OnHoverExit();
+    }
+
+    public override void OnSelect()
+    {
+        OnClick();
     }
 
     public void OnClick()

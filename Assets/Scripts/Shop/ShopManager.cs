@@ -9,19 +9,27 @@ public class ShopManager : MonoBehaviour
     public int coinPerRound = 10;
 
     [HideInInspector] public float currentShopTimer;
+    [HideInInspector] public ShopState state;
 
-    private List<UnitBase> p1Shop = new();
-    private List<UnitBase> p2Shop = new();
+    private List<UnitSet> p1Shop = new();
+    private List<UnitSet> p2Shop = new();
 
     public int p1Coins = 0;
     public int p2Coins = 0;
 
+    private void Awake()
+    {
+        Global.shopManager = this;
+    }
+
     public void OpenShop()
     {
+        GetShopUnits();
         ShowShopUI();
         SetP1Coin(coinPerRound);
         SetP2Coin(coinPerRound);
         ResetUnitPosition();
+        state = ShopState.Select;
 
         for (int i = 0; i < shopUnitCount; i++)
         {
@@ -33,6 +41,7 @@ public class ShopManager : MonoBehaviour
     public void CloseShop()
     {
         HideShopUI();
+        state = ShopState.Deactivated;
         // 상점모드 끝
     }
 
@@ -54,15 +63,23 @@ public class ShopManager : MonoBehaviour
     {
         if (player == Player.Player1)
         {
-            // if 돈없으면{}
-            // else
-            // 돈 --
+            UnitSet set = new(); // 정보 받아쓰기
+            if(set.price > p2Coins) { } // 살 수 없음 
+            else
+            {
+                ChangeP1Coin(-set.price);
             //p1deck.Add(p1Shop[buyIndex])
+            }
         }
         else if (player == Player.Player2)
         {
-            // 돈 --
+            UnitSet set = new(); // 정보 받아쓰기
+            if (set.price > p1Coins) { } // 살 수 없음
+            else
+            {
+                ChangeP2Coin(-set.price);
             //p2deck.Add(p2Shop[buyIndex])
+            }
         }
     }
 
@@ -85,6 +102,11 @@ public class ShopManager : MonoBehaviour
             yield return null;
         }
         CloseShop();
+    }
+
+    private void GetShopUnits()
+    {
+
     }
 
     private void ShowShopUI()
