@@ -14,6 +14,8 @@ public class GridObject : EventObject
     [Header("모션입힐 오브젝트")]
     public Transform visual;
 
+    private int recheckFrame = 0;
+
 
     private void Start()
     {
@@ -38,12 +40,17 @@ public class GridObject : EventObject
             visual.DOShakeScale(0.13f, new Vector3(0.1f, -0.1f, 0), 20);
         }
         else { isMoving = false; }
+        recheckFrame = 0;
     }
 
     private IEnumerator MoveRelativeRecheck(Vector2 dest, LayerMask collisionMask)
     {
-        yield return new WaitForEndOfFrame();
-        MoveRelative(dest, collisionMask);
+        if (recheckFrame < 5)
+        {
+            yield return new WaitForEndOfFrame();
+            recheckFrame++;
+            MoveRelative(dest, collisionMask);
+        }
     }
 
     // 애니매이션 없이 이동
