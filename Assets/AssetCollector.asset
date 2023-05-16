@@ -17,6 +17,7 @@ MonoBehaviour:
   hpCounterSpriteFull: {fileID: -1631777319, guid: f2fbc0dc495be044faa74051e055d059, type: 3}
   hpCounterSpriteEmpty: {fileID: -993504304, guid: f2fbc0dc495be044faa74051e055d059, type: 3}
   p1Selector: {fileID: 789770314801800139, guid: 25ecf7af8838e8e458f48709f801d193, type: 3}
-  p2Selector: {fileID: 4352479533654160872, guid: 370b0cad776539d44933bde4c4336dfc, type: 3}
-  shopCard: {fileID: 3294167335419905526, guid: 244e5529778520c41b7945acdc14c4d3, type: 3}
+  p2Selector: {fileID: 2627722335005277371, guid: bd06d78706565294d8c2aa89bab48f3d, type: 3}
+  p1ShopCard: {fileID: 6378489618867732956, guid: 63fd6649aa5b3554aadc71cb3a4366f2, type: 3}
+  p2ShopCard: {fileID: 3294167335419905526, guid: 244e5529778520c41b7945acdc14c4d3, type: 3}
   shopFieldUnitUI: {fileID: 5676533252955412786, guid: 3801c1c0ad6581540ae4c135ac2d898b, type: 3}

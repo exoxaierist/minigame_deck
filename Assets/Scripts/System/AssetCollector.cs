@@ -15,6 +15,7 @@ public class AssetCollector : ScriptableObject
     public GameObject p2Selector;
 
     [Header("상점 관련")]
-    public GameObject shopCard;
+    public GameObject p1ShopCard;
+    public GameObject p2ShopCard;
     public GameObject shopFieldUnitUI;
 }

@@ -58,9 +58,10 @@ public class ShopManager : MonoBehaviour
     {
         HideShopUI();
         state = ShopState.Closed;
-        // 상점모드 끝
-        float temp = 0;
-        DOTween.To(() => temp, x => temp = x, 1, 0.5f).OnComplete(() => Global.OnShopClose?.Invoke());
+        // 상점모드 끔
+        Global.OnShopClose?.Invoke();
+        //float temp = 0;
+        //DOTween.To(() => temp, x => temp = x, 1, 0.01f).OnComplete(() => Global.OnShopClose?.Invoke());
     }
 
     // 유닛 판매
@@ -164,7 +165,7 @@ public class ShopManager : MonoBehaviour
             for (int i = 0; i < p1Shop.Count; i++)
             {
                 UnitSet unit = p==0?p1Shop[i]:p2Shop[i];
-                ShopCard instance = Instantiate(Global.assets.shopCard, Global.uiParent).GetComponent<ShopCard>();
+                ShopCard instance = Instantiate(p==0?Global.assets.p1ShopCard:Global.assets.p2ShopCard, Global.uiParent).GetComponent<ShopCard>();
                 instance.SetCard(unit, p == 0 ? Player.Player1 : Player.Player2,i);
             }
         }

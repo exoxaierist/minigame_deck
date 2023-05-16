@@ -17,6 +17,7 @@ public class ShopCard : UINavigatable
     private ShopManager shop;
     private UnitSet unit;
     private int selfIndex = -1;
+    private Vector3 placedPosition;
 
     private void Start()
     {
@@ -38,14 +39,14 @@ public class ShopCard : UINavigatable
         transform.DOComplete();
         if (player == Player.Player1)
         {
-            transform.localPosition = new(-1200, 250 - (130 * index), 0);
-            transform.DOLocalMoveX(-840, 0.4f).SetDelay(0.04f * selfIndex).OnComplete(() => Activate());
+            placedPosition = new(-840, 250 - (130 * index), 0);
         }
         else if (player == Player.Player2)
         {
-            transform.localPosition = new(1200, 250 - (130 * index), 0);
-            transform.DOLocalMoveX(840, 0.4f).SetDelay(0.04f * selfIndex).OnComplete(() => Activate());
+            placedPosition = new(840, 250 - (130 * index), 0);
         }
+        transform.localPosition = new(placedPosition.x * 1.2f, placedPosition.y, 0);
+        transform.DOLocalMoveX(placedPosition.x, 0.4f).SetDelay(0.04f * selfIndex).OnComplete(() => Activate());
     }
 
     public void RemoveCard()
@@ -79,6 +80,18 @@ public class ShopCard : UINavigatable
                 CannotBuy();
             }
         }
+    }
+
+    public override void OnFocusIn()
+    {
+        transform.DOKill();
+        transform.DOLocalMoveX(placedPosition.x*0.97f,0.1f);
+    }
+
+    public override void OnFocusOut()
+    {
+        transform.DOKill();
+        transform.DOLocalMoveX(placedPosition.x, 0.1f);
     }
 
     private void CannotBuy()
