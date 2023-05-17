@@ -174,9 +174,9 @@ MonoBehaviour:
   collisionLayer:
     serializedVersion: 2
     m_Bits: 0
+  canMove: 1
   id: unassigned
   hp: {fileID: 0}
-  dir: {fileID: 0}
 --- !u!1 &469977789
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,9 +275,9 @@ MonoBehaviour:
   collisionLayer:
     serializedVersion: 2
     m_Bits: 0
+  canMove: 1
   id: unassigned
   hp: {fileID: 0}
-  dir: {fileID: 0}
 --- !u!1 &890322379
 GameObject:
   m_ObjectHideFlags: 0

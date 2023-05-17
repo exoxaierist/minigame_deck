@@ -41,6 +41,25 @@ public class Hp : MonoBehaviour
     // 체력 변경할때 사용
     public void AddToHP(int value)
     {
+        #region 데미지 줄이는 부분
+        if (GetComponent<TemporaryReduceDamage>().isReduceDamage)
+        {
+            int x = value - GetComponent<TemporaryReduceDamage>().GetReduceDamage();
+            if (x>=0)
+            {
+                value = x;
+            }
+            else
+            {
+                if (value >=0)
+                {
+                    value = 0;
+                }
+                
+            }
+        }
+        #endregion
+
         if (value == 0) return;
         hp = Mathf.Clamp(hp + value, 0, maxHp);
         hpUI.SetHP(hp);

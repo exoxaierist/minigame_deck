@@ -27,10 +27,10 @@ public class DamageTimeout : UnitBase
         base.Awake();
         hp.OnDamage += ResetTimer;//데미지를 입는 경우에 타이머 리셋
     }
-    protected void Update()
+
+    void checkTurn()
     {
-        
-        if( prevTurn < Global.turnManager.GetTurn()) 
+        if (prevTurn < Global.turnManager.GetTurn())
         {
             prevTurn = Global.turnManager.GetTurn();
 
@@ -42,6 +42,12 @@ public class DamageTimeout : UnitBase
             Debug.Log("nodamage");
             deltaTurn = 0; //함수 발동시 타이머 리셋
         }
+    }
+
+    protected void Update()
+    {
+
+        checkTurn();
 
     }
 }
