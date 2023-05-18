@@ -30,3 +30,9 @@ public enum ShopState
     Place,
     Upgrade,
 }
+
+public enum AllyOrEnemy
+{
+    Ally,
+    Enemy,
+}
