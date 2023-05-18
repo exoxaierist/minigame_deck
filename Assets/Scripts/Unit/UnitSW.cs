@@ -16,14 +16,15 @@ public class UnitSW : UnitBase
         Vector3 standardPos = transform.position; // 능력 주체가 되는 유닛의 좌표
         Vector3 targetPos = _unit.transform.position; // 능력 타겟이 되는 유닛의 좌표
 
-        if(standardPos.x == targetPos.x)
+        if (standardPos.x == targetPos.x)
         {
             for(int i = 1; i < Mathf.Abs(targetPos.y - standardPos.y); i++)
             {
                 // 타겟 유닛이 주체 유닛보다 위에 있는 경우
                 if(targetPos.y > standardPos.y)
                 {
-                    if (Physics.Raycast(new Vector3(standardPos.x, standardPos.y + i, 0), Vector3.down)) continue;
+                    
+                    if (Global.CheckOverlap(new(standardPos.x,standardPos.y + i), 1 << 1)) continue;
                     _unit.transform.position = new Vector3(standardPos.x, standardPos.y + i);
                     return;
                 }
