@@ -24,6 +24,9 @@ public class Hp : MonoBehaviour
     public Action OnHpChange;
     public Action OnDeath;
 
+    //피격시, 받는 데미지를 바꾸는 대리자
+    public Func<int, int> DamageModifier;
+
     private void Start()
     {
         hp = maxHp;
@@ -41,24 +44,7 @@ public class Hp : MonoBehaviour
     // 체력 변경할때 사용
     public void AddToHP(int value)
     {
-        #region 데미지 줄이는 부분
-        if (GetComponent<TemporaryReduceDamage>().isReduceDamage)
-        {
-            int x = value - GetComponent<TemporaryReduceDamage>().GetReduceDamage();
-            if (x>=0)
-            {
-                value = x;
-            }
-            else
-            {
-                if (value >=0)
-                {
-                    value = 0;
-                }
-                
-            }
-        }
-        #endregion
+        value = DamageModifier(value); ;//데미지 받기 전 처리
 
         if (value == 0) return;
         hp = Mathf.Clamp(hp + value, 0, maxHp);

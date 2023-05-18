@@ -18,7 +18,7 @@ public class TemporaryReduceDamage : UnitBase //무적 <- 데미지를 받지 않음으로 �
 
     int prevTurn = 0;
     int deltaTurn = 0;
-    void check_ReduceDamageTurn()
+    void check_ReduceDamageTurn()//데미지 줄이는 턴수 체크
     {
         if (isReduceDamage)
         {
@@ -37,15 +37,35 @@ public class TemporaryReduceDamage : UnitBase //무적 <- 데미지를 받지 않음으로 �
             }
         }
     }
+    private void Start()
+    {
+        GetComponent<Hp>().DamageModifier += DamageModify; //피격 받을때 처리 대리자 등록
+    }
+    int DamageModify(int _value)
+    {
+        var value = _value;
+        if (isReduceDamage)
+        {
+            if (value >=0)//힐 체크
+            {
+                return value;
+            }
+
+            int x = value + ReduceDamage;
+
+            if (x>=0)
+            {
+                value = 0;
+            }
+            else
+            {
+                value = x;
+            }
+        }
+        return value;
+    }
     private void Update()
     {
         check_ReduceDamageTurn();
     }
-    public int GetReduceDamage()
-    {
-        return ReduceDamage;
-    }
-
-
-
 }
