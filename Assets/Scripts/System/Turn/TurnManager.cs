@@ -15,24 +15,23 @@ public class TurnManager : MonoBehaviour
     private bool p1Input = false;
     private bool p2Input = false;
 
+    void addTurn()
+    {
+        turn += 1;
+    }
+
     private void Awake()
     {
         Global.turnManager = this;
         Global.OnP1Any += CheckP1Input;
         Global.OnP2Any += CheckP2Input;
-
-        turn = 1;
+        Global.OnTurnStart += addTurn;
     }
 
     private void Update()
     {
-        if (turnActive) 
-        {
-            if (turnTimer == 0) turn++;
-
-            turnTimer += Time.deltaTime; 
-        }
-
+        if (turnActive) turnTimer += Time.deltaTime; 
+        
         if (p1Input && p2Input)
         {
             Global.OnTurnStart?.Invoke();

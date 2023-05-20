@@ -15,8 +15,8 @@ public class DamageTimeout : UnitBase
     private int deltaTurn = 0;
     private int prevTurn = 0;
 
-    //데미지를 받지 않았을때 발동
-    protected virtual void OnNoDamage() { }
+    
+    protected virtual void OnNoDamage() { } //데미지를 받지 않았을때 발동
     void ResetTimer()
     {
         deltaTurn = 0;
@@ -26,28 +26,18 @@ public class DamageTimeout : UnitBase
     {
         base.Awake();
         hp.OnDamage += ResetTimer;//데미지를 입는 경우에 타이머 리셋
+        Global.OnTurnStart += CheckTurn;
     }
 
-    void checkTurn()
+    void CheckTurn()
     {
-        if (prevTurn < Global.turnManager.GetTurn())
-        {
-            prevTurn = Global.turnManager.GetTurn();
-
-            deltaTurn++;
-        }
-        if (deltaTurn == TimeoutTurn)
+        deltaTurn++;
+  
+        if (deltaTurn >= TimeoutTurn)
         {
             OnNoDamage();
             Debug.Log("nodamage");
-            deltaTurn = 0; //함수 발동시 타이머 리셋
+            //deltaTurn = 0; //함수 발동시 타이머 리셋
         }
-    }
-
-    protected void Update()
-    {
-
-        checkTurn();
-
     }
 }
