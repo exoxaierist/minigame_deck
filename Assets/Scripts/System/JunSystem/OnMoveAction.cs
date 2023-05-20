@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveGrid : UnitBase
-{   
+public class OnMoveAction : UnitBase
+{
     //현재 움직인 칸 수
     int MovedGrids = 0;
 
@@ -12,8 +12,14 @@ public class MoveGrid : UnitBase
     public int MoveGrids = 1;
 
     protected virtual void OnGridMoved() { }//조건 충족시 함수 발동
+    protected override void Awake()
+    {
+        base.Awake();
 
-    void OnMove()
+        OnMove += onMove;
+    }
+
+    void onMove()
     {
         MovedGrids++;
 
@@ -24,8 +30,9 @@ public class MoveGrid : UnitBase
             Debug.Log("moved");
         }
     }
+}
 
-    #region Move~ 오버라이드: 끝에 OnMove() 붙임
+   /* #region Move~ 오버라이드: 끝에 OnMove() 붙임
     protected override void MoveUp()
     {
         if (!Global.CheckOverlap(transform.position * Vector2.one + new Vector2(0, 1), collisionLayer)) 
@@ -60,4 +67,4 @@ public class MoveGrid : UnitBase
     }
     #endregion
     
-}
+*/
