@@ -44,7 +44,7 @@ public class Hp : MonoBehaviour
     // 체력 변경할때 사용
     public void AddToHP(int value)
     {
-        value = DamageModifier(value); ;//데미지 받기 전 처리
+        value = DamageModifier(value);//데미지 받기 전 처리
 
         if (value == 0) return;
         hp = Mathf.Clamp(hp + value, 0, maxHp);
