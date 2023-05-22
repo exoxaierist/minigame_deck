@@ -25,7 +25,7 @@ public class Hp : MonoBehaviour
     public Action OnDeath;
 
     //피격시, 받는 데미지를 바꾸는 대리자
-    public Func<int, int> DamageModifier;
+    //public Func<int, int> DamageModifier;
 
     private void Start()
     {
@@ -55,7 +55,35 @@ public class Hp : MonoBehaviour
         else OnDamage?.Invoke();
         CheckDeath();
     }
+    protected int DamageModifier(int _value)
+    {
+        #region 데미지 줄이는 부분
+        var isReduceDamage = GetComponent<TemporaryReduceDamage>().isReduceDamage;
+        var ReduceDamage = GetComponent<TemporaryReduceDamage>().ReduceDamage;
 
+        var value = _value;
+
+        if (isReduceDamage)
+        {
+            if (value >= 0)//힐 체크
+            {
+                return value;
+            }
+
+            int x = value + ReduceDamage;
+
+            if (x >= 0)
+            {
+                value = 0;
+            }
+            else
+            {
+                value = x;
+            }
+        }
+        #endregion
+        return value;
+    }
     // 죽었는지 확인
     private void CheckDeath()
     {

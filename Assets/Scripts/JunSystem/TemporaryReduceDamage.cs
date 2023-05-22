@@ -8,40 +8,31 @@ public class TemporaryReduceDamage : UnitBase //무적 <- 데미지를 받지 않음으로 �
     [Tooltip("데미지를 줄이는 턴 수")]
     int ReduceDamageTurn = 5;
 
-    [SerializeField]
     [Tooltip("줄이는 데미지")]
-    int ReduceDamage = 10;
+    public int ReduceDamage = int.MaxValue;
 
-    [HideInInspector]
+    //[HideInInspector]
     public bool isReduceDamage = false;
     
-
-    int prevTurn = 0;
     int deltaTurn = 0;
     void check_ReduceDamageTurn()//데미지 줄이는 턴수 체크
     {
         if (isReduceDamage)
         {
-            deltaTurn = 0;
-
-            if (prevTurn < Global.turnManager.GetTurn())
+            deltaTurn++;
+            if(deltaTurn >= ReduceDamageTurn)
             {
-                prevTurn = Global.turnManager.GetTurn();
-
-                deltaTurn++;
-            }
-            if (deltaTurn == ReduceDamageTurn)
-            {
+                deltaTurn = 0;
                 isReduceDamage = false;
-
             }
         }
     }
     private void Start()
     {
-        GetComponent<Hp>().DamageModifier += DamageModify; //피격 받을때 처리 대리자 등록
+        Global.OnTurnStart += check_ReduceDamageTurn;
+        //GetComponent<Hp>().DamageModifier += DamageModify; //피격 받을때 처리 대리자 등록
     }
-    int DamageModify(int _value)
+    /*int DamageModify(int _value)
     {
         var value = _value;
         if (isReduceDamage)
@@ -66,6 +57,6 @@ public class TemporaryReduceDamage : UnitBase //무적 <- 데미지를 받지 않음으로 �
     }
     private void Update()
     {
-        check_ReduceDamageTurn();
-    }
+        //check_ReduceDamageTurn();
+    }*/
 }
