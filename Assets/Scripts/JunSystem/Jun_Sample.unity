@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 469977792}
   - component: {fileID: 469977796}
   - component: {fileID: 469977795}
+  - component: {fileID: 469977797}
   m_Layer: 0
   m_Name: SampleP2
   m_TagString: Untagged
@@ -266,7 +267,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469977789}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4032d2f1b3eb9af46a0c3dc0c0303ad3, type: 3}
   m_Name: 
@@ -287,7 +288,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469977789}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f97d72b12d42dc44ea1419788277b1ce, type: 3}
   m_Name: 
@@ -309,7 +310,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469977789}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6adf688cc63d2bb4e82fd5368c958dfe, type: 3}
   m_Name: 
@@ -324,6 +325,30 @@ MonoBehaviour:
   id: unassigned
   hp: {fileID: 0}
   MoveGrids: 1
+--- !u!114 &469977797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469977789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4a14a349c7473489a0db14c84b4aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0}
+  visual: {fileID: 0}
+  player: 2
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  canMove: 1
+  id: unassigned
+  hp: {fileID: 0}
+  ReduceDamageTurn: 5
+  ReduceDamage: 2147483647
+  isReduceDamage: 0
 --- !u!1 &890322379
 GameObject:
   m_ObjectHideFlags: 0
