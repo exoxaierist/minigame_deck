@@ -35,7 +35,7 @@ public class GridObject : EventObject
         transform.position = transform.position * Vector2.one + dest;
         if (visual != null)
         {
-            OnMove();//움직일때 이벤트 발동
+            //OnMove();//움직일때 이벤트 발동
             visual.localPosition = -dest;
             visual.DOComplete();
             visual.DOLocalJump(Vector2.zero, 0.2f, 1, 0.1f).SetEase(Ease.OutQuad).OnComplete(() => isMoving = false);
