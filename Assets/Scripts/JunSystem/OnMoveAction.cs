@@ -15,11 +15,9 @@ public class OnMoveAction : UnitBase
     protected override void Awake()
     {
         base.Awake();
-
-        OnMove += onMove;
     }
 
-    void onMove()
+    protected override void OnMove()
     {
         MovedGrids++;
 

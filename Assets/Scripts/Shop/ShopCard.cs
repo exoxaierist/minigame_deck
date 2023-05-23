@@ -51,6 +51,7 @@ public class ShopCard : UINavigatable
 
     public void RemoveCard()
     {
+        Deactivate();
         transform.DOComplete();
         transform.DOLocalMoveX(1200 * (player == Player.Player1 ? -1 : 1), 0.4f).SetDelay(0.08f * selfIndex).OnComplete(() => Delete());
     }
@@ -58,7 +59,6 @@ public class ShopCard : UINavigatable
     private void Delete()
     {
         Global.OnShopClose -= RemoveCard;
-        Deactivate();
         Destroy(this.gameObject);
     }
 
@@ -84,13 +84,13 @@ public class ShopCard : UINavigatable
 
     public override void OnFocusIn()
     {
-        transform.DOKill();
+        transform.DOComplete();
         transform.DOLocalMoveX(placedPosition.x*0.97f,0.1f);
     }
 
     public override void OnFocusOut()
     {
-        transform.DOKill();
+        transform.DOComplete();
         transform.DOLocalMoveX(placedPosition.x, 0.1f);
     }
 

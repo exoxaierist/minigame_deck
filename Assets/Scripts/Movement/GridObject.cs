@@ -17,7 +17,6 @@ public class GridObject : EventObject
 
     private int recheckFrame = 0;
 
-    protected Action OnMove;
     private void Start()
     {
         gridIncrement = Global.gridIncrement;
@@ -27,7 +26,7 @@ public class GridObject : EventObject
     // 상대적으로 이동
     public void MoveRelative(Vector2 dest) => MoveRelative(dest, 0);
 
-    public void MoveRelative(Vector2 dest, LayerMask collisionMask)
+    public void MoveRelative(Vector2 dest, int collisionMask)
     {
         if (Global.CheckOverlap(transform.position * Vector2.one + dest, collisionMask)) { StartCoroutine(MoveRelativeRecheck(dest, collisionMask)); return; }
         if (isMoving) return;
@@ -35,7 +34,7 @@ public class GridObject : EventObject
         transform.position = transform.position * Vector2.one + dest;
         if (visual != null)
         {
-            OnMove();//움직일때 이벤트 발동
+            OnMove(); //움직일때 이벤트 발동
             visual.localPosition = -dest;
             visual.DOComplete();
             visual.DOLocalJump(Vector2.zero, 0.2f, 1, 0.1f).SetEase(Ease.OutQuad).OnComplete(() => isMoving = false);
@@ -45,7 +44,7 @@ public class GridObject : EventObject
         recheckFrame = 0;
     }
 
-    private IEnumerator MoveRelativeRecheck(Vector2 dest, LayerMask collisionMask)
+    private IEnumerator MoveRelativeRecheck(Vector2 dest, int collisionMask)
     {
         if (recheckFrame < 5)
         {
@@ -63,4 +62,6 @@ public class GridObject : EventObject
 
     // 그리드에 스냅
     public void SnapToGrid() => transform.position = new Vector2(Mathf.Round(transform.position.x / gridIncrement), Mathf.Round(transform.position.y / gridIncrement)) + offset + Global.globalOffset;
+
+    protected virtual void OnMove() { }
 }

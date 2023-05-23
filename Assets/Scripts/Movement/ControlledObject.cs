@@ -9,7 +9,7 @@ public class ControlledObject : GridObject
     [Header("플레이어")]
     public Player player = Player.Player1;
     [Header("충돌 레이어")]
-    public LayerMask collisionLayer;
+    public LayerMask collisionLayer = 0;
     [HideInInspector] public bool canMove = true;
 
     protected virtual void Awake()
@@ -19,19 +19,19 @@ public class ControlledObject : GridObject
 
     protected virtual void MoveUp()
     {
-        if (canMove) MoveRelative(new(0, 1), collisionLayer);
+        if (canMove) MoveRelative(new(0, 1), collisionLayer.value);
     }
     protected virtual void MoveDown()
     {
-        if (canMove) MoveRelative(new(0, -1), collisionLayer);
+        if (canMove) MoveRelative(new(0, -1), collisionLayer.value);
     }
     protected virtual void MoveRight()
     {
-        if (canMove) MoveRelative(new(1, 0), collisionLayer);
+        if (canMove) MoveRelative(new(1, 0), collisionLayer.value);
     }
     protected virtual void MoveLeft()
     {
-        if (canMove) MoveRelative(new(-1, 0),collisionLayer);
+        if (canMove) MoveRelative(new(-1, 0),collisionLayer.value);
     }
 
     // 인풋 대리자에서 제거

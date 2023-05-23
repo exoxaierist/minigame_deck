@@ -63,7 +63,7 @@ public static class Global
 
     //// 유틸리티
     //콜리젼 확인
-    public static bool CheckOverlap(Vector2 dest, LayerMask mask)
+    public static bool CheckOverlap(Vector2 dest, int mask)
     {
         return Physics2D.OverlapCircle(dest, 0.3f, mask);
     }

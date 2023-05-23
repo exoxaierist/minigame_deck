@@ -8,6 +8,11 @@ public class ShopFieldUnitUI : UINavigatable
     
     [HideInInspector] public ShopFieldUnitPlacer placer;
 
+    private void Start()
+    {
+        Global.OnShopClose += RemoveSelf;
+    }
+
     public override void OnSelect()
     {
         if (!placeMode) EnablePlaceMode();
@@ -64,5 +69,12 @@ public class ShopFieldUnitUI : UINavigatable
     {
         placer.ReturnToOrigin();
         DisablePlaceMode();
+    }
+
+    private void RemoveSelf()
+    {
+        Global.OnShopClose -= RemoveSelf;
+        Deactivate();
+        Destroy(gameObject);
     }
 }
