@@ -2,19 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TemporaryReduceDamage : UnitBase //무적 <- 데미지를 받지 않음으로 정의
+public class TemporaryReduceDamage : MonoBehaviour //무적 <- 데미지를 받지 않음으로 정의
 {
     [SerializeField]
     [Tooltip("데미지를 줄이는 턴 수")]
-    int ReduceDamageTurn = 5;
+    protected int ReduceDamageTurn = 5;
 
     [Tooltip("줄이는 데미지")]
-    public int ReduceDamage = int.MaxValue;
-
+    protected int ReduceDamage = int.MaxValue;
+    public int getReduceDamage()
+    {
+        return ReduceDamage;
+    }
     //[HideInInspector]
-    public bool isReduceDamage = false;
-    
-    int deltaTurn = 0;
+    protected bool isReduceDamage = false;
+    public bool getIsReduceDamage()
+    {
+        return isReduceDamage;
+    }
+
+
+    protected int deltaTurn = 0;
     void check_ReduceDamageTurn()//데미지 줄이는 턴수 체크
     {
         if (isReduceDamage)

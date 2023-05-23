@@ -57,28 +57,31 @@ public class Hp : MonoBehaviour
     }
     protected int DamageModifier(int _value)
     {
-        #region 데미지 줄이는 부분
-        var isReduceDamage = GetComponent<TemporaryReduceDamage>().isReduceDamage;
-        var ReduceDamage = GetComponent<TemporaryReduceDamage>().ReduceDamage;
-
         var value = _value;
 
-        if (isReduceDamage)
+        #region 데미지 줄이는 부분
+        if (TryGetComponent(out TemporaryReduceDamage temporaryReduceDamage))
         {
-            if (value >= 0)//힐 체크
-            {
-                return value;
-            }
+            var isReduceDamage = temporaryReduceDamage.getIsReduceDamage();
+            var ReduceDamage = temporaryReduceDamage.getReduceDamage();
 
-            int x = value + ReduceDamage;
+            if (isReduceDamage)
+            {
+                if (value >= 0)//힐 체크
+                {
+                    return value;
+                }
 
-            if (x >= 0)
-            {
-                value = 0;
-            }
-            else
-            {
-                value = x;
+                int x = value + ReduceDamage;
+
+                if (x >= 0)
+                {
+                    value = 0;
+                }
+                else
+                {
+                    value = x;
+                }
             }
         }
         #endregion
