@@ -69,15 +69,7 @@ public class ShopCard : UINavigatable
     {
         if(shop.state != ShopState.Closed)
         {
-            if (shop.Buy(player, selfIndex))
-            {
-                UnitBase instance = Instantiate(unit.fieldObject).GetComponent<UnitBase>();
-                instance.player = player;
-                instance.gameObject.GetComponent<ShopFieldUnitPlacer>().OnShopOpen();
-                // todo 겹치지 않는 랜덤장소에 옮기게
-                instance.transform.position = Vector3.zero;
-            }
-            else // 못살때
+            if (!shop.Buy(player, selfIndex))
             {
                 CannotBuy();
             }

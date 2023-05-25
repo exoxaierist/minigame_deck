@@ -12,6 +12,8 @@ public class ControlledObject : GridObject
     public LayerMask collisionLayer = 0;
     [HideInInspector] public bool canMove = true;
 
+    protected Vector2 direction = new(1,1);
+
     protected virtual void Awake()
     {
         SubscribeToInput();
@@ -20,18 +22,22 @@ public class ControlledObject : GridObject
     protected virtual void MoveUp()
     {
         if (canMove) MoveRelative(new(0, 1), collisionLayer.value);
+        direction = Vector2.up;
     }
     protected virtual void MoveDown()
     {
         if (canMove) MoveRelative(new(0, -1), collisionLayer.value);
+        direction = Vector2.down;
     }
     protected virtual void MoveRight()
     {
         if (canMove) MoveRelative(new(1, 0), collisionLayer.value);
+        direction = Vector2.right;
     }
     protected virtual void MoveLeft()
     {
         if (canMove) MoveRelative(new(-1, 0),collisionLayer.value);
+        direction = Vector2.left;
     }
 
     // 인풋 대리자에서 제거

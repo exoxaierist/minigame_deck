@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PreprocessingUnit : UnitBase, IReceiveAttack
 {
-    protected AttackInfo attackInfo;
     protected Vector2 prevPos;
     protected Vector2 lookDirection;
     protected override void Awake()

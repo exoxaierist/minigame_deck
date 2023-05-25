@@ -17,7 +17,7 @@ public class DamageTimeout : UnitBase
 
     
     protected virtual void OnNoDamage() { } //데미지를 받지 않았을때 발동
-    void ResetTimer()
+    void ResetTimer(UnitBase unit)
     {
         deltaTurn = 0;
     }

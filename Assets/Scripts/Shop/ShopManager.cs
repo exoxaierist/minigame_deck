@@ -86,14 +86,16 @@ public class ShopManager : MonoBehaviour
         {
             //덱이 꽉차있을경우 return false
             UnitSet set = p1Shop[buyIndex];
-            if(set.price > p1Coins) 
-            {
-                return false;
-            } // 살 수 없음 
+            if(set.price > p1Coins) return false;
             else
             {
                 ChangeP1Coin(-set.price);
-                //p1deck.Add(p1Shop[buyIndex])
+                UnitBase instance = Instantiate(set.fieldObject).GetComponent<UnitBase>();
+                instance.player = player;
+                instance.gameObject.GetComponent<ShopFieldUnitPlacer>().OnShopOpen();
+                Global.unitManager.AddToP1Units(instance);
+                // todo 겹치지 않는 랜덤장소에 옮기게
+                instance.transform.position = Vector3.zero;
                 return true;
             }
         }
@@ -101,14 +103,19 @@ public class ShopManager : MonoBehaviour
         {
             //덱이 꽉차있을경우 return false
             UnitSet set = p2Shop[buyIndex];
-            if (set.price > p2Coins) 
+            if (set.price > p2Coins)
             {
                 return false;
-            } // 살 수 없음
+            }
             else
             {
-                ChangeP2Coin(-set.price);
-                //p2deck.Add(p2Shop[buyIndex])
+                ChangeP1Coin(-set.price);
+                UnitBase instance = Instantiate(set.fieldObject).GetComponent<UnitBase>();
+                instance.player = player;
+                instance.gameObject.GetComponent<ShopFieldUnitPlacer>().OnShopOpen();
+                Global.unitManager.AddToP2Units(instance);
+                // todo 겹치지 않는 랜덤장소에 옮기게
+                instance.transform.position = Vector3.zero;
                 return true;
             }
         }

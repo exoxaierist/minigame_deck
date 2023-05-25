@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// 라운드 (몇대몇인지) 관리하는거
 public class RoundManager : MonoBehaviour
 {
     public bool roundOver = false;
+    public int currentRound = 0;
     public int p1Score = 0;
     public int p2Score = 0;
 
@@ -38,7 +40,9 @@ public class RoundManager : MonoBehaviour
 
     public void StartRound()
     {
+        if (!roundOver) return;
         Global.shopManager.CloseShop();
+        currentRound++;
         roundOver = false;
     }
 }

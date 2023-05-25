@@ -65,8 +65,10 @@ public static class Global
 
     //// 매치 전역 설정
     // 그리드 설정
+    public static FieldManager fieldManager;
     public static float gridIncrement = 1;
     public static Vector2 globalOffset = Vector2.zero;
+    public static Vector2 fieldSize = new(14, 10);
 
 
     //// 유틸리티

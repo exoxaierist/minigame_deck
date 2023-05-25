@@ -21,14 +21,13 @@ public class Hp : MonoBehaviour
     public bool isDead = false;
     public int GetHp() => hp;
 
-    // 피격, 사망 대리자
-    public Action OnDamage;
-    public Action OnHeal;
-    public Action OnHpChange;
-    public Action OnDeath;
+    public UnitBase unit;
 
-    //피격시, 받는 데미지를 바꾸는 대리자
-    //public Func<int, int> DamageModifier;
+    // 피격, 사망 대리자
+    public Action<UnitBase> OnDamage;
+    public Action<UnitBase> OnHeal;
+    public Action<UnitBase> OnHpChange;
+    public Action<UnitBase> OnDeath;
 
     private void Start()
     {
@@ -54,8 +53,8 @@ public class Hp : MonoBehaviour
         hpUI.SetHP(hp);
 
         // 대리자 호출
-        if (value > 0) OnHeal?.Invoke();
-        else OnDamage?.Invoke();
+        if (value > 0) OnHeal?.Invoke(unit);
+        else OnDamage?.Invoke(unit);
         CheckDeath();
     }
     protected int DamageModifier(int _value)
@@ -101,7 +100,7 @@ public class Hp : MonoBehaviour
     {
         hp = 0;
         isDead = true;
-        OnDeath?.Invoke();
+        OnDeath?.Invoke(unit);
     }
 
     // HP UI오브젝트 생성
