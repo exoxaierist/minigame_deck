@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,60 @@ public class UnitManager : MonoBehaviour
     public List<int> P1EnemyCountPerUnit; // P1의 유닛이 인덱스마다 근처 적군의 수를 저장
     [HideInInspector]
     public List<int> P2EnemyCountPerUnit; // P2의 유닛이 인덱스마다 근처 적군의 수를 저장
+
+    public Action OnP1Death;
+    public Action OnP2Death;
+
+    private void Awake()
+    {
+        Global.unitManager = this;
+    }
+
+    // p1 유닛리스트에 유닛 추가
+    public void AddToP1Units(UnitBase unit)
+    {
+        if (P1UnitList.Contains(unit)) return;
+        P1UnitList.Add(unit);
+        unit.hp.OnDeath -= CheckP1Win;
+        unit.hp.OnDeath += CheckP2Win;
+    }
+
+    // p2 유닛리스트에 유닛 추가
+    public void AddToP2Units(UnitBase unit)
+    {
+        if (P2UnitList.Contains(unit)) return;
+        P2UnitList.Add(unit);
+        unit.hp.OnDeath -= CheckP2Win;
+        unit.hp.OnDeath += CheckP1Win;
+    }
+
+    // 모든 유닛 hp나 상태같은거 리셋
+    public void ResetAllUnits()
+    {
+
+    }
+
+    // p1 이겼는지 확인, p2유닛 죽을때마다 발동
+    public void CheckP1Win()
+    {
+        if (Global.roundManager.roundOver) return;
+        foreach (UnitBase unitBase in P2UnitList)
+        {
+            if (!unitBase.hp.isDead) return;
+        }
+        Global.OnP1Win?.Invoke();
+    }
+
+    // p2 이겼는지 확인, p1유닛 죽을때마다 발동
+    public void CheckP2Win()
+    {
+        if (Global.roundManager.roundOver) return;
+        foreach (UnitBase unitBase in P1UnitList)
+        {
+            if (!unitBase.hp.isDead) return;
+        }
+        Global.OnP2Win?.Invoke();
+    }
 
     // 인접한 아군 유닛들 반환(int 인덱스)
     // 인접한 적군 유닛들 반환(int 인덱스)

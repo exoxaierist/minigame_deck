@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class Hp : MonoBehaviour
@@ -17,6 +18,8 @@ public class Hp : MonoBehaviour
     [Header("HP")]
     [SerializeField] protected int maxHp = 10;
     [SerializeField] protected int hp;
+    public bool isDead = false;
+    public int GetHp() => hp;
 
     // 피격, 사망 대리자
     public Action OnDamage;
@@ -97,6 +100,7 @@ public class Hp : MonoBehaviour
     private void Death()
     {
         hp = 0;
+        isDead = true;
         OnDeath?.Invoke();
     }
 

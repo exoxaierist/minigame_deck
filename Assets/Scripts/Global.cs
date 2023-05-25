@@ -14,11 +14,17 @@ public static class Global
     // UI Navigation
     public static UINavigationManager uiNavManager;
 
+    // 라운드 매니저
+    public static RoundManager roundManager;
+
     // 턴 매니저
     public static TurnManager turnManager;
 
     // 상점 매니저
     public static ShopManager shopManager;
+
+    // 유닛 매니저
+    public static UnitManager unitManager;
 
 
     //// UI 참조들
@@ -27,6 +33,8 @@ public static class Global
 
     //// 이벤트
     // 라운드 이벤트
+    public static Action OnP1Win;
+    public static Action OnP2Win;
     public static Action OnRoundStart;
     public static Action OnShopOpen;
     public static Action OnShopClose;
