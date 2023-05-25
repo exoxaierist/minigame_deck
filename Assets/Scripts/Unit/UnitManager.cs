@@ -13,9 +13,13 @@ public class UnitManager : MonoBehaviour
     public List<UnitBase> P2UnitList;
     public List<UnitBase> AllUnitList;
 
+    [HideInInspector]
     public List<int> P1AllyCountPerUnit; // P1의 유닛이 인덱스마다 근처 아군의 수를 저장
+    [HideInInspector]
     public List<int> P2AllyCountPerUnit; // P2의 유닛이 인덱스마다 근처 아군의 수를 저장
+    [HideInInspector]
     public List<int> P1EnemyCountPerUnit; // P1의 유닛이 인덱스마다 근처 적군의 수를 저장
+    [HideInInspector]
     public List<int> P2EnemyCountPerUnit; // P2의 유닛이 인덱스마다 근처 적군의 수를 저장
 
     // 인접한 아군 유닛들 반환(int 인덱스)
