@@ -31,6 +31,15 @@ public enum ShopState
     Upgrade,
 }
 
+// 게임 모드
+public enum GameState
+{
+    Pause, // 일시정지?
+    Fight, // 대전모드
+    Shop, // 상점모드
+    Result, // 결과창
+}
+
 public enum AllyOrEnemy
 {
     Ally,

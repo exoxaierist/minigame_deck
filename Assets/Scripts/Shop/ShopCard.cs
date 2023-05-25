@@ -24,6 +24,7 @@ public class ShopCard : UINavigatable
         Global.OnShopClose += RemoveCard;
     }
 
+    // 상점카드 이미지, 텍스트 등 세팅
     public void SetCard(UnitSet _unit, Player _player, int index)
     {
         shop = Global.shopManager;
@@ -49,6 +50,7 @@ public class ShopCard : UINavigatable
         transform.DOLocalMoveX(placedPosition.x, 0.4f).SetDelay(0.04f * selfIndex).OnComplete(() => Activate());
     }
 
+    // 카드 해제 (상점 종료)
     public void RemoveCard()
     {
         Deactivate();
