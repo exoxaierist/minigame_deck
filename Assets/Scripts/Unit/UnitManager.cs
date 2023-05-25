@@ -26,11 +26,6 @@ public class UnitManager : MonoBehaviour
     public Action OnP1Death;
     public Action OnP2Death;
 
-    private void Awake()
-    {
-        Global.unitManager = this;
-    }
-
     // p1 À¯´Ö¸®½ºÆ®¿¡ À¯´Ö Ãß°¡
     public void AddToP1Units(UnitBase unit)
     {
@@ -438,5 +433,6 @@ public class UnitManager : MonoBehaviour
     private void Awake()
     {
         singletoneCheck();
+        Global.unitManager = this;
     }
 }
