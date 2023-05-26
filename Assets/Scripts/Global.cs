@@ -68,7 +68,7 @@ public static class Global
     public static FieldManager fieldManager;
     public static float gridIncrement = 1;
     public static Vector2 globalOffset = Vector2.zero;
-    public static Vector2 fieldSize = new(14, 10);
+    public static Vector2 fieldSize;
 
 
     //// 유틸리티

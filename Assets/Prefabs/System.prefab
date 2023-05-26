@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6528026800834794096}
   - component: {fileID: 4349657105266338928}
   - component: {fileID: 857730517721713564}
+  - component: {fileID: 131944225471351005}
   m_Layer: 3
   m_Name: System
   m_TagString: Untagged
@@ -86,13 +87,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13822e3e1a21cd7428f09f0c8cbdd51e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSelected:
-  - {fileID: 0}
-  p1Selector: {fileID: 789770314801800139, guid: 25ecf7af8838e8e458f48709f801d193, type: 3}
-  p2Selector: {fileID: 4352479533654160872, guid: 370b0cad776539d44933bde4c4336dfc, type: 3}
+  p1Selected: {fileID: 0}
+  p2Selected: {fileID: 0}
   parent: {fileID: 0}
-  p1StartNav: {fileID: 0}
-  p2StartNav: {fileID: 0}
+  freezeP1: 0
+  freezeP2: 0
 --- !u!114 &6528026800834794096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,3 +141,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnActive: 1
   turnDuration: 1
+--- !u!114 &131944225471351005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6817822231527129637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1de8d893ef505b46ae6cfc25035d836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopTime: 30
+  shopUnitCount: 5
+  coinPerRound: 10
+  currentShopTimer: 0
+  state: 0
+  unitData: {fileID: 11400000, guid: aa36eb1784347624b85c42613ebb82b9, type: 2}
+  p1Coins: 0
+  p2Coins: 0

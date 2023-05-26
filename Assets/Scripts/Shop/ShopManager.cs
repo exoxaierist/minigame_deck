@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
-    public float shopTime = 30; // 상점 지속시간
+    public float shopTime = 10; // 상점 지속시간
     public int shopUnitCount = 5; // 한번에 보여주는 유닛수
     public int coinPerRound = 10; // 라운드당 코인
 
@@ -44,13 +44,8 @@ public class ShopManager : MonoBehaviour
         SetP1Coin(coinPerRound);
         SetP2Coin(coinPerRound);
         state = ShopState.Select;
-
-        for (int i = 0; i < shopUnitCount; i++)
-        {
-            // p1Shop.Add(UnitManager.allUnits[Random()]);
-            // p1Shop.Add(UnitManager.allUnits[Random()]);
-        }
         Global.OnShopOpen?.Invoke();
+        StartShopTimer();
     }
 
     // 상점 종료
@@ -94,8 +89,7 @@ public class ShopManager : MonoBehaviour
                 instance.player = player;
                 instance.gameObject.GetComponent<ShopFieldUnitPlacer>().OnShopOpen();
                 Global.unitManager.AddToP1Units(instance);
-                // todo 겹치지 않는 랜덤장소에 옮기게
-                instance.transform.position = Vector3.zero;
+                instance.transform.position = Global.fieldManager.GetEmptyTileP1();
                 return true;
             }
         }
@@ -109,13 +103,12 @@ public class ShopManager : MonoBehaviour
             }
             else
             {
-                ChangeP1Coin(-set.price);
+                ChangeP2Coin(-set.price);
                 UnitBase instance = Instantiate(set.fieldObject).GetComponent<UnitBase>();
                 instance.player = player;
                 instance.gameObject.GetComponent<ShopFieldUnitPlacer>().OnShopOpen();
                 Global.unitManager.AddToP2Units(instance);
-                // todo 겹치지 않는 랜덤장소에 옮기게
-                instance.transform.position = Vector3.zero;
+                instance.transform.position = Global.fieldManager.GetEmptyTileP2();
                 return true;
             }
         }

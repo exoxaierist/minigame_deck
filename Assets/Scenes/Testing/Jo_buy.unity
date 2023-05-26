@@ -294,8 +294,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 384
   canMove: 1
-  id: unassigned
   hp: {fileID: 0}
+  moveDistance: 1
+  invertMovement: 0
 --- !u!4 &583949517
 Transform:
   m_ObjectHideFlags: 0
@@ -731,8 +732,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 384
   canMove: 1
-  id: unassigned
   hp: {fileID: 0}
+  moveDistance: 1
+  invertMovement: 0
 --- !u!4 &1016693368
 Transform:
   m_ObjectHideFlags: 0
@@ -832,8 +834,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 384
   canMove: 1
-  id: unassigned
   hp: {fileID: 0}
+  moveDistance: 1
+  invertMovement: 0
 --- !u!4 &1090002348
 Transform:
   m_ObjectHideFlags: 0
@@ -1017,8 +1020,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 384
   canMove: 1
-  id: unassigned
   hp: {fileID: 0}
+  moveDistance: 1
+  invertMovement: 0
 --- !u!4 &1335107441
 Transform:
   m_ObjectHideFlags: 0
@@ -1202,8 +1206,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 384
   canMove: 1
-  id: unassigned
   hp: {fileID: 0}
+  moveDistance: 1
+  invertMovement: 0
 --- !u!4 &1499332311
 Transform:
   m_ObjectHideFlags: 0
@@ -1303,8 +1308,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 384
   canMove: 1
-  id: unassigned
   hp: {fileID: 0}
+  moveDistance: 1
+  invertMovement: 0
 --- !u!4 &1506172130
 Transform:
   m_ObjectHideFlags: 0
@@ -1404,8 +1410,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 384
   canMove: 1
-  id: unassigned
   hp: {fileID: 0}
+  moveDistance: 1
+  invertMovement: 0
 --- !u!4 &1605260000
 Transform:
   m_ObjectHideFlags: 0
@@ -1505,8 +1512,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 384
   canMove: 1
-  id: unassigned
   hp: {fileID: 0}
+  moveDistance: 1
+  invertMovement: 0
 --- !u!4 &1635360190
 Transform:
   m_ObjectHideFlags: 0
@@ -1606,8 +1614,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 384
   canMove: 1
-  id: unassigned
   hp: {fileID: 0}
+  moveDistance: 1
+  invertMovement: 0
 --- !u!4 &1650903800
 Transform:
   m_ObjectHideFlags: 0
@@ -1818,31 +1827,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1940253489 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6817822231527129637, guid: ff283aecd57a6904884739b2d42f1f9f, type: 3}
-  m_PrefabInstance: {fileID: 198060468}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1940253497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940253489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1de8d893ef505b46ae6cfc25035d836, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shopTime: 30
-  shopUnitCount: 5
-  coinPerRound: 10
-  currentShopTimer: 0
-  state: 0
-  unitData: {fileID: 11400000, guid: aa36eb1784347624b85c42613ebb82b9, type: 2}
-  p1Coins: 0
-  p2Coins: 0
 --- !u!1 &2079046976
 GameObject:
   m_ObjectHideFlags: 0
