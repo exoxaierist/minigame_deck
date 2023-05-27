@@ -5,7 +5,7 @@ using UnityEngine;
 public class UnitHealer : UnitBase
 {
     List<UnitBase> closeAllies = new();
-
+    public int HealAmount = 1;
     private void UpdateCloseAllies()
     {
         RemoveFromDelegate();
@@ -31,6 +31,6 @@ public class UnitHealer : UnitBase
 
     private void OnCloseAllyDamage(UnitBase unit)
     {
-        unit.hp.AddToHP(1);
+        unit.hp.AddToHP(HealAmount);
     }
 }
