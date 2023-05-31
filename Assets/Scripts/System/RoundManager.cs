@@ -5,7 +5,7 @@ using UnityEngine;
 // 라운드 (몇대몇인지) 관리하는거
 public class RoundManager : MonoBehaviour
 {
-    public bool roundOver = false;
+    public bool roundActive = false;
     public int currentRound = 0;
     public int p1Score = 0;
     public int p2Score = 0;
@@ -19,30 +19,33 @@ public class RoundManager : MonoBehaviour
 
     private void OnP1Win()
     {
-        if (roundOver) return;
+        if (!roundActive) return;
         p1Score++;
         RoundOver();
     }
 
     private void OnP2Win()
     {
-        if (roundOver) return;
+        if (!roundActive) return;
         p2Score++;
         RoundOver();
     }
 
     private void RoundOver()
     {
-        roundOver = true;
+        if (!roundActive) return;
+        roundActive = false;
+        Global.OnRoundEnd?.Invoke();
         Global.unitManager.ResetAllUnits();
         Global.shopManager.OpenShop();
     }
 
     public void StartRound()
     {
-        if (!roundOver) return;
-        Global.shopManager.CloseShop();
+        print("roundStart");
+        if (roundActive) return;
         currentRound++;
-        roundOver = false;
+        roundActive = true;
+        Global.OnRoundStart?.Invoke();
     }
 }

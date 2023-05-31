@@ -24,6 +24,7 @@ public class ControlledObject : GridObject
     protected virtual void MoveDown() {}
     protected virtual void MoveRight() {}
     protected virtual void MoveLeft() {}
+    protected virtual void Attack() {}
 
     // 인풋 대리자에서 제거
     protected void UnsubscribeToInput()
@@ -32,12 +33,13 @@ public class ControlledObject : GridObject
         Global.OnP2Down -= MoveDown;
         Global.OnP2Right -= MoveRight;
         Global.OnP2Left -= MoveLeft;
+        Global.OnP2Attack -= Attack;
 
         Global.OnP1Up -= MoveUp;
         Global.OnP1Down -= MoveDown;
         Global.OnP1Right -= MoveRight;
         Global.OnP1Left -= MoveLeft;
-        //Global.P1SpecialAction -= MoveSpecial;
+        Global.OnP1Attack -= Attack;
     }
 
     // 인풋 대리자에 추가
@@ -50,7 +52,7 @@ public class ControlledObject : GridObject
             Global.OnP1Down += MoveDown;
             Global.OnP1Right += MoveRight;
             Global.OnP1Left += MoveLeft;
-            //Global.P1SpecialAction += MoveSpecial;
+            Global.OnP1Attack += Attack;
         }
         else if (player == Player.Player2)
         {
@@ -58,7 +60,7 @@ public class ControlledObject : GridObject
             Global.OnP2Down += MoveDown;
             Global.OnP2Right += MoveRight;
             Global.OnP2Left += MoveLeft;
-            //Global.P2SpecialAction += MoveSpecial;
+            Global.OnP2Attack += Attack;
         }
     }
 

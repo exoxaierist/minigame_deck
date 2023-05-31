@@ -12,7 +12,7 @@ public class ShopFieldUnitPlacer : ControlledObject
 
     protected override void Awake()
     {
-        
+        // do nothing
     }
 
     private void Start()
@@ -27,6 +27,17 @@ public class ShopFieldUnitPlacer : ControlledObject
     {
         if (origin.z != 0) origin = transform.position;
         if (moveEnabled && Global.shopManager.state != ShopState.Closed) MatchFieldUIPosition();
+    }
+
+    protected override void MoveUp() => Move(Vector2.up);
+    protected override void MoveDown() => Move(Vector2.down);
+    protected override void MoveRight() => Move(Vector2.right);
+    protected override void MoveLeft() => Move(Vector2.left);
+
+    private void Move(Vector2 dir)
+    {
+        if (!moveEnabled) return;
+        MoveRelative(dir);
     }
 
     public void OnShopOpen()

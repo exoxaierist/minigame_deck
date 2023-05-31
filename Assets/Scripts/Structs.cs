@@ -4,7 +4,7 @@ using UnityEngine;
 
 public struct AttackInfo{
     public int damage;
-    public UnitBase Attacker;
+    public UnitBase attacker;
 }
 
 public interface IReceiveAttack

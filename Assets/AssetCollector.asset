@@ -21,3 +21,4 @@ MonoBehaviour:
   p1ShopCard: {fileID: 6378489618867732956, guid: 63fd6649aa5b3554aadc71cb3a4366f2, type: 3}
   p2ShopCard: {fileID: 3294167335419905526, guid: 244e5529778520c41b7945acdc14c4d3, type: 3}
   shopFieldUnitUI: {fileID: 5676533252955412786, guid: 3801c1c0ad6581540ae4c135ac2d898b, type: 3}
+  atkObject: {fileID: 6953592009743094161, guid: 863c9ec4995094a4282299d859898876, type: 3}

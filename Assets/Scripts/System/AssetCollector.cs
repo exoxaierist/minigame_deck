@@ -18,4 +18,7 @@ public class AssetCollector : ScriptableObject
     public GameObject p1ShopCard;
     public GameObject p2ShopCard;
     public GameObject shopFieldUnitUI;
+
+    [Header("공격 관련")]
+    public GameObject atkObject;
 }

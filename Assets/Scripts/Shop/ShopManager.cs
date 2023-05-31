@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class ShopManager : MonoBehaviour
 
     [HideInInspector] public float currentShopTimer;
     [HideInInspector] public ShopState state;
+    [SerializeField] private Image shopTimerImg;
 
     private List<UnitSet> p1Shop = new();
     private List<UnitSet> p2Shop = new();
@@ -23,15 +25,6 @@ public class ShopManager : MonoBehaviour
     private void Awake()
     {
         Global.shopManager = this;
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (state != ShopState.Closed) CloseShop();
-            else OpenShop();
-        }
     }
 
     // »óÁ¡¸ðµå ¿ÀÇÂ
@@ -130,10 +123,12 @@ public class ShopManager : MonoBehaviour
         currentShopTimer = shopTime;
         while(currentShopTimer > 0)
         {
+            shopTimerImg.fillAmount = 1 - currentShopTimer / shopTime;
             currentShopTimer -= Time.deltaTime;
             yield return null;
         }
         CloseShop();
+        Global.roundManager.StartRound();
     }
 
     // »óÁ¡¿¡ ¶ç¿ï À¯´Ö ¼±ÅÃ

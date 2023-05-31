@@ -20,6 +20,7 @@ public class Hp : MonoBehaviour
     [SerializeField] protected int hp;
     public bool isDead = false;
     public int GetHp() => hp;
+    public int GetMaxHP() => maxHp;
 
     public UnitBase unit;
 
@@ -57,6 +58,13 @@ public class Hp : MonoBehaviour
         else OnDamage?.Invoke(unit);
         CheckDeath();
     }
+
+    public void ResetHP()
+    {
+        hp = maxHp;
+        isDead = false;
+    }
+
     protected int DamageModifier(int _value)
     {
         var value = _value;
@@ -89,6 +97,7 @@ public class Hp : MonoBehaviour
         #endregion
         return value;
     }
+
     // 죽었는지 확인
     private void CheckDeath()
     {
@@ -106,7 +115,6 @@ public class Hp : MonoBehaviour
     // HP UI오브젝트 생성
     private HpUI CreateHpBar()
     {
-        print(autoParentTransform);
         GameObject instance = Instantiate(Global.assets.hpUI, autoParent?autoParentTransform:customUIParent);
         instance.transform.localPosition = hpUIOffset;
         instance.GetComponent<HpUI>().Set(maxHp,hp,hpUIType);

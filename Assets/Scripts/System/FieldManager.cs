@@ -20,7 +20,7 @@ public class FieldManager : MonoBehaviour
 
     public void CenterCamera()
     {
-        Camera.main.transform.position = new(Global.fieldSize.x / 2, Global.fieldSize.y / 2, -1);
+        Camera.main.transform.position = new(Global.fieldSize.x / 2 + 0.5f, Global.fieldSize.y / 2 + 0.5f, -1);
     }
 
     public Vector2 GetEmptyTileP1()
@@ -49,6 +49,7 @@ public class FieldManager : MonoBehaviour
 
     public Vector2 GetRandomTile()
     {
+        // ¹Ì±¸Çö
         return new(0, 0);
     }
 }

@@ -26,6 +26,9 @@ public static class Global
     // 유닛 매니저
     public static UnitManager unitManager;
 
+    // 공격 풀
+    public static AttackPooler atkPooler;
+
 
     //// UI 참조들
     public static Transform uiParent;
@@ -36,6 +39,7 @@ public static class Global
     public static Action OnP1Win;
     public static Action OnP2Win;
     public static Action OnRoundStart;
+    public static Action OnRoundEnd;
     public static Action OnShopOpen;
     public static Action OnShopClose;
 
@@ -52,15 +56,21 @@ public static class Global
     public static Action OnP1Down;
     public static Action OnP1Right;
     public static Action OnP1Left;
-    public static Action OnP1Select; // 공격
+    public static Action OnP1Attack;
+    public static Action OnP1Refresh;
+    public static Action OnP1Select;
+    public static Action OnP1Sell;
     public static Action OnP1Any; // 아무키나
 
     public static Action OnP2Up;
     public static Action OnP2Down;
     public static Action OnP2Right;
     public static Action OnP2Left;
-    public static Action OnP2Select; // 공격
-    public static Action OnP2Any; // 아무키나
+    public static Action OnP2Attack;
+    public static Action OnP2Refresh;
+    public static Action OnP2Select;
+    public static Action OnP2Sell;
+    public static Action OnP2Any;
 
 
     //// 매치 전역 설정
@@ -72,6 +82,9 @@ public static class Global
 
 
     //// 유틸리티
+    //콜리젼 마스크
+    public static int collisionPlayer = 1 << 7 | 1 << 8; //플레이어만 콜리젼
+
     //콜리젼 확인
     public static bool CheckOverlap(Vector2 dest, int mask)
     {
