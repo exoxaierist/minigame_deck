@@ -13,7 +13,7 @@ public class UnitSample : UnitBase
 
     protected override void Attack()
     {
-        if (turnCount <= 0) return;
+        if (!matchMode || turnCount <= 0) return;
         turnCount--;
         Vector2 target = transform.position * Vector2.one + lastMoveDir; //공격할 위치
         AttackInfo info = new() //공격 정보

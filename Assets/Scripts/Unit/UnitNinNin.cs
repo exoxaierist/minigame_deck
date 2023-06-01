@@ -14,18 +14,18 @@ public class UnitNinNin : UnitBase
 
     protected override void MoveUp()
     {
-        if (canMove) MoveRelative(new(0, 4), collisionLayer.value);
+        if (matchMode) MoveRelative(new(0, 4), collisionLayer.value);
     }
     protected override void MoveDown()
     {
-        if (canMove) MoveRelative(new(0, -4), collisionLayer.value);
+        if (matchMode) MoveRelative(new(0, -4), collisionLayer.value);
     }
     protected override void MoveRight()
     {
-        if (canMove) MoveRelative(new(4, 0), collisionLayer.value);
+        if (matchMode) MoveRelative(new(4, 0), collisionLayer.value);
     }
     protected override void MoveLeft()
     {
-        if (canMove) MoveRelative(new(-4, 0), collisionLayer.value);
+        if (matchMode) MoveRelative(new(-4, 0), collisionLayer.value);
     }
 }

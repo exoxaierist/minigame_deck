@@ -53,7 +53,7 @@ public class UnitManager : MonoBehaviour
     // p1 이겼는지 확인, p2유닛 죽을때마다 발동
     public void CheckP1Win(UnitBase unit)
     {
-        if (Global.roundManager.roundActive) return;
+        if (!Global.roundManager.roundActive) return;
         foreach (UnitBase unitBase in P2UnitList)
         {
             if (!unitBase.hp.isDead) return;
@@ -64,7 +64,7 @@ public class UnitManager : MonoBehaviour
     // p2 이겼는지 확인, p1유닛 죽을때마다 발동
     public void CheckP2Win(UnitBase unit)
     {
-        if (Global.roundManager.roundActive) return;
+        if (!Global.roundManager.roundActive) return;
         foreach (UnitBase unitBase in P1UnitList)
         {
             if (!unitBase.hp.isDead) return;

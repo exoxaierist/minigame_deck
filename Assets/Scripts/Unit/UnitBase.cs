@@ -50,7 +50,7 @@ public class UnitBase : ControlledObject, IReceiveAttack
 
     private void Move(Vector2 dir)
     {
-        if (!canMove || turnCount <= 0) return;
+        if (!matchMode || turnCount <= 0) return;
         turnCount--;
         lastMoveDir = dir;
         dir = (invertMovement ? -dir : dir) * moveDistance;

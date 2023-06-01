@@ -10,7 +10,7 @@ public class ControlledObject : GridObject
     public Player player = Player.Player1;
     [Header("충돌 레이어")]
     public LayerMask collisionLayer = 0;
-    [HideInInspector] public bool canMove = true;
+    [HideInInspector] public bool matchMode = true;
 
     protected Vector2 direction = new(1,1);
 

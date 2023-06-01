@@ -63,6 +63,7 @@ public class Hp : MonoBehaviour
     {
         hp = maxHp;
         isDead = false;
+        hpUI.SetHP(hp);
     }
 
     protected int DamageModifier(int _value)

@@ -45,7 +45,7 @@ public class ShopFieldUnitPlacer : ControlledObject
         unit = GetComponent<UnitBase>();
         player = unit.player;
         collisionLayer = unit.collisionLayer;
-        unit.canMove = false;
+        unit.matchMode = false;
         // create shopfieldunitui
         if (shopFieldUnitUI != null) Destroy(shopFieldUnitUI);
         shopFieldUnitUI = Instantiate(Global.assets.shopFieldUnitUI,Global.uiParent).GetComponent<ShopFieldUnitUI>();
@@ -59,7 +59,7 @@ public class ShopFieldUnitPlacer : ControlledObject
 
     public void OnShopClose()
     {
-        unit.canMove = true;
+        unit.matchMode = true;
         DisableMovement();
         Destroy(shopFieldUnitUI);
     }

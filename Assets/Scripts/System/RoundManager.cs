@@ -34,6 +34,7 @@ public class RoundManager : MonoBehaviour
     private void RoundOver()
     {
         if (!roundActive) return;
+
         roundActive = false;
         Global.OnRoundEnd?.Invoke();
         Global.unitManager.ResetAllUnits();
