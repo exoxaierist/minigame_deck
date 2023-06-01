@@ -209,7 +209,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 131944225471351005, guid: ff283aecd57a6904884739b2d42f1f9f, type: 3}
       propertyPath: shopTime
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 131944225471351005, guid: ff283aecd57a6904884739b2d42f1f9f, type: 3}
       propertyPath: shopTimerImg
