@@ -16,4 +16,18 @@ public class UnitM : UnitBase
             Global.shopManager.ChangeP2Coin(additionalCoin);
         }
     }
+
+    protected override void Attack()
+    {
+        if (!matchMode || turnCount <= 0) return;
+        turnCount--;
+        Vector2 target = transform.position * Vector2.one + lastMoveDir; //공격할 위치
+        AttackInfo info = new() //공격 정보
+        {
+            damage = 1,
+            attacker = this
+        };
+
+        Global.atkPooler.Get().Attack(target, info); //공격
+    }
 }
