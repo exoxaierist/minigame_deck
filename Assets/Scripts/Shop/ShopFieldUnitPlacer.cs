@@ -9,6 +9,8 @@ public class ShopFieldUnitPlacer : ControlledObject
     private Vector3 origin = new(0,0,1);
     private ShopFieldUnitUI shopFieldUnitUI;
     private UnitBase unit;
+    [Header("이 컴포넌트는 변수 안건드려도됨")]
+    public string asdf = "자리차지용 변수"; // 인스펙터 자리차지용 변수
 
     protected override void Awake()
     {
@@ -20,6 +22,8 @@ public class ShopFieldUnitPlacer : ControlledObject
         Global.OnShopOpen += OnShopOpen;
         Global.OnShopClose += OnShopClose;
         unit = GetComponent<UnitBase>();
+        player = unit.player;
+        visual = unit.visual;
         unit.SubscribeToInput();
     }
 

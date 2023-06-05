@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // 유닛 개발 기반
-//[RequireComponent(typeof(ShopFieldUnitPlacer))]
+[RequireComponent(typeof(ShopFieldUnitPlacer))]
+[RequireComponent(typeof(Hp))]
 public class UnitBase : ControlledObject, IReceiveAttack
 {
     [HideInInspector] public Hp hp;
@@ -21,7 +22,15 @@ public class UnitBase : ControlledObject, IReceiveAttack
         Global.OnTurnStart += ResetTurn;
         Global.OnRoundEnd += ResetUnit;
         CheckForHP();
-        if (player == Player.Player2) lastMoveDir = Vector2.left;
+        if(player == Player.Player1)
+        {
+            gameObject.layer = LayerMask.NameToLayer("P1");
+        }
+        else
+        {
+            gameObject.layer = LayerMask.NameToLayer("P2");
+            lastMoveDir = Vector2.left;
+        }
     }
 
     public void ResetUnit()

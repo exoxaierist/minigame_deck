@@ -54,8 +54,9 @@ MonoBehaviour:
   collisionLayer:
     serializedVersion: 2
     m_Bits: 384
-  canMove: 1
+  matchMode: 1
   hp: {fileID: 0}
+  lastMoveDir: {x: 1, y: 0}
   moveDistance: 1
   invertMovement: 0
 --- !u!114 &8309214033619448676
@@ -71,12 +72,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 0}
-  visual: {fileID: 8309214034053404474}
-  player: 1
+  visual: {fileID: 0}
+  player: 0
   collisionLayer:
     serializedVersion: 2
     m_Bits: 0
-  canMove: 1
+  matchMode: 1
+  asdf: 
 --- !u!61 &8309214033619448679
 BoxCollider2D:
   m_ObjectHideFlags: 0
