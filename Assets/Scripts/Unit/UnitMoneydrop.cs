@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnitM : UnitBase
+public class UnitMoneydrop : UnitBase
 {
     int additionalCoin = 2;
     protected override void OnDeath(UnitBase unit) 

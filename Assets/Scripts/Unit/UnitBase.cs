@@ -15,6 +15,7 @@ public class UnitBase : ControlledObject, IReceiveAttack
     public bool invertMovement = false; // 이동방향 반전
 
     protected int turnCount; // 턴마다 남아있는 행동 횟수
+    public virtual void Kill() { }// 죽였을 때 호출하는 함수
 
     protected override void Awake()
     {
@@ -42,6 +43,11 @@ public class UnitBase : ControlledObject, IReceiveAttack
     public virtual void ReceivePayload(AttackInfo _info)
     {
         hp.AddToHP(-_info.damage); // 추후 데미지 받는 방식의 수정에 따라 AttackInfo로 변경될 수 있음
+
+        if(hp.isDead == true)
+        {
+            _info.attacker.Kill();
+        }
     }
     protected virtual void OnHeal(UnitBase unit) { }
     protected virtual void OnDamage(UnitBase unit) { }
