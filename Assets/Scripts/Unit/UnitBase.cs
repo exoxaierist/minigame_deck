@@ -62,6 +62,10 @@ public class UnitBase : ControlledObject, IReceiveAttack
     {
         turnCount = 1;
     }
+    public void Sturn()
+    {
+        turnCount = 0;
+    }
 
     // 코드 오류로 움직이지 않는데 매치모드랑 턴 카운트 관련 코드가 아직 미작성이라 그런듯?
     private void Move(Vector2 dir)
