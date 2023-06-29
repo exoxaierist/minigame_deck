@@ -22,7 +22,7 @@ public class UnitSniperKing : UnitBase
         };
         for (int i = 0; i < 6; i++)
         {
-            Vector2 target = transform.position * Vector2.one + lastMoveDir * i; //공격할 위치
+            Vector2 target = transform.position * Vector2.one + lastMoveDir * (i+1); //공격할 위치
             Global.atkPooler.Get().Attack(target, info); //공격
         }
         
