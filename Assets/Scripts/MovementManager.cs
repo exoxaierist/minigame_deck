@@ -27,6 +27,7 @@ public class MovementManager : MonoBehaviour
                 temp.MoveNext();
                 queue.Enqueue(temp);
             }
+            Physics2D.SyncTransforms();
         }
         queue.Clear();
     }

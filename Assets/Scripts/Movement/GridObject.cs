@@ -45,13 +45,11 @@ public class GridObject : EventObject
         Vector2 destPos = transform.position;
         while (step > 0 && moveLeft > 0)
         {
-            print(Global.CheckOverlap(destPos + moveDirection, Global.collisionPlayer));
             while (moveLeft>0 && !Global.CheckOverlap(destPos + moveDirection, Global.collisionPlayer))
             {
                 destPos += moveDirection;
                 moveLeft--;
                 transform.position = destPos;
-                Physics2D.SyncTransforms();
             }
             
             step--;
