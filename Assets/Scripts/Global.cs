@@ -93,4 +93,20 @@ public static class Global
     {
         return Physics2D.OverlapCircle(dest, 0.3f, mask);
     }
+
+    public static Vector2[] RotateAttackPattern(Vector2[] pattern, Vector2 dir)
+    {
+        Vector2[] result = new Vector2[pattern.Length];
+
+        for (int i = 0; i < pattern.Length; i++)
+        {
+            Vector2 pos = pattern[i];
+            if (dir == Vector2.right) result[i] = pos;
+            else if (dir == Vector2.left) result[i] = new(-pos.x, pos.y);
+            else if (dir == Vector2.up) result[i] = new(-pos.y, pos.x);
+            else if (dir == Vector2.down) result[i] = new(pos.y, -pos.x);
+        }
+
+        return result;
+    }
 }
