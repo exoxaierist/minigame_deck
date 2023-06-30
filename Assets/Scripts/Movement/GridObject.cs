@@ -34,24 +34,6 @@ public class GridObject : EventObject
         moveDirection = dest.normalized;
         moveLeft = (int)dest.magnitude;
         Global.moveManager.Move(MoveCheck(10));
-        //MoveRelative(dest, 0);
-    }
-
-    public void MoveRelative(Vector2 dest, int collisionMask)
-    {
-        if (isMoving) return;
-        isMoving = true;
-        if (Global.CheckOverlap(transform.position * Vector2.one + dest, collisionMask)) { StartCoroutine(MoveRelativeRecheck(dest, collisionMask)); return; }
-        transform.position = transform.position * Vector2.one + dest;
-        if (visual != null)
-        {
-            visual.localPosition = -dest;
-            visual.DOComplete();
-            visual.DOLocalJump(Vector2.zero, 0.2f, 1, 0.1f).SetEase(Ease.OutQuad).OnComplete(() => isMoving = false);
-            visual.DOShakeScale(0.13f, new Vector3(0.1f, -0.1f, 0), 20);
-        }
-        OnMove(); //움직일때 이벤트 발동
-        isMoving = false;
     }
     
     // 코루틴 아님
@@ -63,11 +45,13 @@ public class GridObject : EventObject
         Vector2 destPos = transform.position;
         while (step > 0 && moveLeft > 0)
         {
-            while(moveLeft>0 && !Global.CheckOverlap(destPos + moveDirection, Global.collisionPlayer))
+            print(Global.CheckOverlap(destPos + moveDirection, Global.collisionPlayer));
+            while (moveLeft>0 && !Global.CheckOverlap(destPos + moveDirection, Global.collisionPlayer))
             {
                 destPos += moveDirection;
                 moveLeft--;
                 transform.position = destPos;
+                Physics2D.SyncTransforms();
             }
             
             step--;
@@ -83,16 +67,6 @@ public class GridObject : EventObject
         OnMove();
         isMoving = false;
     } 
-
-    private IEnumerator MoveRelativeRecheck(Vector2 dest, int collisionMask)
-    {
-        if (!stopMoveCheck)
-        {
-            yield return new WaitForEndOfFrame();
-            MoveRelative(dest, collisionMask);
-        }
-        stopMoveCheck = false;
-    }
 
     // 애니매이션 없이 이동
     public void Teleport(Vector2 dest)
