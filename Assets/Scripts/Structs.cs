@@ -22,6 +22,14 @@ public struct UnitSet
     public GameObject fieldObject;
 }
 
+public struct MoveInfo
+{
+    public GridObject obj;
+    public Vector2 dir;
+    public int count;
+    public bool finished;
+}
+
 public interface IReceiveAttack
 {
     public void ReceivePayload(AttackInfo info)

@@ -26,6 +26,9 @@ public static class Global
     // 유닛 매니저
     public static UnitManager unitManager;
 
+    // 이동 관리하는 매니저
+    public static MovementManager moveManager;
+
     // 공격 풀
     public static AttackPooler atkPooler;
 
