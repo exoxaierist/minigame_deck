@@ -5,6 +5,7 @@ using UnityEngine;
 public class UnitNinNin : UnitBase
 {
     private int attackDamage = 5;
+    
     private AttackInfo info;
     [SerializeField]
     private Vector2[] attackRange = new Vector2[] {new Vector2(1,0),new Vector2(0,-1), new Vector2(0,1), new Vector2(0, 3), new Vector2(-1,0)};
@@ -32,10 +33,14 @@ public class UnitNinNin : UnitBase
         dir = (invertMovement ? -dir : dir) * moveDistance;
         MoveRelative(dir);
     }
+    private void MoveDistanceSet()
+    {
+        moveDistance = 4;
+    }
     protected override void Awake()
     {
         base.Awake();
-        moveDistance = 4;
+        MoveDistanceSet();
     }
 
 }
