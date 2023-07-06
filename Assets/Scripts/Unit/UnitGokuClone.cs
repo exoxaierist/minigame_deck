@@ -27,6 +27,12 @@ public class UnitGokuClone : UnitBase
             Global.atkPooler.Get().Attack(target, info); //АјАн
         }
     }
+    public void Summon(Player _player)
+    {
+        player = _player;
+        if(player == Player.Player1) Global.unitManager.P1UnitList.Add(this);
+        else Global.unitManager.P1UnitList.Add(this);
+    }
     protected override void Awake()
     {
         base.Awake();

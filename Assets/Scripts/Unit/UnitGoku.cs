@@ -78,6 +78,8 @@ public class UnitGoku : UnitBase
                 stackedPos.Add(unitPos);
             }
         }
+        indexCount = Global.unitManager.P2UnitList.Count;
+        //싱글톤을 여러번 참조하여 생기는 리소스의 양을 줄임
         //P2 유닛들이 해당 자리에 있는지 탐색
         for (int i = 0; i < indexCount; i++)
         {
@@ -98,6 +100,11 @@ public class UnitGoku : UnitBase
             for(int i = 0; i < cloneAmount; i++)
             {
                 GameObject clone = Instantiate(gokuClonePrefab);
+                if (clone.TryGetComponent<UnitGokuClone>(out UnitGokuClone cloneScript))
+                {
+                    cloneScript.Summon(player);
+                }
+                else Debug.LogError("Can't Get UnitGokuClone Script From Clone");
                 //겹친 자리와 분신이 소환될 자리가 같지 않다면 그 자리로 이동
                 //겹친 자리가 없어도 마찬가지
                 if (stackedPos != null || clonePos[i] != stackedPos[i])
