@@ -96,14 +96,20 @@ public static class Global
 
     public static Vector2[] RotateAttackPattern(Vector2[] pattern, Vector2 dir)
     {
+        // AttackRange는 오른쪽 기준으로 작성
         Vector2[] result = new Vector2[pattern.Length];
 
+        //dir은 누른 키의 방향 벡터
         for (int i = 0; i < pattern.Length; i++)
         {
             Vector2 pos = pattern[i];
+            //방향벡터가 오른쪽이라면 오른쪽 기준으로 작성되었기 때문에 그대로 작동
             if (dir == Vector2.right) result[i] = pos;
-            else if (dir == Vector2.left) result[i] = new(-pos.x, pos.y);
+            //방향벡터가 왼쪽일 경우 원점 대칭임
+            else if (dir == Vector2.left) result[i] = new(-pos.x, -pos.y);
+            //방향벡터가 위쪽일 경우 y값에 -1을 곱한 후 x와 y의 값을 바꿈
             else if (dir == Vector2.up) result[i] = new(-pos.y, pos.x);
+            //방향벡터가 아래쪽일 경우 x값에 -1을 곱한 후 x와 y의 값을 바꿈
             else if (dir == Vector2.down) result[i] = new(pos.y, -pos.x);
         }
 

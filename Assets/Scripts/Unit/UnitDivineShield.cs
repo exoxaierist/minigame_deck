@@ -6,7 +6,6 @@ public class UnitDivineShield : UnitBase
 {
     //함수는 스택 Action은 힙, 따라서 스택쪽에 속한 함수가 더 빠름
     private int attackDamage = 6;
-    AttackInfo info;
     [SerializeField]
     private Vector2[] attackRange = new Vector2[] {new Vector2(1,2), new Vector2(0,1), new Vector2(-1, 2)};
     private int moveCount = 0;
@@ -29,9 +28,15 @@ public class UnitDivineShield : UnitBase
     {
         if (!matchMode || turnCount <= 0) return;
         turnCount--;
-        foreach (var item in attackRange)
+        AttackInfo info = new() //공격 정보
         {
-            Vector2 target = transform.position * Vector2.one + lastMoveDir * item; //공격할 위치
+            damage = 6,
+            attacker = this
+        };
+        int attackAmount = attackRange.Length;
+        for (int i = 0; i < attackAmount; i++)
+        {
+            Vector2 target = transform.position * Vector2.one + lastMoveDir * attackRange[i]; //공격할 위치
             Global.atkPooler.Get().Attack(target, info); //공격
         }
     }

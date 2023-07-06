@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class UnitGoku : UnitBase
 {
+    //한명씩 밀려 움직이면 여러명이 소환돼요..
     private int attackDamage = 6;
-    private AttackInfo info;
     [SerializeField]
-    private Vector2[] attackRange = new Vector2[] { new Vector2(1, 1), new Vector2(0, 1), new Vector2(-1, -1) };
+    //공격 범위는 오른쪽을 보고 있을 때를 기준으로 작성
+    private Vector2[] attackRange = new Vector2[] { new Vector2(1, 1), new Vector2(1, 0), new Vector2(1, -1) };
     [SerializeField]
     GameObject gokuClonePrefab;
     
@@ -23,9 +24,15 @@ public class UnitGoku : UnitBase
     {
         if (!matchMode || turnCount <= 0) return;
         turnCount--;
-        foreach (var item in attackRange)
+        AttackInfo info = new() //공격 정보
         {
-            Vector2 target = transform.position * Vector2.one + lastMoveDir * item; //공격할 위치
+            damage = 6,
+            attacker = this
+        };
+        int attackAmount = attackRange.Length;
+        for(int i = 0; i < attackAmount; i++)
+        {
+            Vector2 target = transform.position * Vector2.one + lastMoveDir * attackRange[i]; //공격할 위치
             Global.atkPooler.Get().Attack(target, info); //공격
         }
     }
