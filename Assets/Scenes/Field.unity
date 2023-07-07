@@ -964,6 +964,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 131944225471351005, guid: ff283aecd57a6904884739b2d42f1f9f, type: 3}
+      propertyPath: unitData
+      value: 
+      objectReference: {fileID: 11400000, guid: aa36eb1784347624b85c42613ebb82b9, type: 2}
+    - target: {fileID: 131944225471351005, guid: ff283aecd57a6904884739b2d42f1f9f, type: 3}
       propertyPath: shopTimerImg
       value: 
       objectReference: {fileID: 790765407}

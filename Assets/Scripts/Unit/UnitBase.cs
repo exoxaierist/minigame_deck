@@ -17,6 +17,10 @@ public class UnitBase : ControlledObject, IReceiveAttack
     protected int turnCount; // 턴마다 남아있는 행동 횟수
     public virtual void Kill() { }// 죽였을 때 호출하는 함수
 
+    //공격
+    protected Vector2[] attackPattern = { new(1, 0) }; // 공격패턴, 오른쪽을 바라볼때의 패턴 기준으로 좌푯값
+    protected AttackInfo attackInfo;
+
     protected override void Awake()
     {
         base.Awake();
@@ -32,6 +36,11 @@ public class UnitBase : ControlledObject, IReceiveAttack
             gameObject.layer = LayerMask.NameToLayer("P2");
             lastMoveDir = Vector2.left;
         }
+        attackInfo = new() //공격정보 세팅
+        {
+            damage = 1,
+            attacker = this,
+        };
     }
 
     public void ResetUnit()
@@ -57,12 +66,20 @@ public class UnitBase : ControlledObject, IReceiveAttack
     protected override void MoveDown() => Move(Vector2.down);
     protected override void MoveRight() => Move(Vector2.right);
     protected override void MoveLeft() => Move(Vector2.left);
-    
+    protected override void Attack()
+    {
+        foreach (Vector2 target in Global.RotateAttackPattern(attackPattern,lastMoveDir))
+        {
+            Global.atkPooler.Get().Attack(target, attackInfo);
+        }
+    }
+
     private void ResetTurn()
     {
         turnCount = 1;
     }
-    public void Sturn()
+    
+    public void Stun()
     {
         turnCount = 0;
     }

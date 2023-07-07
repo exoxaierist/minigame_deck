@@ -137,8 +137,8 @@ public class ShopManager : MonoBehaviour
         p1Shop.Clear();
         for (int i = 0; i < shopUnitCount; i++)
         {
-            p1Shop.Add(unitData.unitList[Random.Range(0, unitData.unitList.Count - 1)]);
-            p2Shop.Add(unitData.unitList[Random.Range(0, unitData.unitList.Count - 1)]);
+            p1Shop.Add(unitData.unitList[Random.Range(0, unitData.unitList.Count)]);
+            p2Shop.Add(unitData.unitList[Random.Range(0, unitData.unitList.Count)]);
         }
     }
 

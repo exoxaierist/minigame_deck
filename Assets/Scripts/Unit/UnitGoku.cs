@@ -8,7 +8,7 @@ public class UnitGoku : UnitBase
     private int attackDamage = 6;
     [SerializeField]
     //공격 범위는 오른쪽을 보고 있을 때를 기준으로 작성
-    private Vector2[] attackRange = new Vector2[] { new Vector2(1, 1), new Vector2(1, 0), new Vector2(1, -1) };
+    private Vector2[] attackRange = new Vector2[] { new(1, 1), new(1, 0), new(1, -1) };
     [SerializeField]
     GameObject gokuClonePrefab;
     
@@ -30,6 +30,10 @@ public class UnitGoku : UnitBase
             attacker = this
         };
         int attackAmount = attackRange.Length;
+        foreach (Vector2 target in Global.RotateAttackPattern(attackRange,lastMoveDir))
+        {
+            Global.atkPooler.Get().Attack(target, info); //공격
+        }
         for(int i = 0; i < attackAmount; i++)
         {
             Vector2 target = transform.position * Vector2.one + lastMoveDir * attackRange[i]; //공격할 위치

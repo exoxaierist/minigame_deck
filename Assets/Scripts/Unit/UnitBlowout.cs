@@ -25,6 +25,6 @@ public class UnitBlowout : UnitBase
 
         int ran= Random.Range(0, units.Length);
 
-        units[ran].Sturn();
+        units[ran].Stun();
     }
 }

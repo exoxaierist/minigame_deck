@@ -32,8 +32,5 @@ public struct MoveInfo
 
 public interface IReceiveAttack
 {
-    public void ReceivePayload(AttackInfo info)
-    {
-
-    }
+    public void ReceivePayload(AttackInfo info) { }
 }
