@@ -70,7 +70,7 @@ public class UnitBase : ControlledObject, IReceiveAttack
     {
         foreach (Vector2 target in Global.RotateAttackPattern(attackPattern,lastMoveDir))
         {
-            Global.atkPooler.Get().Attack(target, attackInfo);
+            Global.atkPooler.Get().Attack(target+transform.position*Vector2.one, attackInfo);
         }
     }
 

@@ -136,6 +136,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8309214034053404474}
   - component: {fileID: 8309214034053404475}
+  - component: {fileID: 1330755083572130483}
+  - component: {fileID: 2049830346642215931}
   m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
@@ -210,3 +212,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1330755083572130483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8309214034053404473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766d3c317882dd2448871f484896b9e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateEveryFrame: 0
+  updateOnAwake: 1
+  offset: 0
+--- !u!114 &2049830346642215931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8309214034053404473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db1bf88648ce9f439460b2a2b731466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreUnit: 0
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
