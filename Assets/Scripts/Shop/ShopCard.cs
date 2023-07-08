@@ -40,11 +40,11 @@ public class ShopCard : UINavigatable
         transform.DOComplete();
         if (player == Player.Player1)
         {
-            placedPosition = new(-840, 250 - (130 * index), 0);
+            placedPosition = new(-800, 250 - (150 * index), 0);
         }
         else if (player == Player.Player2)
         {
-            placedPosition = new(840, 250 - (130 * index), 0);
+            placedPosition = new(800, 250 - (150 * index), 0);
         }
         transform.localPosition = new(placedPosition.x * 1.2f, placedPosition.y, 0);
         transform.DOLocalMoveX(placedPosition.x, 0.4f).SetDelay(0.04f * selfIndex).OnComplete(() => Activate());

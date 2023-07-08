@@ -29,7 +29,7 @@ MonoBehaviour:
     health: 2
     power: 2
     price: 4
-    desc: hello
+    desc: "\uC544\uAD70 \uC720\uB2DB\uC5D0 \uADFC\uC811\uC2DC \uC801\uC744 \uB04C\uC5B4\uB2F9\uAE40"
     fieldObject: {fileID: 8309214033619448675, guid: dbf28a4f57337f14d8ad195d8e59cc78, type: 3}
   - id: berserker
     name: "\uAD11\uB780\uC790"

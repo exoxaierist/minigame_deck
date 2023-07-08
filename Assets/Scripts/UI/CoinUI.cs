@@ -23,6 +23,6 @@ public class CoinUI : MonoBehaviour
 
     private void Refresh()
     {
-        text.text = "coin:" + (player==Player.Player1?Global.shopManager.p1Coins.ToString():Global.shopManager.p2Coins.ToString());
+        text.text = (player==Player.Player1?Global.shopManager.p1Coins.ToString():Global.shopManager.p2Coins.ToString());
     }
 }
