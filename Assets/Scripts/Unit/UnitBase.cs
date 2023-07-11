@@ -20,7 +20,9 @@ public class UnitBase : ControlledObject, IReceiveAttack
     //공격
     protected Vector2[] attackPattern = { new(1, 0) }; // 공격패턴, 오른쪽을 바라볼때의 패턴 기준으로 좌푯값
     protected AttackInfo attackInfo;
-
+    //추가 체력, 공격력
+    public int additionalHP = 0;
+    public int additionalDamage = 0;
     protected override void Awake()
     {
         base.Awake();
@@ -68,10 +70,16 @@ public class UnitBase : ControlledObject, IReceiveAttack
     protected override void MoveLeft() => Move(Vector2.left);
     protected override void Attack()
     {
+        AttackInfo info = attackInfo;
+        if (additionalDamage !=0 )
+        {
+            attackInfo.damage += additionalDamage;
+        }
         foreach (Vector2 target in Global.RotateAttackPattern(attackPattern,lastMoveDir))
         {
             Global.atkPooler.Get().Attack(target+transform.position*Vector2.one, attackInfo);
         }
+        attackInfo = info;
     }
 
     private void ResetTurn()
