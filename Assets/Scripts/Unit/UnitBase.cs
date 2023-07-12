@@ -44,7 +44,13 @@ public class UnitBase : ControlledObject, IReceiveAttack
             attacker = this,
         };
     }
-
+    //유닛의 초기값을 유닛마다 정해주는 함수
+    protected void UnitReferenceSet(Vector2[] _attackPattern, AttackInfo _attackInfo, int _moveDistance)
+    {
+        attackPattern = _attackPattern;
+        attackInfo = _attackInfo;
+        moveDistance = _moveDistance;
+    }
     public void ResetUnit()
     {
         hp.ResetHP();

@@ -6,25 +6,25 @@ public class UnitNinNin : UnitBase
 {
     private int attackDamage = 5;
     
-    private AttackInfo info;
+    //private AttackInfo info;
     [SerializeField]
-    private Vector2[] attackRange = new Vector2[] {new Vector2(1,0),new Vector2(0,-1), new Vector2(0,1), new Vector2(0, 3), new Vector2(-1,0)};
+    private Vector2[] attackRange = new Vector2[] {new (1,0),new (0,-1), new (0,1), new (3, 0), new (-1,0)};
     private float evadeProbability = 0.33f;
     public override void ReceivePayload(AttackInfo _info)
     {
         float dice = Random.Range(0.01f, 1.00f); //정확한 확률 계산을 위해 0을 뺸 시작을 0.01f로 잡음
         if (dice >= evadeProbability) hp.AddToHP(-_info.damage);
     }
-    protected override void Attack()
-    {
-        if (!matchMode || turnCount <= 0) return;
-        turnCount--;
-        foreach (var item in attackRange)
-        {
-            Vector2 target = transform.position * Vector2.one + lastMoveDir * item; //공격할 위치
-            Global.atkPooler.Get().Attack(target, info); //공격
-        }
-    }
+    //protected override void Attack()
+    //{
+    //    if (!matchMode || turnCount <= 0) return;
+    //    turnCount--;
+    //    foreach (var item in attackRange)
+    //    {
+    //        Vector2 target = transform.position * Vector2.one + lastMoveDir * item; //공격할 위치
+    //        Global.atkPooler.Get().Attack(target, info); //공격
+    //    }
+    //}
     private void Move(Vector2 dir)
     {
         if (!matchMode || turnCount <= 0) return;
@@ -33,14 +33,15 @@ public class UnitNinNin : UnitBase
         dir = (invertMovement ? -dir : dir) * moveDistance;
         MoveRelative(dir);
     }
-    private void MoveDistanceSet()
-    {
-        moveDistance = 4;
-    }
     protected override void Awake()
     {
         base.Awake();
-        MoveDistanceSet();
+        attackInfo = new() //공격정보 세팅
+        {
+            damage = 5,
+            attacker = this,
+        };
+        moveDistance = 4;
     }
 
 }

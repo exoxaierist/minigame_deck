@@ -6,7 +6,6 @@ public class UnitGokuClone : UnitBase
 {
     private int attackDamage = 3;
     [SerializeField]
-    private Vector2[] attackRange = new Vector2[] { new Vector2(1, 1), new Vector2(0, 1), new Vector2(-1, -1) };
 
     private void Move(Vector2 dir)
     {
@@ -16,22 +15,22 @@ public class UnitGokuClone : UnitBase
         dir = (invertMovement ? -dir : dir) * moveDistance;
         MoveRelative(dir);
     }
-    protected override void Attack()
-    {
-        if (!matchMode || turnCount <= 0) return;
-        turnCount--;
-        AttackInfo info = new() //공격 정보
-        {
-            damage = 6,
-            attacker = this
-        };
-        int attackAmount = attackRange.Length;
-        for (int i = 0; i < attackAmount; i++)
-        {
-            Vector2 target = transform.position * Vector2.one + lastMoveDir * attackRange[i]; //공격할 위치
-            Global.atkPooler.Get().Attack(target, info); //공격
-        }
-    }
+    //protected override void Attack()
+    //{
+    //    if (!matchMode || turnCount <= 0) return;
+    //    turnCount--;
+    //    AttackInfo info = new() //공격 정보
+    //    {
+    //        damage = 6,
+    //        attacker = this
+    //    };
+    //    int attackAmount = attackRange.Length;
+    //    for (int i = 0; i < attackAmount; i++)
+    //    {
+    //        Vector2 target = transform.position * Vector2.one + lastMoveDir * attackRange[i]; //공격할 위치
+    //        Global.atkPooler.Get().Attack(target, info); //공격
+    //    }
+    //}
     public void Summon(Player _player)
     {
         player = _player;
@@ -42,5 +41,6 @@ public class UnitGokuClone : UnitBase
     {
         base.Awake();
         moveDistance = 2;
+        attackPattern = new Vector2[] { new Vector2(1, 1), new Vector2(0, 1), new Vector2(-1, -1) };
     }
 }

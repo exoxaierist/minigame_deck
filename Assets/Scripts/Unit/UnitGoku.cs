@@ -20,26 +20,27 @@ public class UnitGoku : UnitBase
         dir = (invertMovement ? -dir : dir) * moveDistance;
         MoveRelative(dir);
     }
-    protected override void Attack()
-    {
-        if (!matchMode || turnCount <= 0) return;
-        turnCount--;
-        AttackInfo info = new() //공격 정보
-        {
-            damage = 6,
-            attacker = this
-        };
-        int attackAmount = attackRange.Length;
-        foreach (Vector2 target in Global.RotateAttackPattern(attackRange,lastMoveDir))
-        {
-            Global.atkPooler.Get().Attack(target, info); //공격
-        }
-        for(int i = 0; i < attackAmount; i++)
-        {
-            Vector2 target = transform.position * Vector2.one + lastMoveDir * attackRange[i]; //공격할 위치
-            Global.atkPooler.Get().Attack(target, info); //공격
-        }
-    }
+    //protected override void Attack()
+    //{
+        
+    //    if (!matchMode || turnCount <= 0) return;
+    //    turnCount--;
+    //    AttackInfo info = new() //공격 정보
+    //    {
+    //        damage = 6,
+    //        attacker = this
+    //    };
+    //    int attackAmount = attackRange.Length;
+    //    foreach (Vector2 target in Global.RotateAttackPattern(attackRange,lastMoveDir))
+    //    {
+    //        Global.atkPooler.Get().Attack(target, info); //공격
+    //    }
+    //    for(int i = 0; i < attackAmount; i++)
+    //    {
+    //        Vector2 target = transform.position * Vector2.one + lastMoveDir * attackRange[i]; //공격할 위치
+    //        Global.atkPooler.Get().Attack(target, info); //공격
+    //    }
+    //}
     private void MakingClone()
     {
         Vector3[] clonePos = new Vector3[2];
@@ -135,5 +136,10 @@ public class UnitGoku : UnitBase
         base.Awake();
         Global.OnRoundStart += MakingClone;
         moveDistance = 2;
+        attackInfo = new() //공격정보 세팅 유닛 베이스의 값이 바뀔 수 있으므로 지정
+        {
+            damage = 6,
+            attacker = this,
+        };
     }
 }
