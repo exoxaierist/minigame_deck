@@ -133,7 +133,7 @@ public class UnitGoku : UnitBase
     protected override void Awake()
     {
         base.Awake();
-        Global.OnTurnStart += MakingClone;
+        Global.OnRoundStart += MakingClone;
         moveDistance = 2;
     }
 }
