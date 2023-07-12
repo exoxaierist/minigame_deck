@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: UnitDataHolderTesting
   m_EditorClassIdentifier: 
   unitList:
-  - id: ninnin
-    name: "\uB2CC\uB2CC"
-    tier: 2
-    image: {fileID: 21300000, guid: daf2ab606d4db0d4f9ecf4c02137d2a8, type: 3}
-    health: 3
-    power: 5
-    price: 2
-    desc: asdf
-    fieldObject: {fileID: 2409073514068800575, guid: 25c7a77fbc8fd7f4c9c506fcd811aba5, type: 3}
   - id: Goku
     name: "\uACE0\uCFE0"
     tier: 2
@@ -31,3 +22,21 @@ MonoBehaviour:
     price: 2
     desc: 1234
     fieldObject: {fileID: 7757112801352648442, guid: 65a2da2bb37b8364b8e915579c2e3512, type: 3}
+  - id: NinNin
+    name: "\uB2CC\uB2CC"
+    tier: 2
+    image: {fileID: 21300000, guid: daf2ab606d4db0d4f9ecf4c02137d2a8, type: 3}
+    health: 3
+    power: 5
+    price: 2
+    desc: asdf
+    fieldObject: {fileID: 2409073514068800575, guid: 25c7a77fbc8fd7f4c9c506fcd811aba5, type: 3}
+  - id: victim
+    name: "\uB300\uC2E0\uC8FD\uB294\uC790"
+    tier: 3
+    image: {fileID: -1082763765, guid: 884c3f34598e59547ad5523aef526a7d, type: 3}
+    health: 7
+    power: 1
+    price: 3
+    desc: wwww
+    fieldObject: {fileID: 7234166300226822418, guid: cd7702a9dd31d574eba3d3966f753053, type: 3}

@@ -49,6 +49,19 @@ public class UnitManager : MonoBehaviour
     {
 
     }
+    /// <summary>
+    /// 유닛들을 살리는 함수
+    /// </summary>
+    /// <param name="_units">인수값은 UnitBase의 리스트 형태</param>
+    public void ReviveUnits(List<UnitBase> _units)
+    {
+        int count = _units.Count;
+        for(int i = 0; i < count; i++)
+        {
+            if (_units[i].TryGetComponent<Hp>(out Hp hp)) hp.ResetHP();
+            else Debug.LogError("Can't Get Hp Component From UnitBase");
+        }
+    }
 
     // p1 이겼는지 확인, p2유닛 죽을때마다 발동
     public void CheckP1Win(UnitBase unit)

@@ -18,7 +18,16 @@ public class UnitVictim : UnitBase
     }
     private void ReviveAlly()
     {
-
+        UnitBase targetUnit = new UnitBase();
+        while (true)
+        {
+            int cnt = 0;
+            targetUnit = Global.unitManager.GetRandomDeadAlly(player);
+            if (targetUnit != this) break;
+            else if (cnt > 20) Debug.LogError("Revive Target Unit Not Exist");
+            else cnt++;
+        }
+        Global.unitManager.ReviveUnits(new List<UnitBase>() { targetUnit });
     }
     protected override void Awake()
     {
@@ -30,5 +39,10 @@ public class UnitVictim : UnitBase
                 attacker = this,
             },
             moveDistanceBuffer);
+    }
+    protected override void OnDeath(UnitBase unit)
+    {
+        base.OnDeath(unit);
+        ReviveAlly();
     }
 }

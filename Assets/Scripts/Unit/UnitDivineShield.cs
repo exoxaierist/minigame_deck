@@ -6,6 +6,7 @@ public class UnitDivineShield : UnitBase
 {
     //함수는 스택 Action은 힙, 따라서 스택쪽에 속한 함수가 더 빠름
     private int attackDamage = 6;
+
     [SerializeField]
     private Vector2[] attackRange = new Vector2[] {new Vector2(1,2), new Vector2(0,1), new Vector2(-1, 2)};
     private int moveCount = 0;
