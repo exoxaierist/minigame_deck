@@ -5,6 +5,7 @@ using UnityEngine;
 public class UnitGokuClone : UnitBase
 {
     private int attackDamage = 3;
+    private int moveDistanceBuffer = 2;
     [SerializeField]
 
     private void Move(Vector2 dir)
@@ -40,7 +41,12 @@ public class UnitGokuClone : UnitBase
     protected override void Awake()
     {
         base.Awake();
-        moveDistance = 2;
-        attackPattern = new Vector2[] { new Vector2(1, 1), new Vector2(0, 1), new Vector2(-1, -1) };
+        UnitPropertiesSet(new Vector2[] { new (1, 1), new (0, 1), new (-1, -1) },
+            new AttackInfo
+            {
+                damage = attackDamage,
+                attacker = this,
+            },
+            moveDistanceBuffer);
     }
 }

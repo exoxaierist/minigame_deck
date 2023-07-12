@@ -5,10 +5,11 @@ using UnityEngine;
 public class UnitNinNin : UnitBase
 {
     private int attackDamage = 5;
+    private int moveDistanceBuffer = 4;
     
     //private AttackInfo info;
-    [SerializeField]
-    private Vector2[] attackRange = new Vector2[] {new (1,0),new (0,-1), new (0,1), new (3, 0), new (-1,0)};
+    //[SerializeField]
+    //private Vector2[] attackRange = new Vector2[] {new (1,0),new (0,-1), new (0,1), new (3, 0), new (-1,0)};
     private float evadeProbability = 0.33f;
     public override void ReceivePayload(AttackInfo _info)
     {
@@ -36,12 +37,13 @@ public class UnitNinNin : UnitBase
     protected override void Awake()
     {
         base.Awake();
-        attackInfo = new() //공격정보 세팅
-        {
-            damage = 5,
-            attacker = this,
-        };
-        moveDistance = 4;
+        UnitPropertiesSet(new Vector2[] { new(1, 0), new(0, -1), new(0, 1), new(3, 0), new(-1, 0) },
+            new AttackInfo
+            {
+                damage = attackDamage,
+                attacker = this,
+            },
+            moveDistanceBuffer);
     }
 
 }

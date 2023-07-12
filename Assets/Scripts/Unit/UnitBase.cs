@@ -44,8 +44,13 @@ public class UnitBase : ControlledObject, IReceiveAttack
             attacker = this,
         };
     }
-    //유닛의 초기값을 유닛마다 정해주는 함수
-    protected void UnitReferenceSet(Vector2[] _attackPattern, AttackInfo _attackInfo, int _moveDistance)
+    /// <summary>
+    /// 유닛의 초기값을 유닛마다 정해주는 함수
+    /// </summary>
+    /// <param name="_attackPattern">공격 패턴</param>
+    /// <param name="_attackInfo">AttackInfo 데이터</param>
+    /// <param name="_moveDistance">움직이는 거리</param>
+    protected void UnitPropertiesSet(Vector2[] _attackPattern, AttackInfo _attackInfo, int _moveDistance)
     {
         attackPattern = _attackPattern;
         attackInfo = _attackInfo;

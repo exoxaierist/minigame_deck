@@ -419,6 +419,67 @@ public class UnitManager : MonoBehaviour
         }
         return -1;*/
     }
+    /// <summary>
+    /// 죽은 랜덤한 아군을 반환해주는 함수, 단 그 위치에 적군이 있을 경우는 제외
+    /// </summary>
+    /// <param name="_player">유닛을 소유한 플레이어, player</param>
+    /// <returns>죽은 랜덤한 아군 UnitBase</returns>
+    public UnitBase GetRandomDeadAlly(Player _player)
+    {
+        List<UnitBase> targetList = new List<UnitBase>();
+        if (_player == Player.Player1) targetList = P1UnitList;
+        else if(_player == Player.Player2) targetList = P2UnitList;
+
+        List<UnitBase> deadList = new List<UnitBase>();
+
+        int targetListCount = targetList.Count;
+        for(int i = 0; i < targetListCount; i++)
+        {
+            if(targetList[i].TryGetComponent<Hp>(out Hp hp))
+            {
+                if (hp.isDead) deadList.Add(targetList[i]);
+            }
+            else
+            {
+                Debug.LogError("Can't Get Hp from UnitList");
+            }
+        }
+
+        //타겟 유닛 위에 유닛을 없을때까지 반복
+        while(true)
+        {
+            UnitBase target = deadList[UnityEngine.Random.Range(0, targetListCount)];
+            Vector3 targetPos = target.gameObject.transform.position;
+
+            bool ListSearch(Player _player)
+            {
+                List<UnitBase> playerList = new List<UnitBase>();
+
+                if (_player == Player.Player1) playerList = P1UnitList;
+                else if (_player == Player.Player2) playerList = P2UnitList;
+
+                int playerListCount = playerList.Count;
+
+                for (int i = 0; i < playerListCount; i++)
+                {
+                    if (playerList[i].TryGetComponent<Hp>(out Hp hp))
+                    {
+                        // 해당 유닛이 죽어있다면 다음 인덱스로
+                        if (hp.isDead) continue;
+                    }
+                    // 해당 유닛이 다른 유닛과 겹쳐있다면 false를 반환하여 함수 종료
+                    if (targetPos == playerList[i].gameObject.transform.position) return false;
+                }
+                return true;
+            }
+            // 다른 유닛과 겹쳐 있는 경우라면 while문 반복
+            if (ListSearch(Player.Player1) == false) continue;
+            if (ListSearch(Player.Player2) == false) continue;
+
+            // 다른 유닛과 겹쳐 있지 않다면 target을 반환
+            return target;
+        }
+    }
     private void singletoneCheck()
     {
         if (Instance == null)

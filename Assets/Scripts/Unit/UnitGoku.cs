@@ -5,10 +5,12 @@ using UnityEngine;
 public class UnitGoku : UnitBase
 {
     //한명씩 밀려 움직이면 여러명이 소환돼요..
+    //본체가 죽으면 라운드가 끝나요
     private int attackDamage = 6;
-    [SerializeField]
+    private int moveDistanceBuffer = 2;
     //공격 범위는 오른쪽을 보고 있을 때를 기준으로 작성
-    private Vector2[] attackRange = new Vector2[] { new(1, 1), new(1, 0), new(1, -1) };
+    //[SerializeField]
+    //private Vector2[] attackRange = new Vector2[] { new(1, 1), new(1, 0), new(1, -1) };
     [SerializeField]
     GameObject gokuClonePrefab;
     
@@ -135,11 +137,12 @@ public class UnitGoku : UnitBase
     {
         base.Awake();
         Global.OnRoundStart += MakingClone;
-        moveDistance = 2;
-        attackInfo = new() //공격정보 세팅 유닛 베이스의 값이 바뀔 수 있으므로 지정
-        {
-            damage = 6,
-            attacker = this,
-        };
+        UnitPropertiesSet(new Vector2[] { new(1, 1), new(1, 0), new(1, -1) },
+            new AttackInfo
+            {
+                damage = attackDamage,
+                attacker = this,
+            },
+            moveDistanceBuffer);
     }
 }
