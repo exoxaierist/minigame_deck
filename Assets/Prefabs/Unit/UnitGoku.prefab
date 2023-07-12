@@ -143,10 +143,8 @@ MonoBehaviour:
   lastMoveDir: {x: 1, y: 0}
   moveDistance: 1
   invertMovement: 0
-  attackRange:
-  - {x: 1, y: 1}
-  - {x: 0, y: 1}
-  - {x: -1, y: -1}
+  additionalHP: 0
+  additionalDamage: 0
   gokuClonePrefab: {fileID: 2331431120787190662, guid: b71ba088f0cc64642b7cb802be348d0a, type: 3}
 --- !u!114 &7757112801352648445
 MonoBehaviour:
@@ -211,7 +209,7 @@ MonoBehaviour:
   autoParent: 1
   customUIParent: {fileID: 0}
   hpUIType: 0
-  maxHp: 10
+  maxHp: 5
   hp: 0
   isDead: 0
   unit: {fileID: 0}

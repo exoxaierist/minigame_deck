@@ -40,3 +40,12 @@ MonoBehaviour:
     price: 3
     desc: wwww
     fieldObject: {fileID: 7234166300226822418, guid: cd7702a9dd31d574eba3d3966f753053, type: 3}
+  - id: shield
+    name: "\uBC29\uD328"
+    tier: 1
+    image: {fileID: 24536637, guid: 884c3f34598e59547ad5523aef526a7d, type: 3}
+    health: 4
+    power: 2
+    price: 1
+    desc: qqqq
+    fieldObject: {fileID: 4366271769852106585, guid: 7646a22f4a54d8b4e9e1e257dacd8667, type: 3}

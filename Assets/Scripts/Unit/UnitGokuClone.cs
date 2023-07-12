@@ -36,7 +36,7 @@ public class UnitGokuClone : UnitBase
     {
         player = _player;
         if(player == Player.Player1) Global.unitManager.P1UnitList.Add(this);
-        else Global.unitManager.P1UnitList.Add(this);
+        else Global.unitManager.P2UnitList.Add(this);
     }
     protected override void Awake()
     {

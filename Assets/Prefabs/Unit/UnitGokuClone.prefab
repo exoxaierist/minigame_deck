@@ -143,10 +143,8 @@ MonoBehaviour:
   lastMoveDir: {x: 1, y: 0}
   moveDistance: 1
   invertMovement: 0
-  attackRange:
-  - {x: 1, y: 1}
-  - {x: 0, y: 1}
-  - {x: -1, y: -1}
+  additionalHP: 0
+  additionalDamage: 0
 --- !u!114 &2331431120787190659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,7 +208,7 @@ MonoBehaviour:
   autoParent: 1
   customUIParent: {fileID: 0}
   hpUIType: 0
-  maxHp: 10
+  maxHp: 2
   hp: 0
   isDead: 0
   unit: {fileID: 0}

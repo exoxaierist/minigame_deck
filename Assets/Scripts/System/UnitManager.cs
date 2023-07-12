@@ -62,7 +62,7 @@ public class UnitManager : MonoBehaviour
             else Debug.LogError("Can't Get Hp Component From UnitBase");
         }
     }
-
+    
     // p1 이겼는지 확인, p2유닛 죽을때마다 발동
     public void CheckP1Win(UnitBase unit)
     {

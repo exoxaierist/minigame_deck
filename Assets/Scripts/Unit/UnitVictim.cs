@@ -29,6 +29,11 @@ public class UnitVictim : UnitBase
         }
         Global.unitManager.ReviveUnits(new List<UnitBase>() { targetUnit });
     }
+    protected override void OnDeath(UnitBase unit)
+    {
+        base.OnDeath(unit);
+        ReviveAlly();
+    }
     protected override void Awake()
     {
         base.Awake();
@@ -39,10 +44,5 @@ public class UnitVictim : UnitBase
                 attacker = this,
             },
             moveDistanceBuffer);
-    }
-    protected override void OnDeath(UnitBase unit)
-    {
-        base.OnDeath(unit);
-        ReviveAlly();
     }
 }
