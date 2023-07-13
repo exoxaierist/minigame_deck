@@ -49,12 +49,21 @@ MonoBehaviour:
     price: 1
     desc: qqqq
     fieldObject: {fileID: 4366271769852106585, guid: 7646a22f4a54d8b4e9e1e257dacd8667, type: 3}
-  - id: bomberman
+  - id: Bomberman
     name: "\uD3ED\uD0C4\uB9C8\uB9C8\uB9D8"
     tier: 1
-    image: {fileID: 24536637, guid: 884c3f34598e59547ad5523aef526a7d, type: 3}
+    image: {fileID: 1799918213, guid: 884c3f34598e59547ad5523aef526a7d, type: 3}
     health: 5
     power: 2
     price: 1
     desc: hhhh
     fieldObject: {fileID: 5994652946190812740, guid: 8cae1747d06ac9a4fb5ac8a7de124e7d, type: 3}
+  - id: SuicideBomb
+    name: "\uACE0\uC2B4\uD3ED\uBC1C"
+    tier: 2
+    image: {fileID: 21300000, guid: 748ae8b33df036b46a86e0387f1602cf, type: 3}
+    health: 5
+    power: 0
+    price: 2
+    desc: iiii
+    fieldObject: {fileID: 3575288241437121221, guid: acdabb9c9b721ca4b91e80ff681635d8, type: 3}
