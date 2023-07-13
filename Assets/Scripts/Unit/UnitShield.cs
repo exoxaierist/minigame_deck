@@ -51,42 +51,59 @@ public class UnitShield : UnitBase
     /// </summary>
     private void moveToRandomAlly()
     {
-        //랜덤 유닛 고르기
-        UnitBase _targetUnit = null;
+        //랜덤 유닛 고르기, 타겟 유닛이 이 유닛이라면 다시 고름
+        UnitBase targetUnit = null;
         while(true)
         {
             if (player == Player.Player1)
-                _targetUnit = Global.unitManager.P1UnitList[Random.Range(0, Global.unitManager.P1UnitList.Count)];
+                targetUnit = Global.unitManager.P1UnitList[Random.Range(0, Global.unitManager.P1UnitList.Count)];
             else
-                _targetUnit = Global.unitManager.P2UnitList[Random.Range(0, Global.unitManager.P2UnitList.Count)];
-            if (_targetUnit == this) continue;
+                targetUnit = Global.unitManager.P2UnitList[Random.Range(0, Global.unitManager.P2UnitList.Count)];
+            if (targetUnit == this) continue;
             else break;
         }
         
         //타겟 유닛으로 이동
         Vector2 _targetPos = Vector2.zero;
-        Vector3 dirVec = _targetUnit.lastMoveDir;
-        _targetPos = _targetUnit.transform.position + dirVec;
-        for (int i = 0; i < Global.unitManager.P1UnitList.Count; i++)
+        Vector3 dirVec = targetUnit.lastMoveDir;
+        _targetPos = targetUnit.transform.position + dirVec;
+
+        List<UnitBase> targetList = new List<UnitBase>();
+        int targetListCount = 0;
+        int count = 0;
+        while(true)
         {
-            UnitBase targetP1Unit = Global.unitManager.P1UnitList[i];
-            if (targetP1Unit == this) { }
-            else if (targetP1Unit.transform.position == (Vector3)_targetPos)
+            if(count % 2 == 0) targetList = Global.unitManager.P1UnitList;
+            else targetList = Global.unitManager.P2UnitList;
+            targetListCount = targetList.Count;
+
+            //겹치는 부분이 없다면 true를 반환, 아니라면 false를 반환
+            bool listSearch()
             {
-                _targetPos = _targetUnit.transform.position + dirVec;
+                for (int i = 0; i < targetListCount; i++)
+                {
+                    UnitBase unit = targetList[i];
+                    if (unit == this) continue;
+                    else if (unit.transform.position == (Vector3)_targetPos)
+                    {
+                        _targetPos = unit.transform.position + dirVec;
+                        return false;
+                    }
+                }
+                return true;
             }
-        }
-        for (int i = 0; i < Global.unitManager.P2UnitList.Count; i++)
-        {
-            UnitBase targetP2Unit = Global.unitManager.P2UnitList[i];
-            if (targetP2Unit == this) { }
-            else if (targetP2Unit.transform.position == (Vector3)_targetPos)
-            {
-                _targetPos = _targetUnit.transform.position + dirVec;
-            }
+            bool isEnd = listSearch();
+            //리스트 두개 모두 탐색 완료시 break
+            if (count >= 2) break;
+            //리스트 두개 모두 탐색 미완료시 해당 리스트의 탐색이 끝났는지 함수의 리턴값으로 판별
+            if (isEnd == true) count++;
+            else continue;
         }
         transform.position = _targetPos;
         //겹치는 버그 있는데 아직 못고침
+        //아군 유닛이든 적군 유닛이든 해당 위치 앞에 유닛이 있다면 겹침
+        //이유를 찾음 인덱스가 더 낮은 유닛이 앞에 있는 경우 그 유닛은 탐색하지 않음
+        //반복문으로 활용해야할듯
     }
     private void Move(Vector2 dir)
     {
