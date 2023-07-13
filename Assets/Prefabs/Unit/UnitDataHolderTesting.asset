@@ -49,3 +49,12 @@ MonoBehaviour:
     price: 1
     desc: qqqq
     fieldObject: {fileID: 4366271769852106585, guid: 7646a22f4a54d8b4e9e1e257dacd8667, type: 3}
+  - id: bomberman
+    name: "\uD3ED\uD0C4\uB9C8\uB9C8\uB9D8"
+    tier: 1
+    image: {fileID: 24536637, guid: 884c3f34598e59547ad5523aef526a7d, type: 3}
+    health: 5
+    power: 2
+    price: 1
+    desc: hhhh
+    fieldObject: {fileID: 5994652946190812740, guid: 8cae1747d06ac9a4fb5ac8a7de124e7d, type: 3}

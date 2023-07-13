@@ -104,6 +104,7 @@ public class UnitShield : UnitBase
         //아군 유닛이든 적군 유닛이든 해당 위치 앞에 유닛이 있다면 겹침
         //이유를 찾음 인덱스가 더 낮은 유닛이 앞에 있는 경우 그 유닛은 탐색하지 않음
         //반복문으로 활용해야할듯
+        //버그 수정 완료
     }
     private void Move(Vector2 dir)
     {

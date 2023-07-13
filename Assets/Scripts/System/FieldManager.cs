@@ -49,7 +49,12 @@ public class FieldManager : MonoBehaviour
 
     public Vector2 GetRandomTile()
     {
-        // 미구현
-        return new(0, 0);
+        // 구현 완료
+        int fieldSizeX = (int)fieldSize.x;
+        int fieldSizeY = (int)fieldSize.y;
+
+        int RandomX = Random.Range(1, fieldSizeX + 1);
+        int RandomY = Random.Range(1, fieldSizeY + 1);
+        return new(RandomX, RandomY);
     }
 }

@@ -37,7 +37,7 @@ public class UnitVictim : UnitBase
     protected override void Awake()
     {
         base.Awake();
-        UnitPropertiesSet(new Vector2[] { new(1, 1), new(1, 0), new(1, -1) },
+        UnitPropertiesSet(new Vector2[] { new(1, -1) },
             new AttackInfo
             {
                 damage = attackDamage,
