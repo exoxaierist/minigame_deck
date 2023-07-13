@@ -67,3 +67,12 @@ MonoBehaviour:
     price: 2
     desc: iiii
     fieldObject: {fileID: 3575288241437121221, guid: acdabb9c9b721ca4b91e80ff681635d8, type: 3}
+  - id: Gongcham
+    name: "\uC639\uACE8\uCC38"
+    tier: 2
+    image: {fileID: 21300000, guid: fc8dcc4a15d828e4686470389805489c, type: 3}
+    health: 2
+    power: 1
+    price: 2
+    desc: llll
+    fieldObject: {fileID: 8265890852013598689, guid: f67f2f6e7a1e4c946ab73fa45b10e740, type: 3}
