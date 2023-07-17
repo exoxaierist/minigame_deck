@@ -76,3 +76,12 @@ MonoBehaviour:
     price: 2
     desc: llll
     fieldObject: {fileID: 8265890852013598689, guid: f67f2f6e7a1e4c946ab73fa45b10e740, type: 3}
+  - id: Hook
+    name: "\uAC08\uACE0\uB9AC\uB9E8"
+    tier: 1
+    image: {fileID: 21300000, guid: 35a3340b835c797478eb139353421953, type: 3}
+    health: 5
+    power: 1
+    price: 1
+    desc: kkkkk
+    fieldObject: {fileID: 2958807149000922791, guid: a0fa2947830b0384c995f8bafbb6c6c5, type: 3}

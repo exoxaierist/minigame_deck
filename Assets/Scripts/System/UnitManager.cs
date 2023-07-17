@@ -14,14 +14,14 @@ public class UnitManager : MonoBehaviour
     public List<UnitBase> P2UnitList;
     public List<UnitBase> AllUnitList;
 
-    [HideInInspector]
-    public List<int> P1AllyCountPerUnit; // P1의 유닛이 인덱스마다 근처 아군의 수를 저장
-    [HideInInspector]
-    public List<int> P2AllyCountPerUnit; // P2의 유닛이 인덱스마다 근처 아군의 수를 저장
-    [HideInInspector]
-    public List<int> P1EnemyCountPerUnit; // P1의 유닛이 인덱스마다 근처 적군의 수를 저장
-    [HideInInspector]
-    public List<int> P2EnemyCountPerUnit; // P2의 유닛이 인덱스마다 근처 적군의 수를 저장
+    //[HideInInspector]
+    //public List<int> P1AllyCountPerUnit; // P1의 유닛이 인덱스마다 근처 아군의 수를 저장, 사용하지 않음
+    //[HideInInspector]
+    //public List<int> P2AllyCountPerUnit; // P2의 유닛이 인덱스마다 근처 아군의 수를 저장, 사용하지 않음
+    //[HideInInspector]
+    //public List<int> P1EnemyCountPerUnit; // P1의 유닛이 인덱스마다 근처 적군의 수를 저장, 사용하지 않음
+    //[HideInInspector]
+    //public List<int> P2EnemyCountPerUnit; // P2의 유닛이 인덱스마다 근처 적군의 수를 저장, 사용하지 않음
 
     public Action OnP1Death;
     public Action OnP2Death;
@@ -109,7 +109,7 @@ public class UnitManager : MonoBehaviour
                     float distance = Vector3.Magnitude(standardPos - P1UnitList[i].transform.position);
                     if (distance < 1.1f) closeUnitList.Add(P1UnitList[i]);
                 }
-                P1AllyCountPerUnit[_index] = closeUnitList.Count;
+                //P1AllyCountPerUnit[_index] = closeUnitList.Count;
                 break;
             case Player.Player2:
                 standardPos = P2UnitList[_index].transform.position;
@@ -119,7 +119,7 @@ public class UnitManager : MonoBehaviour
                     float distance = Vector3.Magnitude(standardPos - P2UnitList[i].transform.position);
                     if (distance < 1.1f) closeUnitList.Add(P2UnitList[i]);
                 }
-                P2AllyCountPerUnit[_index] = closeUnitList.Count;
+                //P2AllyCountPerUnit[_index] = closeUnitList.Count;
                 break;
         }
         return closeUnitList;
@@ -165,6 +165,46 @@ public class UnitManager : MonoBehaviour
                 break;
         }
         return closestAlly;
+    }
+    public UnitBase GetFarthestEnemyInCross(int _index, Player _player)
+    {
+        float distance = 0f;
+        Vector3 standardPos = Vector3.zero;
+        UnitBase farthestEnemy = null;
+        switch (_player)
+        {
+            case Player.Player1:
+                standardPos = P1UnitList[_index].transform.position;
+                for (int i = 0; i < P2UnitList.Count; i++)
+                {
+                    if (_index == i) continue;
+                    Vector3 targetPos = P2UnitList[i].transform.position;
+                    if (standardPos.x != targetPos.x && standardPos.y != targetPos.y) continue;
+                    float newDistance = Vector3.Magnitude(standardPos - targetPos);
+                    if (distance < newDistance)
+                    {
+                        distance = newDistance;
+                        farthestEnemy = P2UnitList[i];
+                    }
+                }
+                break;
+            case Player.Player2:
+                standardPos = P2UnitList[_index].transform.position;
+                for (int i = 0; i < P1UnitList.Count; i++)
+                {
+                    if (_index == i) continue;
+                    Vector3 targetPos = P1UnitList[i].transform.position;
+                    if (standardPos.x != targetPos.x && standardPos.y != targetPos.y) continue;
+                    float newDistance = Vector3.Magnitude(standardPos - targetPos);
+                    if (distance < newDistance)
+                    {
+                        distance = newDistance;
+                        farthestEnemy = P1UnitList[i];
+                    }
+                }
+                break;
+        }
+        return farthestEnemy;
     }
     /// <summary>
     /// 가장 먼 아군을 반환하는 함수
@@ -228,7 +268,7 @@ public class UnitManager : MonoBehaviour
                     float distance = Vector3.Magnitude(standardPos - P2UnitList[i].transform.position);
                     if (distance < 1.1f) closeUnitList.Add(P2UnitList[i]);
                 }
-                P1EnemyCountPerUnit[_index] = closeUnitList.Count;
+                //P1EnemyCountPerUnit[_index] = closeUnitList.Count;
                 break;
             case Player.Player2:
                 standardPos = P2UnitList[_index].transform.position;
@@ -238,7 +278,7 @@ public class UnitManager : MonoBehaviour
                     float distance = Vector3.Magnitude(standardPos - P1UnitList[i].transform.position);
                     if (distance < 1.1f) closeUnitList.Add(P1UnitList[i]);
                 }
-                P2EnemyCountPerUnit[_index] = closeUnitList.Count;
+                //P2EnemyCountPerUnit[_index] = closeUnitList.Count;
                 break;
         }
         return closeUnitList;
@@ -389,25 +429,24 @@ public class UnitManager : MonoBehaviour
     /// <summary>
     /// 유닛의 근처 적, 아군의 수를 반환해줌
     /// </summary>
-    /// <param name="_data">근처에서 찾을 유닛의 정보, 적군인지 아군인지 Type = AllyOrEnemy</param>
     /// <param name="_index">유닛의 인덱스, 인덱스는 GetMyIndex 사용</param>
     /// <param name="_player">유닛을 소유한 플레이어, player</param>
     /// <returns>유닛 주변에 있는 적 혹은 아군의 수 Type = List<int></returns>
-    public List<int> GetMyUnitCount(int _index, Player _player)
-    {
-        List<int> list = new List<int>();
-        switch(_player)
-        {
-            case Player.Player1:
-                list.Add(P1AllyCountPerUnit[_index]);
-                list.Add(P1EnemyCountPerUnit[_index]);
-                break;
-            case Player.Player2:
-                list.Add(P2AllyCountPerUnit[_index]);
-                list.Add(P2EnemyCountPerUnit[_index]);
-                break;
-        }
-        return list;
+    //public List<int> GetMyUnitCount(int _index, Player _player)
+    //{
+    //    List<int> list = new List<int>();
+    //    switch(_player)
+    //    {
+    //        case Player.Player1:
+    //            list.Add(P1AllyCountPerUnit[_index]);
+    //            list.Add(P1EnemyCountPerUnit[_index]);
+    //            break;
+    //        case Player.Player2:
+    //            list.Add(P2AllyCountPerUnit[_index]);
+    //            list.Add(P2EnemyCountPerUnit[_index]);
+    //            break;
+    //    }
+    //    return list;
         /*if(_data == AllyOrEnemy.Ally)
         {
             if(player == Player.Player1)
@@ -431,7 +470,7 @@ public class UnitManager : MonoBehaviour
             }
         }
         return -1;*/
-    }
+    //}
     /// <summary>
     /// 죽은 랜덤한 아군을 반환해주는 함수, 단 그 위치에 적군이 있을 경우는 제외
     /// </summary>

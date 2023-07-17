@@ -65,29 +65,29 @@ public class UnitSW : UnitBase
         UnitBase target = UnitManager.Instance.GetClosestEnemy(index, player);
         //공격하는 코드
     }
-    public void GetCloseToEnemyAutoAttack()
-    {
-        int index = UnitManager.Instance.GetMyIndex(this, player);
-        if(lastUnitCount[(int)AllyOrEnemy.Enemy] < UnitManager.Instance.GetMyUnitCount(index, player)[(int)AllyOrEnemy.Enemy])
-        {
-            AttackClosestEnemy();
-            lastUnitCount[(int)AllyOrEnemy.Enemy] = UnitManager.Instance.GetMyUnitCount(index, player)[(int)AllyOrEnemy.Enemy];
-        }
-    }
+    //public void GetCloseToEnemyAutoAttack()
+    //{
+    //    int index = UnitManager.Instance.GetMyIndex(this, player);
+    //    if(lastUnitCount[(int)AllyOrEnemy.Enemy] < UnitManager.Instance.GetMyUnitCount(index, player)[(int)AllyOrEnemy.Enemy])
+    //    {
+    //        AttackClosestEnemy();
+    //        lastUnitCount[(int)AllyOrEnemy.Enemy] = UnitManager.Instance.GetMyUnitCount(index, player)[(int)AllyOrEnemy.Enemy];
+    //    }
+    //}
     public void CreateWall()
     {
         //벽 생성
         //벽은 따로 움직임 관련해서 코드와 오브젝트를 작성해야하기 떄문에 비워둠
     }
-    public void SeperatedFromEnemyCreateWall()
-    {
-        int index = UnitManager.Instance.GetMyIndex(this, player);
-        if (lastUnitCount[(int)AllyOrEnemy.Enemy] > UnitManager.Instance.GetMyUnitCount(index, player)[(int)AllyOrEnemy.Enemy])
-        {
-            CreateWall();
-            lastUnitCount[(int)AllyOrEnemy.Enemy] = UnitManager.Instance.GetMyUnitCount(index, player)[(int)AllyOrEnemy.Enemy];
-        }
-    }
+    //public void SeperatedFromEnemyCreateWall()
+    //{
+    //    int index = UnitManager.Instance.GetMyIndex(this, player);
+    //    if (lastUnitCount[(int)AllyOrEnemy.Enemy] > UnitManager.Instance.GetMyUnitCount(index, player)[(int)AllyOrEnemy.Enemy])
+    //    {
+    //        CreateWall();
+    //        lastUnitCount[(int)AllyOrEnemy.Enemy] = UnitManager.Instance.GetMyUnitCount(index, player)[(int)AllyOrEnemy.Enemy];
+    //    }
+    //}
     protected override void Awake()
     {
         base.Awake();
