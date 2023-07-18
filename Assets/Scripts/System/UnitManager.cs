@@ -174,11 +174,10 @@ public class UnitManager : MonoBehaviour
         switch (_player)
         {
             case Player.Player1:
-                standardPos = P1UnitList[_index].transform.position;
+                standardPos = P1UnitList[_index].gameObject.transform.position;
                 for (int i = 0; i < P2UnitList.Count; i++)
                 {
-                    if (_index == i) continue;
-                    Vector3 targetPos = P2UnitList[i].transform.position;
+                    Vector3 targetPos = P2UnitList[i].gameObject.transform.position;
                     if (standardPos.x != targetPos.x && standardPos.y != targetPos.y) continue;
                     float newDistance = Vector3.Magnitude(standardPos - targetPos);
                     if (distance < newDistance)
@@ -189,11 +188,10 @@ public class UnitManager : MonoBehaviour
                 }
                 break;
             case Player.Player2:
-                standardPos = P2UnitList[_index].transform.position;
+                standardPos = P2UnitList[_index].gameObject.transform.position;
                 for (int i = 0; i < P1UnitList.Count; i++)
                 {
-                    if (_index == i) continue;
-                    Vector3 targetPos = P1UnitList[i].transform.position;
+                    Vector3 targetPos = P1UnitList[i].gameObject.transform.position;
                     if (standardPos.x != targetPos.x && standardPos.y != targetPos.y) continue;
                     float newDistance = Vector3.Magnitude(standardPos - targetPos);
                     if (distance < newDistance)

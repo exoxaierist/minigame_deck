@@ -14,8 +14,8 @@ public class UnitHook : UnitBase
         {
             int m_index = Global.unitManager.GetMyIndex(this, player);
             UnitBase m_target = Global.unitManager.GetFarthestEnemyInCross(m_index, player);
-            Debug.Log(m_target);
-
+            if (m_target == null) return; // Å¸°ÙÀÌ ¾ø´Ù¸é ½ºÅµ
+            if (m_target.TryGetComponent<UnitHook>(out UnitHook unitHook)) return; // °°Àº Á¾·ùÀÇ À¯´ÖÀÌ¸é ½ºÅµ
             Vector2 m_moveTargetPos = transform.position;
             Vector2 m_targetPos = m_target.transform.position;
             Vector2 m_compareDir = Vector2.zero;
@@ -66,8 +66,8 @@ public class UnitHook : UnitBase
                 else m_count++;
                 if (m_count > 2) break;
             }
-            Debug.Log(m_target);
-            Debug.Log(m_moveTargetPos);
+            //Debug.Log(m_target);
+            //Debug.Log(m_moveTargetPos);
             m_target.gameObject.transform.position = m_moveTargetPos;
         }
     }

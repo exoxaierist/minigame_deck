@@ -13,69 +13,6 @@ MonoBehaviour:
   m_Name: UnitDataHolderTesting
   m_EditorClassIdentifier: 
   unitList:
-  - id: Goku
-    name: "\uACE0\uCFE0"
-    tier: 2
-    image: {fileID: 21300000, guid: 9125c204f566db048a92ebcb64d9d14a, type: 3}
-    health: 5
-    power: 6
-    price: 2
-    desc: 1234
-    fieldObject: {fileID: 7757112801352648442, guid: 65a2da2bb37b8364b8e915579c2e3512, type: 3}
-  - id: NinNin
-    name: "\uB2CC\uB2CC"
-    tier: 2
-    image: {fileID: 21300000, guid: daf2ab606d4db0d4f9ecf4c02137d2a8, type: 3}
-    health: 3
-    power: 5
-    price: 2
-    desc: asdf
-    fieldObject: {fileID: 2409073514068800575, guid: 25c7a77fbc8fd7f4c9c506fcd811aba5, type: 3}
-  - id: victim
-    name: "\uB300\uC2E0\uC8FD\uB294\uC790"
-    tier: 3
-    image: {fileID: -1082763765, guid: 884c3f34598e59547ad5523aef526a7d, type: 3}
-    health: 7
-    power: 1
-    price: 3
-    desc: wwww
-    fieldObject: {fileID: 7234166300226822418, guid: cd7702a9dd31d574eba3d3966f753053, type: 3}
-  - id: shield
-    name: "\uBC29\uD328"
-    tier: 1
-    image: {fileID: 24536637, guid: 884c3f34598e59547ad5523aef526a7d, type: 3}
-    health: 4
-    power: 2
-    price: 1
-    desc: qqqq
-    fieldObject: {fileID: 4366271769852106585, guid: 7646a22f4a54d8b4e9e1e257dacd8667, type: 3}
-  - id: Bomberman
-    name: "\uD3ED\uD0C4\uB9C8\uB9C8\uB9D8"
-    tier: 1
-    image: {fileID: 1799918213, guid: 884c3f34598e59547ad5523aef526a7d, type: 3}
-    health: 5
-    power: 2
-    price: 1
-    desc: hhhh
-    fieldObject: {fileID: 5994652946190812740, guid: 8cae1747d06ac9a4fb5ac8a7de124e7d, type: 3}
-  - id: SuicideBomb
-    name: "\uACE0\uC2B4\uD3ED\uBC1C"
-    tier: 2
-    image: {fileID: 21300000, guid: 748ae8b33df036b46a86e0387f1602cf, type: 3}
-    health: 5
-    power: 0
-    price: 2
-    desc: iiii
-    fieldObject: {fileID: 3575288241437121221, guid: acdabb9c9b721ca4b91e80ff681635d8, type: 3}
-  - id: Gongcham
-    name: "\uC639\uACE8\uCC38"
-    tier: 2
-    image: {fileID: 21300000, guid: fc8dcc4a15d828e4686470389805489c, type: 3}
-    health: 2
-    power: 1
-    price: 2
-    desc: llll
-    fieldObject: {fileID: 8265890852013598689, guid: f67f2f6e7a1e4c946ab73fa45b10e740, type: 3}
   - id: Hook
     name: "\uAC08\uACE0\uB9AC\uB9E8"
     tier: 1
@@ -85,3 +22,12 @@ MonoBehaviour:
     price: 1
     desc: kkkkk
     fieldObject: {fileID: 2958807149000922791, guid: a0fa2947830b0384c995f8bafbb6c6c5, type: 3}
+  - id: Sample
+    name: "\uC0D8\uD50C"
+    tier: 1
+    image: {fileID: 21300000, guid: 35a3340b835c797478eb139353421953, type: 3}
+    health: 10
+    power: 1
+    price: 1
+    desc: wkwkw
+    fieldObject: {fileID: 8309214033619448675, guid: dbf28a4f57337f14d8ad195d8e59cc78, type: 3}
