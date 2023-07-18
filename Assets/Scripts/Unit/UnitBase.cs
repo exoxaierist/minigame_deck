@@ -81,6 +81,8 @@ public class UnitBase : ControlledObject, IReceiveAttack
     protected override void MoveLeft() => Move(Vector2.left);
     protected override void Attack()
     {
+        if (!matchMode || turnCount <= 0) return;
+        turnCount--;
         AttackInfo info = attackInfo;
         if (additionalDamage !=0 )
         {
@@ -98,9 +100,11 @@ public class UnitBase : ControlledObject, IReceiveAttack
         turnCount = 1;
     }
     
-    public void Stun()
+    public void Stun() // 스턴 당할 턴 수를 인수로 받음
     {
         turnCount = 0;
+        Global.OnTurnStart -= Stun;
+        //스턴이 됐다면 스턴을 턴 시작시 추가하는 코드를 빼줌
     }
 
     // 코드 오류로 움직이지 않는데 매치모드랑 턴 카운트 관련 코드가 아직 미작성이라 그런듯?
