@@ -108,8 +108,8 @@ public class UnitBase : ControlledObject, IReceiveAttack
     {
         if (!matchMode || turnCount <= 0) return;
         turnCount--;
-        lastMoveDir = dir;
         dir = (invertMovement ? -dir : dir) * moveDistance;
+        lastMoveDir = dir;
         MoveRelative(dir);
     }
 

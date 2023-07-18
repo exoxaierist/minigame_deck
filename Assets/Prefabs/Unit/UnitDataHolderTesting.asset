@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: UnitDataHolderTesting
   m_EditorClassIdentifier: 
   unitList:
-  - id: Hook
-    name: "\uAC08\uACE0\uB9AC\uB9E8"
+  - id: Mirror
+    name: "\uAC70\uC6B8"
     tier: 1
     image: {fileID: 21300000, guid: 35a3340b835c797478eb139353421953, type: 3}
-    health: 5
-    power: 1
+    health: 4
+    power: 2
     price: 1
-    desc: kkkkk
-    fieldObject: {fileID: 2958807149000922791, guid: a0fa2947830b0384c995f8bafbb6c6c5, type: 3}
+    desc: rrrr
+    fieldObject: {fileID: 6270298157543981941, guid: b6ab370e0e176bb438905e46a6eab2d3, type: 3}
   - id: Sample
     name: "\uC0D8\uD50C"
     tier: 1
-    image: {fileID: 21300000, guid: 35a3340b835c797478eb139353421953, type: 3}
+    image: {fileID: 21300000, guid: 177f0e0a4941a464f935c21b367d57c7, type: 3}
     health: 10
     power: 1
     price: 1

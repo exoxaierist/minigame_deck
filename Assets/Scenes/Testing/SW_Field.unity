@@ -734,10 +734,6 @@ MonoBehaviour:
   P1UnitList: []
   P2UnitList: []
   AllUnitList: []
-  P1AllyCountPerUnit: 
-  P2AllyCountPerUnit: 
-  P1EnemyCountPerUnit: 
-  P2EnemyCountPerUnit: 
 --- !u!114 &783545987
 MonoBehaviour:
   m_ObjectHideFlags: 0
