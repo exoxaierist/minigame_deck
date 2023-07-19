@@ -53,6 +53,8 @@ public class Hp : MonoBehaviour
         hp = Mathf.Clamp(hp + value, 0, maxHp);
         hpUI.SetHP(hp);
 
+        if (CheckDeath()) return;
+
         // 대리자 호출
         if (value > 0) OnHeal?.Invoke(unit);
         else OnDamage?.Invoke(unit);
@@ -100,9 +102,17 @@ public class Hp : MonoBehaviour
     }
 
     // 죽었는지 확인
-    private void CheckDeath()
+    private bool CheckDeath()
     {
-        if (hp <= 0) Death();
+        if (hp <= 0)
+        {
+            Death();
+            return true;
+        }
+        else 
+        { 
+            return false; 
+        }
     }
 
     // 죽임
