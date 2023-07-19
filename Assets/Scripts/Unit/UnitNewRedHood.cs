@@ -8,27 +8,40 @@ public class UnitNewRedHood : UnitBase
     {
         if (!matchMode || turnCount <= 0) return;
         turnCount--;
-        Vector2 target = transform.position * Vector2.one + lastMoveDir; //공격할 위치
-        AttackInfo info = new() //공격 정보
+        AttackInfo info = attackInfo;
+        if (additionalDamage != 0)
         {
-            damage = 1,
-            attacker = this
-        };
+            attackInfo.damage += additionalDamage;
+        }
+        
+        foreach (Vector2 target in Global.RotateAttackPattern(attackPattern, lastMoveDir))
+        {
+            Global.atkPooler.Get().Attack(target + transform.position * Vector2.one, attackInfo);
 
-        Global.atkPooler.Get().Attack(target, info); //공격
-        if(player == Player.Player1)
-        {
-            if (Global.shopManager.p1Coins <= 10)
+            //추가공격
+            if (player == Player.Player1)
             {
-                Global.atkPooler.Get().Attack(target, info); //공격
+                if (Global.shopManager.p1Coins <= 10)
+                {
+                    Global.atkPooler.Get().Attack(target, info); //공격
+                }
+            }
+            else if (player == Player.Player2)
+            {
+                if (Global.shopManager.p2Coins <= 10)
+                {
+                    Global.atkPooler.Get().Attack(target, info); //공격
+                }
             }
         }
-        else if (player == Player.Player2)
-        {
-            if (Global.shopManager.p2Coins <= 10)
-            {
-                Global.atkPooler.Get().Attack(target, info); //공격
-            }
-        }
+        attackInfo = info;
+
+        
+        
+    }
+    protected override void Awake()
+    {
+        base.Awake();
+        UnitPropertiesSet(new Vector2[] { new(1, 0) }, new() { damage = 1, attacker = this }, 1);
     }
 }

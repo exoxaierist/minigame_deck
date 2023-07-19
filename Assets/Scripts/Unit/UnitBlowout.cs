@@ -9,6 +9,8 @@ public class UnitBlowout : UnitBase
         base.Awake();
 
         Global.OnTurnStart += turnstart;
+
+        UnitPropertiesSet(new Vector2[] { new(3, 0) }, new() { attacker = this, damage = 2 }, moveDistance);
     }
     UnitBase[] units;
     void turnstart()

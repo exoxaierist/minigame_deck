@@ -5,7 +5,7 @@ using UnityEngine;
 public class UnitMoneydrop : UnitBase
 {
     int additionalCoin = 2;
-    protected override void OnDeath(UnitBase unit) 
+    protected void _OnDeath(UnitBase unit) 
     {
         if (player == Player.Player1)
         {
@@ -16,8 +16,14 @@ public class UnitMoneydrop : UnitBase
             Global.shopManager.ChangeP2Coin(additionalCoin);
         }
     }
+    protected override void Awake()
+    {
+        base.Awake();
+        hp.OnDeath += _OnDeath;
+        UnitPropertiesSet(new Vector2[] { new(1, 0), new(2, 0) }, new() {damage = 2, attacker = this },1);
+    }
 
-    protected override void Attack()
+    /*protected override void Attack()
     {
         if (!matchMode || turnCount <= 0) return;
         turnCount--;
@@ -29,5 +35,5 @@ public class UnitMoneydrop : UnitBase
         };
 
         Global.atkPooler.Get().Attack(target, info); //АјАн
-    }
+    }*/
 }
