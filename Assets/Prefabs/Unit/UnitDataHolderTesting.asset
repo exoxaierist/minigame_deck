@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: UnitDataHolderTesting
   m_EditorClassIdentifier: 
   unitList:
-  - id: Spores
-    name: "\uD3EC\uC790"
+  - id: Auto
+    name: "\uC624\uD1A0"
     tier: 1
     image: {fileID: 21300000, guid: 35a3340b835c797478eb139353421953, type: 3}
     health: 3
     power: 1
     price: 1
     desc: rrrr
-    fieldObject: {fileID: 7608108815894728860, guid: efead8de37981374699f29fe5e1c9db6, type: 3}
+    fieldObject: {fileID: 3959451949445120068, guid: fbbc3583d1790f5449fb242bacf50188, type: 3}
   - id: Sample
     name: "\uC0D8\uD50C"
     tier: 1

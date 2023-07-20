@@ -16,6 +16,11 @@ public class UnitBase : ControlledObject, IReceiveAttack
 
     protected int turnCount; // 턴마다 남아있는 행동 횟수
     public virtual void Kill() { }// 죽였을 때 호출하는 함수
+    public virtual void GiveDamage(UnitBase _unitBase) // 데미지를 주었을 때 호출하는 함수
+    {
+        Global.unitManager.DamagedUnitData.Add(this); // 공격자 정보
+        Global.unitManager.DamagedUnitData.Add(_unitBase); // 피격자 정보
+    }
 
     //공격
     protected Vector2[] attackPattern = { new(1, 0) }; // 공격패턴, 오른쪽을 바라볼때의 패턴 기준으로 좌푯값
@@ -66,6 +71,11 @@ public class UnitBase : ControlledObject, IReceiveAttack
     {
         hp.AddToHP(-_info.damage); // 추후 데미지 받는 방식의 수정에 따라 AttackInfo로 변경될 수 있음
 
+        if(hp.isDamaged == true)
+        {
+            _info.attacker.GiveDamage(this);
+            hp.isDamaged = false;
+        }
         if(hp.isDead == true)
         {
             _info.attacker.Kill();

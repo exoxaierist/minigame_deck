@@ -19,6 +19,7 @@ public class Hp : MonoBehaviour
     [SerializeField] protected int maxHp = 10;
     [SerializeField] protected int hp;
     public bool isDead = false;
+    public bool isDamaged = false;
     public int GetHp() => hp;
     public int GetMaxHP() => maxHp;
 
@@ -57,7 +58,11 @@ public class Hp : MonoBehaviour
 
         // 대리자 호출
         if (value > 0) OnHeal?.Invoke(unit);
-        else OnDamage?.Invoke(unit);
+        else
+        {
+            OnDamage?.Invoke(unit);
+            isDamaged = true;
+        }
         CheckDeath();
     }
 

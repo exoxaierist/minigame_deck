@@ -42,6 +42,7 @@ public class TurnManager : MonoBehaviour
             p2Input = false;
             turnTimer = 0;
             Global.OnTurnStart?.Invoke();
+            Global.OnTurnStartLate?.Invoke();
         }
         else if (turnTimer >= turnDuration)
         {
@@ -52,6 +53,7 @@ public class TurnManager : MonoBehaviour
 
             turnTimer = 0;
             Global.OnTurnStart?.Invoke();
+            Global.OnTurnStartLate?.Invoke();
         }
     }
 

@@ -12,7 +12,9 @@ public class UnitManager : MonoBehaviour
     public static UnitManager Instance;
     public List<UnitBase> P1UnitList;
     public List<UnitBase> P2UnitList;
-    public List<UnitBase> AllUnitList;
+    //public List<UnitBase> AllUnitList; // 모든 유닛의 리스트, 사용하지 않음
+
+    public List<UnitBase> DamagedUnitData; // 짝수 인덱스는 공격자 UnitBase 홀수 인덱스는 피격자 UnitBase
 
     //[HideInInspector]
     //public List<int> P1AllyCountPerUnit; // P1의 유닛이 인덱스마다 근처 아군의 수를 저장, 사용하지 않음
@@ -26,6 +28,10 @@ public class UnitManager : MonoBehaviour
     public Action OnP1Death;
     public Action OnP2Death;
 
+    public void ListReset()
+    {
+        DamagedUnitData.Clear();
+    }
     // p1 유닛리스트에 유닛 추가
     public void AddToP1Units(UnitBase unit)
     {
@@ -545,5 +551,6 @@ public class UnitManager : MonoBehaviour
     {
         singletoneCheck();
         Global.unitManager = this;
+        Global.OnTurnStartLate += ListReset;
     }
 }

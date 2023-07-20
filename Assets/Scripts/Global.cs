@@ -51,6 +51,7 @@ public static class Global
 
     // 턴 이벤트
     public static Action OnTurnStart;
+    public static Action OnTurnStartLate; // LateUpdate처럼 TurnStart보다 한턴 뒤에 부를 용도
     public static Action OnP1NoInput;
     public static Action OnP2NoInput;
 

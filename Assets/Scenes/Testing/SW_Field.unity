@@ -733,7 +733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   P1UnitList: []
   P2UnitList: []
-  AllUnitList: []
+  DamagedUnitData: []
 --- !u!114 &783545987
 MonoBehaviour:
   m_ObjectHideFlags: 0
