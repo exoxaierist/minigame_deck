@@ -26,7 +26,6 @@ public class UnitBlowout : UnitBase
         }
 
         int ran= Random.Range(0, units.Length);
-
-        units[ran].Stun();
+        if(units.Length !=0 ) units[ran].Stun();
     }
 }
