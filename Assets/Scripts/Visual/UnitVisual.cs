@@ -44,6 +44,6 @@ public class UnitVisual : MonoBehaviour
 
     private void OnDeath(UnitBase _)
     {
-
+        spr.DOFade(0.5f, 0.2f);
     }
 }

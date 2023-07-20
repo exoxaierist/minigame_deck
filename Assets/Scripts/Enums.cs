@@ -11,7 +11,7 @@ public enum Player
 public enum HpUIType
 {
     Counter,
-    Slider,
+    Number,
 }
 
 // Navigatable 이 붙은 버튼의 종류

@@ -87,7 +87,7 @@ public static class Global
 
     //// 유틸리티
     //콜리젼 마스크
-    public static int collisionPlayer = 1 << 7 | 1 << 8; //플레이어만 콜리젼
+    public static int collisionPlayer = 1 << 7 | 1 << 8 | 1 << 6; //플레이어만 콜리젼
 
     //콜리젼 확인
     public static bool CheckOverlap(Vector2 dest, int mask)
@@ -99,7 +99,6 @@ public static class Global
     {
         // AttackRange는 오른쪽 기준으로 작성
         Vector2[] result = new Vector2[pattern.Length];
-
         //dir은 누른 키의 방향 벡터
         for (int i = 0; i < pattern.Length; i++)
         {

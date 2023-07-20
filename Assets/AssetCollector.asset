@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpUI: {fileID: 8703906369888561978, guid: 2777edec9ca8ff243aca5d11d597d86b, type: 3}
   hpCounterUI: {fileID: 5943234233941188421, guid: 78cf247edfff3c640a649aaf3de41fda, type: 3}
+  hpNumber: {fileID: 944593316052414463, guid: d2bfcfd46d4cc9a4ab613eee4a201812, type: 3}
   hpCounterSpriteFull: {fileID: -1631777319, guid: f2fbc0dc495be044faa74051e055d059, type: 3}
   hpCounterSpriteEmpty: {fileID: -993504304, guid: f2fbc0dc495be044faa74051e055d059, type: 3}
   p1Selector: {fileID: 789770314801800139, guid: 25ecf7af8838e8e458f48709f801d193, type: 3}

@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class HpUI : MonoBehaviour
@@ -10,6 +11,7 @@ public class HpUI : MonoBehaviour
     private int maxHp = 10;
     private int hp;
     private List<HpCounterUI> counters = new();
+    private HpNumber number;
     private Vector3 origin;
 
     public void Set(int _maxHP, int _hp, HpUIType _type)
@@ -22,6 +24,10 @@ public class HpUI : MonoBehaviour
         if (type == HpUIType.Counter)
         {
             CreateCounters();
+            if (maxHp != hp) SetHP(hp);
+        }else if (type == HpUIType.Number)
+        {
+            CreateNumber();
             if (maxHp != hp) SetHP(hp);
         }
     }
@@ -44,6 +50,12 @@ public class HpUI : MonoBehaviour
         }
     }
 
+    public void CreateNumber()
+    {
+        GameObject instance = Instantiate(Global.assets.hpNumber, transform);
+        instance.transform.SetParent(transform);
+    }
+
     public void SetHP(int newHp)
     {
         if (newHp == hp) return;
@@ -64,6 +76,10 @@ public class HpUI : MonoBehaviour
                     counters[hp - 1 - i].SetEmpty(i*0.06f);
                 }
             }
+        }
+        else if(type == HpUIType.Number)
+        {
+
         }
         hp = newHp;
     }

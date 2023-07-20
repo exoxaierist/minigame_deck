@@ -7,6 +7,7 @@ public class AssetCollector : ScriptableObject
     [Header("HP¹Ù UI")]
     public GameObject hpUI;
     public GameObject hpCounterUI;
+    public GameObject hpNumber;
     public Sprite hpCounterSpriteFull;
     public Sprite hpCounterSpriteEmpty;
 

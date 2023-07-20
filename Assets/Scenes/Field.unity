@@ -410,11 +410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   P1UnitList: []
   P2UnitList: []
-  AllUnitList: []
-  P1AllyCountPerUnit: 
-  P2AllyCountPerUnit: 
-  P1EnemyCountPerUnit: 
-  P2EnemyCountPerUnit: 
+  DamagedUnitData: []
 --- !u!114 &203996482
 MonoBehaviour:
   m_ObjectHideFlags: 0
