@@ -39,7 +39,7 @@ public class UINavigatable : MonoBehaviour
     private UINavigatable SearchRight()
     {
         List<UINavigatable> all = Global.uiNavManager.GetAllNavigatable();
-        float closestDist = 10000000;
+        float closestDist = 100000000;
         UINavigatable result = null;
         
         foreach (UINavigatable nav in all)

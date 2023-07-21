@@ -1715,7 +1715,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 131944225471351005, guid: ff283aecd57a6904884739b2d42f1f9f, type: 3}
       propertyPath: shopTime
-      value: 7
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 131944225471351005, guid: ff283aecd57a6904884739b2d42f1f9f, type: 3}
       propertyPath: unitData
@@ -4128,6 +4128,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5132590677484744895, guid: 9d81e4f2630d3b649a34df0fdd59b7e1, type: 3}
+      propertyPath: offset.y
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5606827525373960819, guid: 9d81e4f2630d3b649a34df0fdd59b7e1, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4267,6 +4271,10 @@ PrefabInstance:
     - target: {fileID: 5606827525935172699, guid: 9d81e4f2630d3b649a34df0fdd59b7e1, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 783
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618111892379987555, guid: 9d81e4f2630d3b649a34df0fdd59b7e1, type: 3}
+      propertyPath: offset.y
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d81e4f2630d3b649a34df0fdd59b7e1, type: 3}

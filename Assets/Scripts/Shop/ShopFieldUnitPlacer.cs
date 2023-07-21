@@ -46,6 +46,7 @@ public class ShopFieldUnitPlacer : ControlledObject
 
     public void OnShopOpen()
     {
+        ReturnToOrigin();
         unit = GetComponent<UnitBase>();
         player = unit.player;
         collisionLayer = unit.collisionLayer;
@@ -55,10 +56,6 @@ public class ShopFieldUnitPlacer : ControlledObject
         shopFieldUnitUI = Instantiate(Global.assets.shopFieldUnitUI,Global.uiParent).GetComponent<ShopFieldUnitUI>();
         shopFieldUnitUI.placer = this;
         shopFieldUnitUI.player = player;
-        shopFieldUnitUI.Activate();
-
-        ReturnToOrigin();
-        MatchFieldUIPosition();
     }
 
     public void OnShopClose()
@@ -76,16 +73,23 @@ public class ShopFieldUnitPlacer : ControlledObject
         SubscribeToInput();
     }
 
-    public void DisableMovement() { UnsubscribeToInput(); moveEnabled = false; origin = transform.position; }
+    public void DisableMovement() { UnsubscribeToInput(); moveEnabled = false; origin = transform.position; shopFieldUnitUI.Deactivate(); }
 
     public void ReturnToOrigin()
     {
         float temp = 0;
-        DOTween.To(() => temp, x => temp = x, 1, (6 - transform.position.y) * 0.04f).OnComplete(() => { MoveRelative(origin - transform.position); MatchFieldUIPosition(); });;
+        DOTween.To(() => temp, x => temp = x, 1, (6 - transform.position.y) * 0.04f).OnComplete(() => { MoveRelative(origin - transform.position); StartCoroutine(DelayedActivate()); });;
     }
 
     private void MatchFieldUIPosition()
     {
         shopFieldUnitUI.transform.position = Camera.main.WorldToScreenPoint(transform.position);
+        shopFieldUnitUI.Activate();
+    }
+
+    private IEnumerator DelayedActivate()
+    {
+        yield return new WaitForSecondsRealtime(0.2f);
+        MatchFieldUIPosition();
     }
 }

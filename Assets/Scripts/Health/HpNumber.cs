@@ -17,4 +17,14 @@ public class HpNumber : MonoBehaviour
         transform.DOComplete();
         transform.DOShakePosition(0.1f, new Vector3(0.02f, 0.02f, 0), 20);
     }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public void Show()
+    {
+        gameObject.SetActive(true);
+    }
 }

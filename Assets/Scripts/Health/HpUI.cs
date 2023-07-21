@@ -54,6 +54,8 @@ public class HpUI : MonoBehaviour
     {
         GameObject instance = Instantiate(Global.assets.hpNumber, transform);
         instance.transform.SetParent(transform);
+        number = instance.GetComponent<HpNumber>();
+        number.SetNumber(hp);
     }
 
     public void SetHP(int newHp)
@@ -79,7 +81,15 @@ public class HpUI : MonoBehaviour
         }
         else if(type == HpUIType.Number)
         {
-
+            number.SetNumber(newHp);
+            if(newHp == 0)
+            {
+                number.Hide();
+            }
+            else
+            {
+                number.Show();
+            }
         }
         hp = newHp;
     }
