@@ -31,8 +31,9 @@ public class UnitBase : ControlledObject, IReceiveAttack
     protected override void Awake()
     {
         base.Awake();
-        Global.OnTurnStart += ResetTurn;
+        Global.OnTurnStart += ResetTurn; // 이 부분이 유닛에게 턴을 추가해주는 부분
         Global.OnRoundEnd += ResetUnit;
+        Global.OnRoundEnd += AddUnitToUnitList;
         CheckForHP();
         if(player == Player.Player1)
         {
@@ -64,6 +65,9 @@ public class UnitBase : ControlledObject, IReceiveAttack
     public void ResetUnit()
     {
         hp.ResetHP();
+        Global.OnTurnStart += ResetTurn;
+        if (player == Player.Player1) gameObject.layer = 7;
+        else if(player == Player.Player2) gameObject.layer = 8;
     }
 
     // 피격시 해당 함수 호출
@@ -83,7 +87,26 @@ public class UnitBase : ControlledObject, IReceiveAttack
     }
     protected virtual void OnHeal(UnitBase unit) { }
     protected virtual void OnDamage(UnitBase unit) { }
-    protected virtual void OnDeath(UnitBase unit) { }
+    protected virtual void OnDeath(UnitBase unit)
+    {
+        switch(player)
+        {
+            case Player.Player1:
+                Global.unitManager.P1UnitList.Remove(this);
+                Global.unitManager.P1DeadUnitList.Add(this);
+                break;
+            case Player.Player2:
+                Global.unitManager.P2UnitList.Remove(this);
+                Global.unitManager.P2DeadUnitList.Add(this);
+                break;
+            default:
+                //플레이어들의 유닛이 아닌 경우
+                break;
+        }
+        gameObject.layer = 9; // Dead Layer로 바꿈
+        turnCount = 0;
+        Global.OnTurnStart -= ResetTurn;
+    }
 
     protected override void MoveUp() => Move(Vector2.up);
     protected override void MoveDown() => Move(Vector2.down);
@@ -105,6 +128,22 @@ public class UnitBase : ControlledObject, IReceiveAttack
         attackInfo = info;
     }
 
+    //해당 유닛들을 다시 P1UnitList와 P2UnitList에 추가해주는 코드
+    protected virtual void AddUnitToUnitList()
+    {
+        switch (player)
+        {
+            case Player.Player1:
+                Global.unitManager.AddToP1Units(this);
+                break;
+            case Player.Player2:
+                Global.unitManager.AddToP2Units(this);
+                break;
+            default:
+                //플레이어들의 유닛이 아닌 경우
+                break;
+        }
+    }
     private void ResetTurn()
     {
         turnCount = 1;

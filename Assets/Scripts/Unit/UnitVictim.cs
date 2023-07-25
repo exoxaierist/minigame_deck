@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UnitVictim : UnitBase
 {
+    //Á×À»¶§ ¸ØÃç¹ö¸² ¹ö±× ÀÖÀ½
     private int attackDamage = 1;
     private int moveDistanceBuffer = 2;
     //private Vector2[] attackRange = new Vector2[] { new(1, -1)};
@@ -23,8 +24,13 @@ public class UnitVictim : UnitBase
         {
             int cnt = 0;
             targetUnit = Global.unitManager.GetRandomDeadAlly(player);
+            if (targetUnit == null) return;
             if (targetUnit != this) break;
-            else if (cnt > 20) Debug.LogError("Revive Target Unit Not Exist");
+            else if (cnt > 20)
+            {
+                Debug.LogError("Revive Target Unit Not Exist");
+                return;
+            }
             else cnt++;
         }
         Global.unitManager.ReviveUnits(new List<UnitBase>() { targetUnit });

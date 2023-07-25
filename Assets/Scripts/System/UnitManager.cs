@@ -16,6 +16,10 @@ public class UnitManager : MonoBehaviour
 
     public List<UnitBase> DamagedUnitData; // 짝수 인덱스는 공격자 UnitBase 홀수 인덱스는 피격자 UnitBase
 
+    //플레이어마다 죽은 유닛들의 리스트
+    public List<UnitBase> P1DeadUnitList;
+    public List<UnitBase> P2DeadUnitList;
+
     //[HideInInspector]
     //public List<int> P1AllyCountPerUnit; // P1의 유닛이 인덱스마다 근처 아군의 수를 저장, 사용하지 않음
     //[HideInInspector]
@@ -28,9 +32,14 @@ public class UnitManager : MonoBehaviour
     public Action OnP1Death;
     public Action OnP2Death;
 
-    public void ListReset()
+    public void DamagedListReset()
     {
         DamagedUnitData.Clear();
+    }
+    public void DeadUnitListReset()
+    {
+        P1DeadUnitList.Clear();
+        P2DeadUnitList.Clear();
     }
     // p1 유닛리스트에 유닛 추가
     public void AddToP1Units(UnitBase unit)
@@ -64,8 +73,9 @@ public class UnitManager : MonoBehaviour
         int count = _units.Count;
         for(int i = 0; i < count; i++)
         {
-            if (_units[i].TryGetComponent<Hp>(out Hp hp)) hp.ResetHP();
-            else Debug.LogError("Can't Get Hp Component From UnitBase");
+            _units[i].ResetUnit();
+            //if (_units[i].TryGetComponent<Hp>(out Hp hp)) hp.ResetHP();
+            //else Debug.LogError("Can't Get Hp Component From UnitBase");
         }
     }
     
@@ -483,28 +493,49 @@ public class UnitManager : MonoBehaviour
     public UnitBase GetRandomDeadAlly(Player _player)
     {
         List<UnitBase> targetList = new List<UnitBase>();
-        if (_player == Player.Player1) targetList = P1UnitList;
-        else if(_player == Player.Player2) targetList = P2UnitList;
-
-        List<UnitBase> deadList = new List<UnitBase>();
+        if (_player == Player.Player1) targetList = P1DeadUnitList;
+        else if(_player == Player.Player2) targetList = P2DeadUnitList;
 
         int targetListCount = targetList.Count;
-        for(int i = 0; i < targetListCount; i++)
-        {
-            if(targetList[i].TryGetComponent<Hp>(out Hp hp))
-            {
-                if (hp.isDead) deadList.Add(targetList[i]);
-            }
-            else
-            {
-                Debug.LogError("Can't Get Hp from UnitList");
-            }
-        }
+        //List<UnitBase> deadList = new List<UnitBase>();
+
+        //int targetListCount = targetList.Count;
+        //for(int i = 0; i < targetListCount; i++)
+        //{
+        //    if(targetList[i].TryGetComponent<Hp>(out Hp hp))
+        //    {
+        //        if (hp.isDead) deadList.Add(targetList[i]);
+        //    }
+        //    else
+        //    {
+        //        Debug.LogError("Can't Get Hp from UnitList");
+        //    }
+        //}
+        // 구조 변경으로 인한 deadList 삭제
 
         //타겟 유닛 위에 유닛을 없을때까지 반복
+        int cnt = 0; // 너무 많이 반복해서 무한 루프에 빠진 경우 탈출용 카운터
+        List<UnitBase> targetedUnits = new List<UnitBase>(); // 타겟이 되었던 유닛들의 리스트
         while(true)
         {
-            UnitBase target = deadList[UnityEngine.Random.Range(0, targetListCount)];
+            //타겟 리스트가 비어있는 경우
+            if (targetListCount == 0) return null;
+
+            cnt++;
+            //플레이어당 죽은 유닛이 100개일 경우는 없다고 배제
+            if(cnt > 200) return null;
+            // 타겟 리스트에서 랜덤 타겟 유닛을 받음
+            UnitBase target = targetList[UnityEngine.Random.Range(0, targetListCount)];
+            // 타겟 리스트의 수보다 타겟이 된 유닛의 갯수가 같거나 크다면 null을 반환하며 종료
+            if(targetedUnits.Count >= targetListCount)
+            {
+                Debug.LogError("Units Exist On All Of Dead Unit");
+                return null;
+            }
+            // 타겟 유닛이 이미 전에 타겟된 적이 있다면 다음으로
+            if (targetedUnits.Contains(target)) continue;
+            // 아니라면 리스트에 추가
+            else targetedUnits.Add(target);
             Vector3 targetPos = target.gameObject.transform.position;
 
             bool ListSearch(Player _player)
@@ -518,17 +549,21 @@ public class UnitManager : MonoBehaviour
 
                 for (int i = 0; i < playerListCount; i++)
                 {
-                    if (playerList[i].TryGetComponent<Hp>(out Hp hp))
-                    {
-                        // 해당 유닛이 죽어있다면 다음 인덱스로
-                        if (hp.isDead) continue;
-                    }
+                    // 죽은 레이어인 경우
+                    if (playerList[i].gameObject.layer == 9) continue;
+                    // 구조 변경으로 인한 코드 간편화
+                    //if (playerList[i].TryGetComponent<Hp>(out Hp hp))
+                    //{
+                    //    // 해당 유닛이 죽어있다면 관계 없으므로 다음 인덱스로
+                    //    if (hp.isDead) continue;
+                    //}
                     // 해당 유닛이 다른 유닛과 겹쳐있다면 false를 반환하여 함수 종료
+                    // 다른 유닛으로 타겟을 설정해서 다시 탐색하기 위함
                     if (targetPos == playerList[i].gameObject.transform.position) return false;
                 }
+                // 탐색을 전부 하였는데 타겟이 겹치는 부분이 없는 경우 true를 반환하며 탐색 종료
                 return true;
             }
-            // 다른 유닛과 겹쳐 있는 경우라면 while문 반복
             if (ListSearch(Player.Player1) == false) continue;
             if (ListSearch(Player.Player2) == false) continue;
 
@@ -551,6 +586,7 @@ public class UnitManager : MonoBehaviour
     {
         singletoneCheck();
         Global.unitManager = this;
-        Global.OnTurnStartLate += ListReset;
+        Global.OnTurnStartLate += DamagedListReset;
+        Global.OnRoundEnd += DeadUnitListReset;
     }
 }

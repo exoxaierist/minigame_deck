@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: UnitDataHolderTesting
   m_EditorClassIdentifier: 
   unitList:
-  - id: Auto
-    name: "\uC624\uD1A0"
-    tier: 1
-    image: {fileID: 21300000, guid: 35a3340b835c797478eb139353421953, type: 3}
-    health: 3
-    power: 1
-    price: 1
-    desc: rrrr
-    fieldObject: {fileID: 3959451949445120068, guid: fbbc3583d1790f5449fb242bacf50188, type: 3}
   - id: Sample
     name: "\uC0D8\uD50C"
     tier: 1
@@ -31,3 +22,12 @@ MonoBehaviour:
     price: 1
     desc: wkwkw
     fieldObject: {fileID: 8309214033619448675, guid: dbf28a4f57337f14d8ad195d8e59cc78, type: 3}
+  - id: Victim
+    name: "\uB300\uC2E0\uC8FD\uB294\uC790"
+    tier: 0
+    image: {fileID: 21300000, guid: 177f0e0a4941a464f935c21b367d57c7, type: 3}
+    health: 0
+    power: 0
+    price: 0
+    desc: 0000
+    fieldObject: {fileID: 7234166300226822418, guid: cd7702a9dd31d574eba3d3966f753053, type: 3}
