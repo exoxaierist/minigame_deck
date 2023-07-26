@@ -7,6 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(Hp))]
 public class UnitBase : ControlledObject, IReceiveAttack
 {
+    // 죽을 때 오브젝트 alpha값이 줄어드는 코드가 어딘지 모르겠음
     [HideInInspector] public Hp hp;
 
     // 이동관련

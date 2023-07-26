@@ -20,9 +20,9 @@ public class UnitVictim : UnitBase
     private void ReviveAlly()
     {
         UnitBase targetUnit = new UnitBase();
-        while (true)
+        int cnt = 0;
+        while (true) //while문은 현업에서 coroutine안에 넣어서 사용하는 경우가 많다고 함
         {
-            int cnt = 0;
             targetUnit = Global.unitManager.GetRandomDeadAlly(player);
             if (targetUnit == null) return;
             if (targetUnit != this) break;
