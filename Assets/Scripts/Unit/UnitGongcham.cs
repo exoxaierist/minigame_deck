@@ -19,6 +19,11 @@ public class UnitGongcham : UnitBase
         {
             hp.AddToHP(-_info.damage); // 추후 데미지 받는 방식의 수정에 따라 AttackInfo로 변경될 수 있음
         }
+        if (hp.isDamaged == true)
+        {
+            _info.attacker.GiveDamage(this);
+            hp.isDamaged = false;
+        }
         if (hp.isDead == true)
         {
             _info.attacker.Kill();
