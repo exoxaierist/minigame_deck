@@ -24,6 +24,16 @@ public class UnitDivineShield : UnitBase
     {
         if (isShield) isShield = false;
         else hp.AddToHP(-_info.damage);
+
+        if (hp.isDamaged == true)
+        {
+            _info.attacker.GiveDamage(this);
+            hp.isDamaged = false;
+        }
+        if (hp.isDead == true)
+        {
+            _info.attacker.Kill();
+        }
     }
     protected override void Attack()
     {

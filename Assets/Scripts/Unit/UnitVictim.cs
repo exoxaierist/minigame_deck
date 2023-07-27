@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UnitVictim : UnitBase
 {
+    //죽을때 멈춰버림 버그 있음
     private int attackDamage = 1;
     private int moveDistanceBuffer = 2;
     //private Vector2[] attackRange = new Vector2[] { new(1, -1)};
@@ -19,12 +20,17 @@ public class UnitVictim : UnitBase
     private void ReviveAlly()
     {
         UnitBase targetUnit = new UnitBase();
-        while (true)
+        int cnt = 0;
+        while (true) //while문은 현업에서 coroutine안에 넣어서 사용하는 경우가 많다고 함
         {
-            int cnt = 0;
             targetUnit = Global.unitManager.GetRandomDeadAlly(player);
+            if (targetUnit == null) return;
             if (targetUnit != this) break;
-            else if (cnt > 20) Debug.LogError("Revive Target Unit Not Exist");
+            else if (cnt > 20)
+            {
+                Debug.LogError("Revive Target Unit Not Exist");
+                return;
+            }
             else cnt++;
         }
         Global.unitManager.ReviveUnits(new List<UnitBase>() { targetUnit });
