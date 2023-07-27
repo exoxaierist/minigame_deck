@@ -162,9 +162,9 @@ public class UnitBase : ControlledObject, IReceiveAttack
     {
         if (!matchMode || turnCount <= 0) return;
         turnCount--;
-        dir = (invertMovement ? -dir : dir) * moveDistance;
+        dir = (invertMovement ? -dir : dir);
         lastMoveDir = dir;
-        MoveRelative(dir);
+        MoveRelative(dir*moveDistance);
     }
 
     // 오브젝트에 같이 딸려있는 HP 컴포넌트 찾아서 이벤트 등록

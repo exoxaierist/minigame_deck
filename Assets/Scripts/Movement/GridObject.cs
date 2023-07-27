@@ -27,6 +27,20 @@ public class GridObject : EventObject
     }
 
     private void EndTurn() { if (isMoving) stopMoveCheck = true; }
+    // 충돌체크없이 상대이동
+    public void MoveRelativeAbsolute(Vector2 dest)
+    {
+        Vector2 originPos = transform.position;
+        transform.position = (Vector2)transform.position + dest;
+        if (visual != null)
+        {
+            visual.localPosition = originPos - transform.position * Vector2.one;
+            visual.DOComplete();
+            visual.DOLocalJump(Vector2.zero, 0.2f, 1, 0.1f).SetEase(Ease.OutQuad).OnComplete(() => isMoving = false);
+            visual.DOShakeScale(0.13f, new Vector3(0.1f, -0.1f, 0), 20);
+        }
+        OnMove();
+    }
 
     // 상대적으로 이동
     public void MoveRelative(Vector2 dest)

@@ -73,12 +73,16 @@ public class ShopFieldUnitPlacer : ControlledObject
         SubscribeToInput();
     }
 
-    public void DisableMovement() { UnsubscribeToInput(); moveEnabled = false; origin = transform.position; shopFieldUnitUI.Deactivate(); }
+    public void DisableMovement() { UnsubscribeToInput(); moveEnabled = false; origin = transform.position;}
 
     public void ReturnToOrigin()
     {
         float temp = 0;
-        DOTween.To(() => temp, x => temp = x, 1, (6 - transform.position.y) * 0.04f).OnComplete(() => { MoveRelative(origin - transform.position); StartCoroutine(DelayedActivate()); });;
+        DOTween.To(() => temp, x => temp = x, 1, (6 - transform.position.y) * 0.04f).OnComplete(() => { 
+            MoveRelativeAbsolute(origin - transform.position);
+            print(origin - transform.position);
+            StartCoroutine(DelayedActivate());
+        });
     }
 
     private void MatchFieldUIPosition()

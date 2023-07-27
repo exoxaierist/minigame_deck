@@ -73,6 +73,8 @@ public class ShopFieldUnitUI : UINavigatable
 
     private void RemoveSelf()
     {
+        Global.uiNavManager.freezeP1 = false;
+        Global.uiNavManager.freezeP2 = false;
         Global.OnShopClose -= RemoveSelf;
         Deactivate();
         Destroy(gameObject);
