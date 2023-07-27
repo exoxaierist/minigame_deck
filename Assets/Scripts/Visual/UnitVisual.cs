@@ -35,6 +35,7 @@ public class UnitVisual : MonoBehaviour
 
     private void OnDamage(UnitBase _)
     {
+        transform.DOComplete();
         transform.DOShakeRotation(0.3f, new Vector3(0, 0, 8), 25);
         transform.DOShakePosition(0.2f, new Vector3(0.05f, 0.05f, 0),25);
         spr.DOComplete();
