@@ -32,12 +32,14 @@ public class UINavigationManager : MonoBehaviour
         Global.OnP1Right += OnP1MoveRight;
         Global.OnP1Left += OnP1MoveLeft;
         Global.OnP1Select += OnP1Select;
+        Global.OnP1Sell += OnP1Sell;
 
         Global.OnP2Up += OnP2MoveUp;
         Global.OnP2Down += OnP2MoveDown;
         Global.OnP2Right += OnP2MoveRight;
         Global.OnP2Left += OnP2MoveLeft;
         Global.OnP2Select += OnP2Select;
+        Global.OnP2Sell += OnP2Sell;
     }
 
     public void AddNavigatable(UINavigatable nav)
@@ -121,6 +123,10 @@ public class UINavigationManager : MonoBehaviour
         if (freezeP1 || p1Selected == null) return;
         p1Selected.OnSelect();
     }
+    private void OnP1Sell()
+    {
+        p1Selected.OnSell();
+    }
     private void OnP2MoveUp()
     {
         if (freezeP2 || p2Selected == null) return;
@@ -149,5 +155,9 @@ public class UINavigationManager : MonoBehaviour
     {
         if (freezeP2 || p2Selected == null) return;
         p2Selected.OnSelect();
+    }
+    private void OnP2Sell()
+    {
+        p2Selected.OnSell();
     }
 }

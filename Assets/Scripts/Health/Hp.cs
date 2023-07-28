@@ -6,24 +6,22 @@ using UnityEngine;
 
 public class Hp : MonoBehaviour
 {
-    [Header("UI")]
-    public bool showHpUI = true;
-    public Vector2 hpUIOffset = new(0, 0.8f);
-    public bool autoParent = true;
+    [HideInInspector] public bool showHpUI = true;
+    [HideInInspector] public Vector2 hpUIOffset = new(0, 0.8f);
+    [HideInInspector] public bool autoParent = true;
     private Transform autoParentTransform;
-    public Transform customUIParent;
-    public HpUIType hpUIType;
+    [HideInInspector] public Transform customUIParent;
+    [HideInInspector] public HpUIType hpUIType = HpUIType.Number;
     private HpUI hpUI;
 
-    [Header("HP")]
-    [SerializeField] protected int maxHp = 10;
-    [SerializeField] protected int hp;
-    public bool isDead = false;
-    public bool isDamaged = false;
+    [HideInInspector] public int maxHp = 10;
+    [HideInInspector] public int hp;
+    [HideInInspector] public bool isDead = false;
+    [HideInInspector] public bool isDamaged = false;
     public int GetHp() => hp;
     public int GetMaxHP() => maxHp;
 
-    public UnitBase unit;
+    [HideInInspector] public UnitBase unit;
 
     // 피격, 사망 대리자
     public Action<UnitBase> OnDamage;

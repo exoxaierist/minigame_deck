@@ -11,9 +11,9 @@ public class UnitBase : ControlledObject, IReceiveAttack
     [HideInInspector] public Hp hp;
 
     // 이동관련
-    public Vector2 lastMoveDir = Vector2.right;
-    public int moveDistance = 1; // 이동 칸 수
-    public bool invertMovement = false; // 이동방향 반전
+    [HideInInspector] public Vector2 lastMoveDir = Vector2.right;
+    [HideInInspector] public int moveDistance = 1; // 이동 칸 수
+    [HideInInspector] public bool invertMovement = false; // 이동방향 반전
 
     protected int turnCount; // 턴마다 남아있는 행동 횟수
     public virtual void Kill() { }// 죽였을 때 호출하는 함수
@@ -27,8 +27,10 @@ public class UnitBase : ControlledObject, IReceiveAttack
     protected Vector2[] attackPattern = { new(1, 0) }; // 공격패턴, 오른쪽을 바라볼때의 패턴 기준으로 좌푯값
     protected AttackInfo attackInfo;
     //추가 체력, 공격력
-    public int additionalHP = 0;
-    public int additionalDamage = 0;
+    [HideInInspector] public int additionalHP = 0;
+    [HideInInspector] public int additionalDamage = 0;
+    public UnitSet unitInfo;
+
     protected override void Awake()
     {
         base.Awake();
@@ -178,4 +180,17 @@ public class UnitBase : ControlledObject, IReceiveAttack
             hp.OnDeath += OnDeath;
         }
     }
+
+    public void SetUnitInfo(UnitSet info)
+    {
+        unitInfo = info;
+        hp.maxHp = unitInfo.health;
+        hp.hp = unitInfo.health;
+        attackInfo.damage = unitInfo.power;
+
+        if(visual.TryGetComponent(out UnitVisual _visual))
+        {
+            _visual.spr.sprite = info.image;
+        }
+    } 
 }

@@ -57,13 +57,13 @@ public class ShopManager : MonoBehaviour
     {
         if (player == Player.Player1)
         {
-            //µ· È¯±Þ
-            //p1deck.removeat(sellIndex);
+            ChangeP1Coin(Mathf.CeilToInt(Global.unitManager.P1UnitList[sellIndex].unitInfo.price*0.5f));
+            Global.unitManager.P1UnitList.RemoveAt(sellIndex);
         }
         else if (player == Player.Player2)
         {
-            //µ· È¯±Þ
-            //p2deck.removeat(sellIndex);
+            ChangeP2Coin(Mathf.CeilToInt(Global.unitManager.P2UnitList[sellIndex].unitInfo.price * 0.5f));
+            Global.unitManager.P2UnitList.RemoveAt(sellIndex);
         }
     }
 
@@ -72,7 +72,7 @@ public class ShopManager : MonoBehaviour
     {
         if (player == Player.Player1)
         {
-            //µ¦ÀÌ ²ËÂ÷ÀÖÀ»°æ¿ì return false
+            if (Global.unitManager.P1UnitList.Count >= 5) return false;
             UnitSet set = p1Shop[buyIndex];
             if(set.price > p1Coins) return false;
             else
@@ -83,12 +83,13 @@ public class ShopManager : MonoBehaviour
                 instance.gameObject.GetComponent<ShopFieldUnitPlacer>().OnShopOpen();
                 Global.unitManager.AddToP1Units(instance);
                 instance.transform.position = Global.fieldManager.GetEmptyTileP1();
+                instance.SetUnitInfo(set);
                 return true;
             }
         }
         else if (player == Player.Player2)
         {
-            //µ¦ÀÌ ²ËÂ÷ÀÖÀ»°æ¿ì return false
+            if (Global.unitManager.P2UnitList.Count >= 5) return false;
             UnitSet set = p2Shop[buyIndex];
             if (set.price > p2Coins)
             {
@@ -102,6 +103,7 @@ public class ShopManager : MonoBehaviour
                 instance.gameObject.GetComponent<ShopFieldUnitPlacer>().OnShopOpen();
                 Global.unitManager.AddToP2Units(instance);
                 instance.transform.position = Global.fieldManager.GetEmptyTileP2();
+                instance.SetUnitInfo(set);
                 return true;
             }
         }

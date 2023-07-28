@@ -18,6 +18,14 @@ public class ShopFieldUnitUI : UINavigatable
         if (!placeMode) EnablePlaceMode();
     }
 
+    public override void OnSell()
+    {
+        DisablePlaceMode();
+        Global.shopManager.Sell( player, Global.unitManager.GetMyIndex(placer.GetComponent<UnitBase>(), player)); ;
+        placer.RemoveSelf();
+        RemoveSelf();
+    }
+
     private void OnDestroy()
     {
         Deactivate();
@@ -61,13 +69,6 @@ public class ShopFieldUnitUI : UINavigatable
     // 옮기는중 선택키 눌렀을때
     private void Confirm()
     {
-        DisablePlaceMode();
-    }
-
-    // 모름, 어쩌면 판매로 쓸지도
-    private void Cancel()
-    {
-        placer.ReturnToOrigin();
         DisablePlaceMode();
     }
 

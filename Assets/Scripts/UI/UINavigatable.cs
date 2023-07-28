@@ -36,6 +36,8 @@ public class UINavigatable : MonoBehaviour
 
     public virtual void OnSelect() { }
 
+    public virtual void OnSell() { }
+
     private UINavigatable SearchRight()
     {
         List<UINavigatable> all = Global.uiNavManager.GetAllNavigatable();

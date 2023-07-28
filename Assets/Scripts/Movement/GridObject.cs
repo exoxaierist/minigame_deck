@@ -13,7 +13,7 @@ public class GridObject : EventObject
     protected bool isMoving = false;
 
     [Header("모션입힐 오브젝트")]
-    public Transform visual;
+    [HideInInspector] public Transform visual;
 
     private bool stopMoveCheck = false;
     private Vector2 moveDirection;

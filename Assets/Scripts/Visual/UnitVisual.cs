@@ -7,7 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(YSort))]
 public class UnitVisual : MonoBehaviour
 {
-    private SpriteRenderer spr;
+    public SpriteRenderer spr;
     private YSort sorter;
     private UnitBase unit;
 
@@ -24,6 +24,8 @@ public class UnitVisual : MonoBehaviour
         unit = transform.parent.GetComponent<UnitBase>();
         unit.hp.OnDamage += OnDamage;
         unit.hp.OnDeath += OnDeath;
+
+        unit.visual = transform;
     }
 
     private void Update()
