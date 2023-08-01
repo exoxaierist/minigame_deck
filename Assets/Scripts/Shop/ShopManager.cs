@@ -25,6 +25,14 @@ public class ShopManager : MonoBehaviour
     private void Awake()
     {
         Global.shopManager = this;
+        try
+        {
+            shopTimerImg = GameObject.FindGameObjectWithTag("TIMER").GetComponent<Image>();
+        }
+        catch
+        {
+            enabled = false;
+        }
     }
 
     // 상점모드 오픈
