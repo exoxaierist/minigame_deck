@@ -73,7 +73,7 @@ public class UnitManager : MonoBehaviour
         int count = _units.Count;
         for(int i = 0; i < count; i++)
         {
-            _units[i].ResetUnit();
+            _units[i].hp.OnRevive(_units[i]);
             //if (_units[i].TryGetComponent<Hp>(out Hp hp)) hp.ResetHP();
             //else Debug.LogError("Can't Get Hp Component From UnitBase");
         }

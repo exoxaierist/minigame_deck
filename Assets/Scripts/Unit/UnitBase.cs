@@ -67,8 +67,7 @@ public class UnitBase : ControlledObject, IReceiveAttack
     }
     public void ResetUnit()
     {
-        hp.ResetHP();
-        Global.OnTurnStart += ResetTurn;
+        SubscribeToInput();
         if (player == Player.Player1) gameObject.layer = 7;
         else if(player == Player.Player2) gameObject.layer = 8;
     }
@@ -108,7 +107,13 @@ public class UnitBase : ControlledObject, IReceiveAttack
         }
         gameObject.layer = 9; // Dead Layer·Î ¹Ù²Þ
         turnCount = 0;
-        Global.OnTurnStart -= ResetTurn;
+        UnsubscribeToInput();
+    }
+    protected virtual void OnRevive(UnitBase unit)
+    {
+        SubscribeToInput();
+        if (player == Player.Player1) gameObject.layer = 7;
+        else if (player == Player.Player2) gameObject.layer = 8;
     }
 
     protected override void MoveUp() => Move(Vector2.up);
@@ -178,6 +183,7 @@ public class UnitBase : ControlledObject, IReceiveAttack
             hp.OnHeal += OnHeal;
             hp.OnDamage += OnDamage;
             hp.OnDeath += OnDeath;
+            hp.OnRevive += OnRevive;
         }
     }
 
@@ -188,9 +194,9 @@ public class UnitBase : ControlledObject, IReceiveAttack
         hp.hp = unitInfo.health;
         attackInfo.damage = unitInfo.power;
 
-        if(visual.TryGetComponent(out UnitVisual _visual))
-        {
-            _visual.spr.sprite = info.image;
-        }
+        //if(visual.TryGetComponent(out UnitVisual _visual))
+        //{
+        //    _visual.spr.sprite = info.image;
+        //}
     } 
 }

@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c737334a3012164f8e717d1a0906921, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8db1bf88648ce9f439460b2a2b731466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spr: {fileID: 0}
   ignoreUnit: 0
   damageColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &7567606218505600274
@@ -170,7 +171,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   matchMode: 1
-  asdf: 
 --- !u!61 &7567606218505600278
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -217,6 +217,7 @@ MonoBehaviour:
   maxHp: 3
   hp: 0
   isDead: 0
+  isDamaged: 0
   unit: {fileID: 0}
 --- !u!114 &5631156655685219142
 MonoBehaviour:
@@ -243,3 +244,13 @@ MonoBehaviour:
   invertMovement: 0
   additionalHP: 0
   additionalDamage: 0
+  unitInfo:
+    id: 
+    name: 
+    tier: 0
+    image: {fileID: 0}
+    health: 0
+    power: 0
+    price: 0
+    desc: 
+    fieldObject: {fileID: 0}

@@ -28,6 +28,7 @@ public class Hp : MonoBehaviour
     public Action<UnitBase> OnHeal;
     public Action<UnitBase> OnHpChange;
     public Action<UnitBase> OnDeath;
+    public Action<UnitBase> OnRevive;
 
     private void Start()
     {
@@ -124,6 +125,13 @@ public class Hp : MonoBehaviour
         hp = 0;
         isDead = true;
         OnDeath?.Invoke(unit);
+    }
+
+    //살림
+    private void Revive()
+    {
+        ResetHP();
+        OnRevive?.Invoke(unit);
     }
 
     // HP UI오브젝트 생성

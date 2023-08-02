@@ -24,6 +24,7 @@ public class UnitVisual : MonoBehaviour
         unit = transform.parent.GetComponent<UnitBase>();
         unit.hp.OnDamage += OnDamage;
         unit.hp.OnDeath += OnDeath;
+        unit.hp.OnRevive += OnRevive;
 
         unit.visual = transform;
     }
@@ -48,5 +49,9 @@ public class UnitVisual : MonoBehaviour
     private void OnDeath(UnitBase _)
     {
         spr.DOFade(0.5f, 0.2f);
+    }
+    private void OnRevive(UnitBase _)
+    {
+        spr.DOFade(1f, 1f);
     }
 }

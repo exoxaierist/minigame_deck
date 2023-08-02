@@ -108,7 +108,7 @@ TextureImporter:
       name: grass_wall_0
       rect:
         serializedVersion: 2
-        x: 1600
+        x: 1601
         y: 600
         width: 200
         height: 300
@@ -116,7 +116,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.33333334}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -93, y: -145}
+        - {x: -93, y: 41}
+        - {x: 90, y: 41}
+        - {x: 90, y: -145}
       tessellationDetail: 0
       bones: []
       spriteID: 65e0fc59b38984744ae24ba3483066c9
@@ -137,7 +141,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.33333334}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -93, y: -140}
+        - {x: -93, y: 46}
+        - {x: 91, y: 46}
+        - {x: 91, y: -140}
       tessellationDetail: 0
       bones: []
       spriteID: 54441e238325ccf42b1a41155f9906df
