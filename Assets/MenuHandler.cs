@@ -8,6 +8,7 @@ public class MenuHandler : MonoBehaviour
 {
     public GameObject menuPanel;
     public GameObject mapSelectPanel;
+    public GameObject optionPanel;
 
     public static MenuHandler main;
     private string currentMap = "Field";
@@ -29,6 +30,11 @@ public class MenuHandler : MonoBehaviour
         {
             DisableAll();
             mapSelectPanel.SetActive(true);
+        }
+        else if (name== "Option")
+        {
+            DisableAll();
+            optionPanel.SetActive(true);
         }
         else print(name + "이 존재하지 않음");
     }
