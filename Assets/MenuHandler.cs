@@ -61,5 +61,6 @@ public class MenuHandler : MonoBehaviour
     {
         menuPanel.SetActive(false);
         mapSelectPanel.SetActive(false);
+        optionPanel.SetActive(false);
     }
 }
