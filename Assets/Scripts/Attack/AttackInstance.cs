@@ -7,6 +7,7 @@ public class AttackInstance : MonoBehaviour
     public bool active = false;
     private AttackInfo payload;
     private SpriteRenderer spr;
+    private Animator anim;
 
     // 공격하기
     public void Attack(Vector2 _pos, AttackInfo _payload)
@@ -28,8 +29,11 @@ public class AttackInstance : MonoBehaviour
     private IEnumerator ShowEffect()
     {
         spr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
+        anim.Play("effect01");
         spr.enabled = true;
-        yield return new WaitForSecondsRealtime(0.1f);
+        // return new WaitForSecondsRealtime(0.f);
+        yield return new WaitForSeconds(0.25f);
         spr.enabled = false;
         Remove();
     }
