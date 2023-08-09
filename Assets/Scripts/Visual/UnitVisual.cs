@@ -54,4 +54,8 @@ public class UnitVisual : MonoBehaviour
     {
         spr.DOFade(1f, 1f);
     }
+    public void VisualReset()
+    {
+        spr.DOFade(1f, 1f);
+    }
 }

@@ -68,8 +68,10 @@ public class UnitBase : ControlledObject, IReceiveAttack
     public void ResetUnit()
     {
         SubscribeToInput();
+        hp.ResetHP();
         if (player == Player.Player1) gameObject.layer = 7;
         else if(player == Player.Player2) gameObject.layer = 8;
+        visual.GetComponent<UnitVisual>().VisualReset();
     }
 
     // 피격시 해당 함수 호출
@@ -79,12 +81,12 @@ public class UnitBase : ControlledObject, IReceiveAttack
 
         if(hp.isDamaged == true)
         {
-            _info.attacker.GiveDamage(this);
+            if(_info.attacker != null) _info.attacker.GiveDamage(this);
             hp.isDamaged = false;
         }
         if(hp.isDead == true)
         {
-            _info.attacker.Kill();
+            if (_info.attacker != null) _info.attacker.Kill();
         }
     }
     protected virtual void OnHeal(UnitBase unit) { }
@@ -112,6 +114,7 @@ public class UnitBase : ControlledObject, IReceiveAttack
     protected virtual void OnRevive(UnitBase unit)
     {
         SubscribeToInput();
+        hp.ResetHP();
         if (player == Player.Player1) gameObject.layer = 7;
         else if (player == Player.Player2) gameObject.layer = 8;
     }
