@@ -197,9 +197,10 @@ public class UnitBase : ControlledObject, IReceiveAttack
         hp.hp = unitInfo.health;
         attackInfo.damage = unitInfo.power;
 
-        //if(visual.TryGetComponent(out UnitVisual _visual))
-        //{
-        //    _visual.spr.sprite = info.image;
-        //}
-    } 
+        if (visual.TryGetComponent(out UnitVisual _visual))
+        {
+            if (player == Player.Player1) _visual.spr.sprite = info.image1;
+            else if(player == Player.Player2) _visual.spr.sprite = info.image2;
+        }
+    }
 }

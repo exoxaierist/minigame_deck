@@ -14,7 +14,8 @@ public struct UnitSet
     public string id; // 유닛 고유 id
     public string name; // 유닛 이름
     public int tier; // 유닛 티어
-    public Sprite image; // 유닛 이미지
+    public Sprite image1; // P1 유닛 이미지
+    public Sprite image2; // P2 유닛 이미지
     public int health; // 유닛 체력
     public int power; // 유닛 공격력
     public int price; // 유닛 가격

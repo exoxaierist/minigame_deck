@@ -13,21 +13,257 @@ MonoBehaviour:
   m_Name: UnitDataHolder
   m_EditorClassIdentifier: 
   unitList:
-  - id: ninnin
-    name: "\uB2CC\uB2CC"
-    tier: 2
-    image: {fileID: 21300000, guid: d4cc213dee287e6409052ec6663c98eb, type: 3}
-    health: 3
-    power: 5
-    price: 2
-    desc: asdf
-    fieldObject: {fileID: 2409073514068800575, guid: 25c7a77fbc8fd7f4c9c506fcd811aba5, type: 3}
-  - id: berserker
-    name: "\uAD11\uB780\uC790"
+  - id: Hook
+    name: "\uAC08\uACE0\uB9AC\uB9E8"
     tier: 1
-    image: {fileID: 21300000, guid: b6a96c7c65795c94abf54a62adbf5c38, type: 3}
+    image1: {fileID: 21300000, guid: ec75ea936be73f343b50b25ef4bccaf8, type: 3}
+    image2: {fileID: 21300000, guid: 1dd70d56b8531c142a3c458c232da15f, type: 3}
+    health: 5
+    power: 1
+    price: 1
+    desc: "\uC544\uAD70 \uC720\uB2DB\uC774 \uADFC\uCC98\uC5D0 \uC788\uB2E4\uBA74
+      \uAC00\uC7A5 \uBA3C \uC801\uAD70\uC744 \uB04C\uC5B4\uB2F9\uAE41\uB2C8\uB2E4."
+    fieldObject: {fileID: 2958807149000922791, guid: a0fa2947830b0384c995f8bafbb6c6c5, type: 3}
+  - id: Bomberman
+    name: "\uD3ED\uD0C4\uB9C8\uB9C8\uB9D8"
+    tier: 1
+    image1: {fileID: 21300000, guid: d6dd7fd90ad4ca14cb8fb65ada3b942b, type: 3}
+    image2: {fileID: 21300000, guid: 75c180e7a8606524ea4058cce33929b1, type: 3}
+    health: 5
+    power: 2
+    price: 1
+    desc: "\uD574\uB2F9 \uC720\uB2DB\uC774 1\uCE78 \uC774\uB3D9\uD560 \uB54C\uB9C8\uB2E4
+      \uD544\uB4DC \uC911 1\uCE78\uC774 \uB79C\uB364\uC73C\uB85C \uD3ED\uBC1C\uD569\uB2C8\uB2E4."
+    fieldObject: {fileID: 5994652946190812740, guid: 8cae1747d06ac9a4fb5ac8a7de124e7d, type: 3}
+  - id: Shield
+    name: "\uBC29\uD328"
+    tier: 1
+    image1: {fileID: 21300000, guid: d78c12bc95cc4f446b2e5a7c147749ae, type: 3}
+    image2: {fileID: 21300000, guid: 389b28ace379c7349974162d546310c4, type: 3}
     health: 2
     power: 4
     price: 1
-    desc: it's paper
+    desc: "\uC544\uAD70 \uC720\uB2DB\uC774 \uB370\uBBF8\uC9C0\uB97C \uC785\uC73C\uBA74
+      \uD574\uB2F9 \uC720\uB2DB\uC774 \uB79C\uB364 \uC544\uAD70\uC758 \uC55E\uC73C\uB85C
+      \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    fieldObject: {fileID: 4366271769852106585, guid: 7646a22f4a54d8b4e9e1e257dacd8667, type: 3}
+  - id: Money
+    name: Money
+    tier: 1
+    image1: {fileID: 21300000, guid: 70856d45ab4ed7947b654284f1925954, type: 3}
+    image2: {fileID: 21300000, guid: efa9c931b872ea24fbbaad279b3222a0, type: 3}
+    health: 2
+    power: 3
+    price: 1
+    desc: "\uD574\uB2F9 \uC720\uB2DB\uC774 \uC804\uD22C\uBD88\uAC00 \uC0C1\uD0DC\uAC00
+      \uB418\uBA74 \uCD94\uAC00 \uC7AC\uD654\uB97C \uD68D\uB4DD\uD569\uB2C8\uB2E4."
+    fieldObject: {fileID: 5332937781519375294, guid: c1a5d30c311301d4485e1f4aaf617252, type: 3}
+  - id: Mirror
+    name: "\uAC70\uC6B8"
+    tier: 1
+    image1: {fileID: 21300000, guid: 1ba871f6e4d60c240b76270bfc13beea, type: 3}
+    image2: {fileID: 21300000, guid: a6a6654b8e30ae54a8ed13b15c447123, type: 3}
+    health: 2
+    power: 4
+    price: 1
+    desc: "\uD134\uC774 \uC2DC\uC791\uB420 \uB54C \uACF5\uACA9 \uBC94\uC704\uC5D0
+      \uC788\uB294 \uC801\uAD70 \uC720\uB2DB\uC758 \uC774\uB3D9\uC774 \uBC18\uC804\uB429\uB2C8\uB2E4."
+    fieldObject: {fileID: 6270298157543981941, guid: b6ab370e0e176bb438905e46a6eab2d3, type: 3}
+  - id: Master
+    name: "\uBA85\uC778"
+    tier: 1
+    image1: {fileID: 21300000, guid: 35f3a6229659ad046b3b0a294a557e14, type: 3}
+    image2: {fileID: 21300000, guid: fb1fb8c5d738e6a4694f329510f6f535, type: 3}
+    health: 5
+    power: 1
+    price: 1
+    desc: "\uC544\uAD70\uC5D0\uAC8C \uD53C\uD574\uB97C \uC8FC\uBA74 \uD53C\uD574\uB97C
+      \uC785\uC740 \uC544\uAD70\uC758 \uCCB4\uB825\uACFC \uACF5\uACA9\uB825\uC774
+      \uC0C1\uC2B9\uD569\uB2C8\uB2E4."
+    fieldObject: {fileID: 6162989595821521994, guid: 8de986e6c78266841b2ee1b76b30c18f, type: 3}
+  - id: Madman
+    name: "\uAD11\uB780\uC790"
+    tier: 1
+    image1: {fileID: 21300000, guid: 6f4c7ad292c915c48a3372591b8ea3a7, type: 3}
+    image2: {fileID: 21300000, guid: b7500799e7a2f9e4b9eec7e640b2660b, type: 3}
+    health: 15
+    power: 5
+    price: 1
+    desc: "\uACF5\uACA9 \uD589\uB3D9\uC744 \uD588\uC744 \uB54C \uC790\uC2E0\uC5D0\uAC8C
+      \uD53C\uD574\uB97C \uC785\uD799\uB2C8\uB2E4."
     fieldObject: {fileID: 7518782538113574105, guid: bb21702096546134babfa349b8def459, type: 3}
+  - id: Chargecaptation
+    name: "\uB3CC\uACA9\uB300\uC7A5"
+    tier: 1
+    image1: {fileID: 21300000, guid: d2413acce6b461f459f7fd090cdfaed3, type: 3}
+    image2: {fileID: 21300000, guid: a65c9df3e487d9a41b5ffbc05c176c0e, type: 3}
+    health: 3
+    power: 2
+    price: 1
+    desc: "\uC804\uD22C\uBD88\uAC00 \uC0C1\uD0DC\uAC00 \uB418\uBA74 \uC544\uAD70\uC758
+      \uACF5\uACA9\uB825\uC744 \uC99D\uAC00\uC2DC\uD0B5\uB2C8\uB2E4."
+    fieldObject: {fileID: 8309214033619448675, guid: eaa9e306123077d49ae2be105979e5f2, type: 3}
+  - id: Castle
+    name: "\uC694\uC0C8"
+    tier: 1
+    image1: {fileID: 21300000, guid: 276c86a2926de6b4b82c34a15051d1af, type: 3}
+    image2: {fileID: 21300000, guid: 095b113b56c82494c93dc95245287721, type: 3}
+    health: 5
+    power: 1
+    price: 1
+    desc: "\uD53C\uD574\uB97C \uC785\uC73C\uBA74 \uCCB4\uB825\uC744 \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+    fieldObject: {fileID: 1663512108581161651, guid: 21bacc6a8ca974e4ba506c92871aa133, type: 3}
+  - id: Spores
+    name: "\uBC84\uC12F\uD3EC\uC790"
+    tier: 1
+    image1: {fileID: 21300000, guid: 1847760493fc9b44b92b27e1b05d7b78, type: 3}
+    image2: {fileID: 21300000, guid: e549e40bf19faf343a4c9fd797a4b90d, type: 3}
+    health: 3
+    power: 1
+    price: 1
+    desc: "\uD53C\uD574\uB97C \uC785\uC73C\uBA74 \uACF5\uACA9\uD55C \uC801\uAD70
+      \uC720\uB2DB\uC774 (1\uD134) \uAE30\uC808\uD569\uB2C8\uB2E4."
+    fieldObject: {fileID: 7608108815894728860, guid: efead8de37981374699f29fe5e1c9db6, type: 3}
+  - id: Blowout
+    name: "\uBFC5\uB9DD\uCE58"
+    tier: 1
+    image1: {fileID: 21300000, guid: 107ccb1407e1c714b981d727de5cc89f, type: 3}
+    image2: {fileID: 21300000, guid: 5525503841718f44dbf3e1a6fe7b5d20, type: 3}
+    health: 4
+    power: 2
+    price: 1
+    desc: "\uD134\uC774 \uC2DC\uC791\uD560 \uB54C \uB79C\uB364 \uC801\uAD70 \uC720\uB2DB\uC774
+      (1\uD134) \uAE30\uC808\uD569\uB2C8\uB2E4."
+    fieldObject: {fileID: 7624711969490700795, guid: 09446f2a718c5644ea3246fe82031ad8, type: 3}
+  - id: Mate
+    name: "\uB3D9\uB8CC"
+    tier: 1
+    image1: {fileID: 21300000, guid: be3ef86b4d255f94ba08a797d58c076d, type: 3}
+    image2: {fileID: 21300000, guid: c07da1a8798cdcd4cb8e5c6aadd62f9c, type: 3}
+    health: 4
+    power: 2
+    price: 1
+    desc: "\uD55C \uCE78 \uB4A4 \uC544\uAD70\uC774 \uACF5\uACA9\uD558\uBA74 \uC790\uC2E0\uC758
+      \uACF5\uACA9\uB825\uC774 \uC0C1\uC2B9\uD569\uB2C8\uB2E4."
+    fieldObject: {fileID: 8225930944020873425, guid: 58692c7bd3524164ebdabebbea3fd9bd, type: 3}
+  - id: NewRedHood
+    name: "\uC2E0\uCC38 \uD574\uC801\uB450\uAC74"
+    tier: 1
+    image1: {fileID: 21300000, guid: 99cc7c1669796af419914aa21a7f0ff7, type: 3}
+    image2: {fileID: 21300000, guid: dca31426a562d1c49b29bf03927caf9f, type: 3}
+    health: 5
+    power: 1
+    price: 1
+    desc: "\uBCF4\uC720 \uC7AC\uD654\uAC00 10 \uBBF8\uB9CC\uC77C\uB54C 2\uBC88 \uACF5\uACA9\uD569\uB2C8\uB2E4."
+    fieldObject: {fileID: 8309214033619448675, guid: 622dfd723df129049a627fe794fbdcba, type: 3}
+  - id: Healer
+    name: "\uD790\uB7EC"
+    tier: 2
+    image1: {fileID: 21300000, guid: d508bc15509ca274a9e5c3e3415b0793, type: 3}
+    image2: {fileID: 21300000, guid: 65f0042910c1c3d43aa22e029ad08035, type: 3}
+    health: 8
+    power: 1
+    price: 2
+    desc: "\uACF5\uACA9 \uBC94\uC704\uC758 \uC544\uAD70\uC774 \uD53C\uD574\uB97C
+      \uC785\uC73C\uBA74 \uB2E4\uC74C \uD134\uC5D0 \uC544\uAD70\uC758 \uCCB4\uB825\uC744
+      \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+    fieldObject: {fileID: 8309214033619448675, guid: 873b79706535326478df46288d84eb66, type: 3}
+  - id: Auto
+    name: "\uC790\uB3D9 \uCD94\uAC00 \uACF5\uACA9 \uC720\uB2DB"
+    tier: 2
+    image1: {fileID: 21300000, guid: ef09bc4a093afda4b9cac7c2329dfbf4, type: 3}
+    image2: {fileID: 21300000, guid: f4df4b1e82566bb429fc4a62bff27ee4, type: 3}
+    health: 3
+    power: 1
+    price: 2
+    desc: "\uC544\uAD70\uC774 \uC801\uAD70\uC5D0\uAC8C \uD53C\uD574\uB97C \uC785\uD788\uBA74
+      \uC790\uB3D9\uC73C\uB85C \uCD94\uAC00 \uC720\uB3C4 \uACF5\uACA9\uC744 \uD569\uB2C8\uB2E4."
+    fieldObject: {fileID: 3959451949445120068, guid: fbbc3583d1790f5449fb242bacf50188, type: 3}
+  - id: Ninja
+    name: "\uB2CC\uB2CC"
+    tier: 2
+    image1: {fileID: 21300000, guid: 6fec1c069902d424eb1c3c27cc47bbd8, type: 3}
+    image2: {fileID: 21300000, guid: 10d3c66e2bc195a4a8cdf24cbf83312f, type: 3}
+    health: 5
+    power: 3
+    price: 2
+    desc: "\uD574\uB2F9 \uC720\uB2DB\uC774 \uD53C\uD574\uB97C \uC785\uC744 \uB54C
+      1/3 \uD655\uB960\uB85C \uC0C1\uB300\uC758 \uACF5\uACA9\uC744 \uD68C\uD53C\uD569\uB2C8\uB2E4."
+    fieldObject: {fileID: 2409073514068800575, guid: 25c7a77fbc8fd7f4c9c506fcd811aba5, type: 3}
+  - id: Goku
+    name: "\uACE0\uCFE0"
+    tier: 2
+    image1: {fileID: 21300000, guid: 08a3da2b77ccc4044ae31153c93758e8, type: 3}
+    image2: {fileID: 21300000, guid: e68df4404c7cb72439c367cfef0ea652, type: 3}
+    health: 5
+    power: 6
+    price: 2
+    desc: "\uB77C\uC6B4\uB4DC\uAC00 \uC2DC\uC791\uD560 \uB54C (\uCCB4\uB825 2 / \uACF5\uACA9\uB825
+      3)\uC778 \uBD84\uC2E0\uC744 \uC18C\uD658\uD569\uB2C8\uB2E4."
+    fieldObject: {fileID: 7757112801352648442, guid: 65a2da2bb37b8364b8e915579c2e3512, type: 3}
+  - id: Geumgang
+    name: "\uAE08\uAC15\uBD88\uAD34"
+    tier: 2
+    image1: {fileID: 21300000, guid: 88c9b22aeb437414dad5170baea80b06, type: 3}
+    image2: {fileID: 21300000, guid: b13fbeb78bc6b4746ba525ecdc8072e7, type: 3}
+    health: 5
+    power: 3
+    price: 2
+    desc: "\uD574\uB2F9 \uC720\uB2DB\uC774 \uD53C\uD574\uB97C \uC785\uC73C\uBA74
+      \uACF5\uACA9\uB825\uC774 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    fieldObject: {fileID: 1422345509668757215, guid: bf36be4de896bfc428cbe17cd2db00df, type: 3}
+  - id: Suicidebomb
+    name: "\uACE0\uC2B4\uD3ED\uBC1C"
+    tier: 2
+    image1: {fileID: 21300000, guid: 7d9ddb9c68df538479fc4242b768c8d3, type: 3}
+    image2: {fileID: 21300000, guid: 55f47a51151029c4faa305bdd6046460, type: 3}
+    health: 5
+    power: 0
+    price: 2
+    desc: "\uD574\uB2F9 \uC720\uB2DB\uC774 \uD53C\uD574\uB97C \uC785\uC73C\uBA74
+      \uD53C\uD574\uB97C \uC785\uD78C \uC801\uAD70\uACFC \uAC19\uC774 \uC0AC\uB9DD\uD569\uB2C8\uB2E4."
+    fieldObject: {fileID: 3575288241437121221, guid: acdabb9c9b721ca4b91e80ff681635d8, type: 3}
+  - id: Gongcham
+    name: "\uC639\uACE8\uCC38\uCC38\uCC38"
+    tier: 2
+    image1: {fileID: 21300000, guid: 8d9dccd8144af6a46a44e89e03a5dc18, type: 3}
+    image2: {fileID: 21300000, guid: f4df4b1e82566bb429fc4a62bff27ee4, type: 3}
+    health: 2
+    power: 1
+    price: 2
+    desc: "\uD574\uB2F9 \uC720\uB2DB\uC774 \uC989\uC0AC \uD53C\uD574\uB97C 1\uBC88
+      \uBB34\uD6A8\uD654 \uC2DC\uD0B5\uB2C8\uB2E4."
+    fieldObject: {fileID: 8265890852013598689, guid: f67f2f6e7a1e4c946ab73fa45b10e740, type: 3}
+  - id: Victim
+    name: "\uB300\uC2E0\uC8FD\uB294\uC790"
+    tier: 3
+    image1: {fileID: 21300000, guid: 9ef4bb141d058a041a291dcaec731d42, type: 3}
+    image2: {fileID: 21300000, guid: 4f6b8b558b57978458e0c863f5282750, type: 3}
+    health: 7
+    power: 1
+    price: 3
+    desc: "\uD574\uB2F9 \uC720\uB2DB\uC774 \uC804\uD22C\uBD88\uAC00 \uC0C1\uD0DC\uAC00
+      \uB418\uBA74 \uB79C\uB364\uD55C \uC544\uAD70\uC774 \uBD80\uD65C\uD569\uB2C8\uB2E4."
+    fieldObject: {fileID: 7234166300226822418, guid: cd7702a9dd31d574eba3d3966f753053, type: 3}
+  - id: Heavenlyshield
+    name: "\uCC9C\uC0C1\uC758 \uBCF4\uD638\uB9C9"
+    tier: 3
+    image1: {fileID: 21300000, guid: 19c248d9ccd1fbb4cb910693649f4659, type: 3}
+    image2: {fileID: 21300000, guid: 598babf537829e045b997abff18ce62a, type: 3}
+    health: 3
+    power: 6
+    price: 3
+    desc: "\uD574\uB2F9 \uC720\uB2DB\uC774 2\uCE78 \uC774\uB3D9\uD560 \uB54C \uACF5\uACA9\uC744
+      \uB9C9\uC544\uC8FC\uB294 \uC77C\uD68C\uC131 \uBCF4\uD638\uB9C9\uC744 \uC0DD\uC131\uD569\uB2C8\uB2E4."
+    fieldObject: {fileID: 8309214033619448675, guid: c1a4501e3bb51c9489cf32ab29777d7c, type: 3}
+  - id: Sniperking
+    name: "\uC800\uACA9\uC655"
+    tier: 3
+    image1: {fileID: 21300000, guid: 0fd51a834fd07fb458d7ad148d6c9482, type: 3}
+    image2: {fileID: 21300000, guid: 6f9f103ac2afb0c40bd910ee3cbaa3cc, type: 3}
+    health: 2
+    power: 5
+    price: 3
+    desc: "\uC544\uAD70/\uC801\uAD70 \uC720\uB2DB\uC744 \uC0AC\uB9DD\uD558\uAC8C
+      \uD560 \uACBD\uC6B0 \uACF5\uACA9\uB825\uC774 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    fieldObject: {fileID: 7567606218505600274, guid: c5f6ead1763734d46863edb296be3c87, type: 3}

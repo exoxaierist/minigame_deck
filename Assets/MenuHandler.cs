@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
+//using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,7 +16,8 @@ public class MenuHandler : MonoBehaviour
     private void Awake()
     {
         main = this;
-        SetPanel("Menu");   
+        SetPanel("Menu");
+        Screen.SetResolution(1920, 1080, false);
     }
 
     public void SetPanel(string name)

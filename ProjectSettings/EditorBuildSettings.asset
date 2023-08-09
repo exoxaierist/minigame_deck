@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: fe81b2d84dc793a4c9ffe17f15f25e12
+    path: Assets/Scenes/Final/Menu.unity
+    guid: d96986eec991da4429d297c002d03562
   - enabled: 1
     path: Assets/Scenes/GrassField.unity
     guid: bdb5793fe66745343939587812ab853c
+  - enabled: 1
+    path: Assets/Scenes/Final/DessertField.unity
+    guid: 328dd9fb5c891b24096b4590855062d7
   m_configObjects: {}

@@ -28,7 +28,7 @@ public class ShopCard : UINavigatable
     public void SetCard(UnitSet _unit, Player _player, int index)
     {
         shop = Global.shopManager;
-        image.sprite = _unit.image;
+        image.sprite = _unit.image1;
         nameArea.text = _unit.name;
         healthArea.text = _unit.health.ToString();
         powerArea.text = _unit.power.ToString();
