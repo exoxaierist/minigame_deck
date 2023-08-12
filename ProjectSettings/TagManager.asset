@@ -47,6 +47,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Wall
+    uniqueID: 2927370101
+    locked: 0
   - name: Overlay
     uniqueID: 1693407951
     locked: 0

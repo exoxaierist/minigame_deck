@@ -32,8 +32,16 @@ public class UnitVisual : MonoBehaviour
     private void Update()
     {
         if (ignoreUnit) return;
-        if (unit.lastMoveDir == Vector2.left) spr.flipX = true;
-        else if (unit.lastMoveDir == Vector2.right) spr.flipX = false;
+        if (unit.player == Player.Player1)
+        {
+            if (unit.lastMoveDir == Vector2.left) spr.flipX = false;
+            else if (unit.lastMoveDir == Vector2.right) spr.flipX = true;
+        }
+        else if (unit.player == Player.Player1)
+        {
+            if (unit.lastMoveDir == Vector2.left) spr.flipX = true;
+            else if (unit.lastMoveDir == Vector2.right) spr.flipX = false;
+        }
     }
 
     private void OnDamage(UnitBase _)

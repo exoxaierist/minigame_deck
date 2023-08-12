@@ -35,6 +35,7 @@ public class Hp : MonoBehaviour
         hp = maxHp;
         if (autoParent && TryGetComponent(out GridObject gridobj)) autoParentTransform = gridobj.visual;
         if (showHpUI) hpUI = CreateHpBar();
+        
     }
 
     private void Update()

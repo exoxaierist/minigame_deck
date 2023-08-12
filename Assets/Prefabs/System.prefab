@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1de8d893ef505b46ae6cfc25035d836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopTime: 15
+  shopTime: 25
   shopUnitCount: 5
   coinPerRound: 10
   currentShopTimer: 0

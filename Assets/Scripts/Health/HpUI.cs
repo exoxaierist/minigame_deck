@@ -20,16 +20,17 @@ public class HpUI : MonoBehaviour
         maxHp = _maxHP;
         hp = _maxHP;
         type = _type;
-
+        CreateNumber();
+        if (maxHp != hp) SetHP(hp);
+        /*
         if (type == HpUIType.Counter)
         {
             CreateCounters();
             if (maxHp != hp) SetHP(hp);
         }else if (type == HpUIType.Number)
         {
-            CreateNumber();
-            if (maxHp != hp) SetHP(hp);
-        }
+            
+        }*/
     }
 
     public void CreateCounters()

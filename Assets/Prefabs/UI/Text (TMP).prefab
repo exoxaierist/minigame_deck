@@ -1,0 +1,898 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1561868752998746179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6926389393002445992}
+  - component: {fileID: 7121598157534606339}
+  - component: {fileID: 5132477607340853635}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6926389393002445992
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561868752998746179}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7455164738086906378}
+  - {fileID: 141006497063989859}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -860, y: -515}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7121598157534606339
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561868752998746179}
+  m_CullTransparentMesh: 1
+--- !u!114 &5132477607340853635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561868752998746179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "\uAC08\uACE0\uB9AC\uB9E8\thook\t1\t5\t\uC544\uAD70 \uC720\uB2DB\uACFC
+    \uADFC\uC811\uD588\uC744 \uB54C\t\uAC00\uC7A5 \uBA3C \uC801\uAD70 \uB04C\uC5B4\uB2F9\uAE30\uAE30\t1\uCE78\t\t\t\t\t\t\t\t\t\uB09A\uC2DC\uAFBC\uC774
+    \uAC08\uACE0\uB9AC\uB9CC \uB4E4\uACE0\uC788\uB294 \uB290\uB08C\t\uB09A\uC2DC\uAFBC(\uD074\uB798\uC2DC
+    \uB85C\uC584) - \uB098\uBB34\uC704\uD0A4\t\uC544\uAD70 \uC720\uB2DB\uC774 \uADFC\uCC98\uC5D0
+    \uC788\uB2E4\uBA74 \uAC00\uC7A5 \uBA3C \uC801\uAD70\uC744 \uB04C\uC5B4\uB2F9\uAE41\uB2C8\uB2E4.\r\n\t\t\t\t\t\uC2ED\uC790\uAC00\uC5D0
+    \uC788\uB294 \uC720\uB2DB\uC911 \uAC00\uC7A5 \uBA3C \uC720\uB2DB\uB9CC? \uADF8\uB9AC\uACE0
+    \uBCF4\uACE0 \uC788\uB294 \uBC29\uD5A5\uB9CC?\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC190\uBC14\uB2E5\tPalm\t2\t5\t\uD53C\uD574\uB97C
+    \uC92C\uC744\uB54C\t1\uCE78 \uBC00\uC5B4\uB0B4\uAE30(\uCE90\uB9AD\uD130\uAC00
+    \uBCF4\uB294\uCABD)\t1\uCE78\t\t\t\t\t\t\t\t\t\uD3C9\uBC94\uD55C \uC0AC\uB78C\uC778\uB370
+    \uC190\uBC14\uB2E5\uC774 \uC5C4\uCCAD \uD06C\uAC8C \uAC15\uC870\uB41C \uB290\uB08C\thttps://i.namu.wiki/i/pOgRHHFgenWoCSL0Luah16Iz1iN8UjGnhEvfLf_V1LnwiIGSAtdKMTRXbRCl0i6npL9PMTDIS5IKCW-TjHm6xTEgIR9-A3vfCZpDMta0UFbGW8jieEfC5PfOPtfv3ThoBOqncVEGxifNe8lHh67Ugw.webp\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uC801\uAD70\uC5D0\uAC8C \uD53C\uD574\uB97C \uC8FC\uBA74 \uC720\uB2DB\uC774
+    \uBCF4\uB294 \uBC29\uD5A5\uC73C\uB85C 1\uCE78 \uBC00\uC5B4\uB0C5\uB2C8\uB2E4.\r\n\t\t\t\t\t1\uCE78
+    \uBC00\uC5B4\uB0BC \uB54C \uBCBD\uC774\uB098 \uC720\uB2DB\uC774 \uC788\uB294
+    \uACBD\uC6B0 \uADF8 \uB4A4\uB85C? \uD639\uC740 \uC548\uBC00\uB9AC\uAC8C?\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t->
+    \uBCBD\uC774\uB098 \uC720\uB2DB\uC774 \uC788\uB294 \uACBD\uC6B0 \uC548 \uBC00\uB9AC\uAC8C\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uD3ED\uD0C4\uB9C8\uB9C8\uB9D8\tBomberman\t2\t5\t1\uCE78
+    \uC774\uB3D9\uC2DC\t\uB79C\uB364 \uD544\uB4DC(1\uCE78)\uC5D0 \uC790\uB3D9 \uD3ED\uBC1C\t1\uCE78\t\t\t\t\t\t\t\t\t\uAC78\uC5B4\uB2E4\uB2C8\uB294
+    \uD3ED\uD0C4\t\uB9C8\uB9AC\uC624 \uD3ED\uD0C4\uBCD1\t\uD574\uB2F9 \uC720\uB2DB\uC774
+    1\uCE78 \uC774\uB3D9\uD560 \uB54C\uB9C8\uB2E4 \uD544\uB4DC \uC911 1\uCE78\uC774
+    \uB79C\uB364\uC73C\uB85C \uD3ED\uBC1C\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBC29\uD328\tShield\t2\t4\t\uC544\uAD70\uC774
+    \uB370\uBBF8\uC9C0\uB97C \uC785\uC744 \uC2DC\t\uB79C\uB364 \uC544\uAD70\uC774\uBCF4\uACE0\uC788\uB294
+    \uC55E\uC73C\uB85C \uC774\uB3D9\t2\uCE78\t\t\t\t\t\t\t\t\t\uAC70\uB300\uD55C
+    \uBC29\uD328\uB97C \uB4E4\uACE0\uC788\uB294 \uB290\uB08C(ex\uBE0C\uB77C\uC6C0)\t\uBE0C\uB77C\uC6C0
+    - \uB098\uBB34\uC704\uD0A4\t\uC544\uAD70 \uC720\uB2DB\uC774 \uB370\uBBF8\uC9C0\uB97C
+    \uC785\uC73C\uBA74 \uD574\uB2F9 \uC720\uB2DB\uC774 \uB79C\uB364 \uC544\uAD70\uC758
+    \uC55E\uC73C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\nMoney\tMoney\t2\t3\t\uC8FD\uC744
+    \uB54C\t\uCD94\uAC00 \uC7AC\uD654 \uD68D\uB4DD (2\uC6D0)\t1\uCE78\t\t\t\t\t\t\t\t\t\uC0C1\uC778\uC774
+    \uB3C8 \uC8FC\uBA38\uB2C8\uB97C \uB4E4\uACE0 \uC788\uB294 \uBAA8\uC2B5\t\uC911\uC138\uC0C1\uC778\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uC804\uD22C\uBD88\uAC00 \uC0C1\uD0DC\uAC00 \uB418\uBA74 \uCD94\uAC00
+    \uC7AC\uD654\uB97C \uD68D\uB4DD\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uAC70\uC6B8\tMirror\t2\t4\t\uD134
+    \uC2DC\uC791 \uC2DC\t\uC0C1\uB300 \uC720\uB2DB \uC774\uB3D9 \uBC18\uC804\t1\uCE78\t\t\t\t\t\t\t\t\t\uAC70\uC6B8
+    \uC18D\uC5D0 \uD45C\uC815\uC774 \uC788\uB294 \uBC31\uC124\uACF5\uC8FC \uB9C8\uBC95\uAC70\uC6B8
+    \uB290\uB08C\thttps://d15f34w2p8l1cc.cloudfront.net/hearthstone/120f13ba1de120a1a8ce932d992b828f02e9a8ba65c161daa6115b8ddff4ed8c.png\t\uD134\uC774
+    \uC2DC\uC791\uB420 \uB54C \uACF5\uACA9 \uBC94\uC704\uC5D0 \uC788\uB294 \uC801\uAD70
+    \uC720\uB2DB\uC758 \uC774\uB3D9\uC774 \uBC18\uC804\uB429\uB2C8\uB2E4.\r\n\t\t\t\t\t\uC0C1\uB300
+    \uC720\uB2DB \uC804\uBD80?? -> \uACF5\uACA9 \uBC94\uC704\uC5D0 \uC788\uB294 \uCE5C\uAD6C\uB9CC\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\uC804\uBD80\uB77C\uBA74
+    \uC774 \uC720\uB2DB \uC8FD\uC744\uB54C\uAE4C\uC9C0 \uBC18\uB300\uAC00 \uB428\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBA85\uC778\tMaster\t1\t5\t\uC544\uAD70\uC5D0\uAC8C
+    \uD53C\uD574\uB97C \uC92C\uC744 \uB54C\t\uC774 \uCE90\uB9AD\uD130\uC5D0\uAC8C
+    \uD53C\uD574\uB97C \uBC1B\uC740 \uC544\uAD70 \uCCB4\uB825, \uACF5\uACA9\uB825
+    1 \uC0C1\uC2B9\t2\uCE78\t\t\t\t\t\t\t\t\t\uC218\uB3C4\uC2B9 \uB290\uB08C\thttps://i.namu.wiki/i/ezQQE7hSKx61HKeKyjK4OovX0TD_5kP8f6X4-2NPDGArASzB9Dgo0jpIYOeBKIuK0uDGdNXJbWlo0TzfjbSoskntf-fRSQd28AoiEJnW3vKJLOsXrdOZ0Wagsi7GbHlqmvBKd8mQkAeYPlpH9m3iaw.webp\t\uC544\uAD70\uC5D0\uAC8C
+    \uD53C\uD574\uB97C \uC8FC\uBA74 \uD53C\uD574\uB97C \uC785\uC740 \uC544\uAD70\uC758
+    \uCCB4\uB825\uACFC \uACF5\uACA9\uB825\uC774 \uC0C1\uC2B9\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uAD11\uB780\uC790\tmadman\t5\t15\t\uACF5\uACA9
+    \uD0A4\uB97C \uB20C\uB800\uC744 \uB54C\t\uC790\uC2E0\uC5D0\uAC8C \uD53C\uD574(3\uB370\uBBF8\uC9C0)\t2\uCE78\t\t\t\t\t\t\t\t\t\uC624\uD06C\uAC00
+    \uAC70\uB300\uD55C \uB3C4\uB07C\uB97C \uB4E4\uACE0\uC788\uB294 \uB290\uB08C(ex
+    wow \uAC00\uB85C\uC26C)\t\uAC00\uB85C\uC26C \uD5EC\uC2A4\uD06C\uB9BC - \uB098\uBB34\uC704\uD0A4\t\uACF5\uACA9
+    \uD589\uB3D9\uC744 \uD588\uC744 \uB54C \uC790\uC2E0\uC5D0\uAC8C \uD53C\uD574\uB97C
+    \uC785\uD799\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uB3CC\uACA9\uB300\uC7A5\tchargecaptain\t2\t3\t\uC0AC\uB9DD
+    \uC2DC\t\uC544\uAD70 \uACF5\uACA9\uB825 2 \uC99D\uAC00\t1\uCE78\t\t\t\t\t\t\t\t\t\uAC11\uC637\uC744
+    \uC785\uC740 \uCE7C\uC744\uB4E4\uC740 \uC815\uC11D\uC801\uC778 \uAE30\uC0AC(ex
+    \uC720\uD76C\uC655 \uC120\uBD09\uB300\uC7A5)\t\uC120\uBD09 \uB300\uC7A5 - \uB098\uBB34\uC704\uD0A4\t\uC804\uD22C\uBD88\uAC00
+    \uC0C1\uD0DC\uAC00 \uB418\uBA74 \uC544\uAD70\uC758 \uACF5\uACA9\uB825\uC744 \uC99D\uAC00\uC2DC\uD0B5\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC694\uC0C8\tCastle\t1\t5\t\uD53C\uD574\uB97C
+    \uBC1B\uC558\uC744 \uB54C\t\uCCB4\uB825 1~2 \uB79C\uB364 \uD68C\uBCF5\t1\uCE78\t\t\t\t\t\t\t\t\t\uC6C0\uC9C1\uC774\uB294
+    \uC791\uC740 \uC131 \uB290\uB08C\thttps://i.namu.wiki/i/Mus30FHPtrh2EmJvY4oGRvbAJLCrHebn6iYjdWFt8NN5jC9H6aWQri5GuiX353tnAoUceEirT0g4QphY5H7XhfJ2_n8chVku5_ANcYdSqtMlKpQuXOX5_epgihOD74sOUXRRLMhRHCS_Fo000rqDhg.webp\t\uD53C\uD574\uB97C
+    \uC785\uC73C\uBA74 \uCCB4\uB825\uC744 \uD68C\uBCF5\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBC84\uC12F\uD3EC\uC790\tspores\t1\t3\t\uD53C\uD574\uB97C
+    \uC785\uC5C8\uC744 \uB54C\t\uC790\uC2E0\uC5D0\uAC8C \uD53C\uD574\uB97C \uC785\uD78C
+    \uC0C1\uB300 \uAE30\uC808 (1\uD134)\t1\uCE78\t\t\t\t\t\t\t\t\t\uB3C5\uBC84\uC12F\t\uB9C8\uB9AC\uC624
+    \uB3C5\uBC84\uC12F\t\uD53C\uD574\uB97C \uC785\uC73C\uBA74 \uACF5\uACA9\uD55C
+    \uC801\uAD70 \uC720\uB2DB\uC774 (1\uD134) \uAE30\uC808\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBFC5\uB9DD\uCE58\tblowout\t2\t4\t\uD134
+    \uC2DC\uC791 \uC2DC\t\uB79C\uB364 \uC0C1\uB300 1\uD134 \uAE30\uC808\t1\uCE78\t\t\t\t\t\t\t\t\t\uBFC5\uB9DD\uCE58\uB97C
+    \uB4E0 \uAE30\uC0AC\thttps://play-lh.googleusercontent.com/O_Rrpp3TyC8H1EV2JbrGrb8zTmYxSalv4t29-Kq7eWpfYbVuRefk6PFRoiXtJEh0FDU\t\uD134\uC774
+    \uC2DC\uC791\uD560 \uB54C \uB79C\uB364 \uC801\uAD70 \uC720\uB2DB\uC774 (1\uD134)
+    \uAE30\uC808\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBCF5\uC218\uC790\tavenger\t1\t5\t\uBD80\uD65C\uC2DC
+    \t\uACF5\uACA9\uB825 5 \uCD5C\uB300 \uCCB4\uB825 5\uC99D\uAC00 \uC774\uB3D9\uCE78
+    1\uCE78 \uC99D\uAC00\t1\uCE78\t\t\t\t\t\t\t\t\t\uC601\uD654 \uD504\uB9AC\uC2A4\uD2B8
+    \uB290\uB08C\thttps://i.namu.wiki/i/PVi4L1ZFEPgvJLWmY8KHCIM8YqrT3wDuIzgTz-UOsyX9UOin0xc2Io13BIj6ofFNSenKnOrkAy6JBfcdZJ1rOg0_BYl_nfzUdBI-PWp8bE_fSUV0zysb52dcfL5AR9PVqulMc99e003Ilz4YsUAMHw.webp\t\uBD80\uD65C\uD558\uBA74
+    \uACF5\uACA9\uB825 5, \uCD5C\uB300\uCCB4\uB825 5, \uC774\uB3D9\uCE78 1\uCE78
+    \uC99D\uAC00\uB97C \uC5BB\uC2B5\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uB3D9\uB8CC\tMate\t2\t4\t\uD55C
+    \uCE78 \uB4A4 \uC544\uAD70\uC774 \uACF5\uACA9\uD588\uC744 \uB54C\t\uB370\uBBF8\uC9C0
+    1\uC99D\uAC00\t1\uCE78\t\t\t\t\t\t\t\t\t\uAC11\uC637\uC744 \uC785\uC740 \uBCD1\uC0AC\uAC00
+    3\uBA85 \uB098\uB780\uD788 \uC11C \uC788\uC74C\thttps://i.namu.wiki/i/oxrkwYyuOmaEoVFeYp09lP2S20z8fd2YcTaDF2hVEqb-lbgEeM9jPxw7mZ3LLBvjo_5koFmkiu2g91SN9GK1r0t4AqEoKGz9wCMqjgK9BsKVpoalWYehyebthBUDfPovEWomckY4jV4wmrpEroDqBA.webp\t\uD55C
+    \uCE78 \uB4A4 \uC544\uAD70\uC774 \uACF5\uACA9\uD558\uBA74 \uC790\uC2E0\uC758
+    \uACF5\uACA9\uB825\uC774 \uC0C1\uC2B9\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\uD55C\uCE78\uB4A4\uAC00
+    \uBCF4\uACE0 \uC788\uB294 \uBC29\uD5A5\uC758 \uD55C\uCE78 \uB4A4?\t-> \uB3D9\uB8CC
+    \uC720\uB2DB\uC774 \uB4F1\uC9C0\uACE0 \uC788\uB294 \uC720\uB2DB\uC774\uC694\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC2E0\uCC38
+    \uD574\uC801\uB450\uAC74\tNewRedHood\t1\t5\t\uC7AC\uD654\uAC00 10 \uC774\uD558\uC77C
+    \uB54C\t2\uBC88 \uACF5\uACA9\t1\uCE78\t\t\t\t\t\t\t\t\t\uB450\uAC74\uC744 \uC4F4
+    \uB808\uC774\uD53C\uC5B4\uB97C \uB4E4\uC740 \uD574\uC801(ex \uBA54\uC774\uD50C
+    \uBAAC\uC2A4\uD130 \uD06C\uB8E8)\t\uD06C\uB8E8 | \uBA54\uC774\uD50C\uC2A4\uD1A0\uB9ACM
+    \uC704\uD0A4 | Fandom\t\uBCF4\uC720 \uC7AC\uD654\uAC00 10 \uBBF8\uB9CC\uC77C\uB54C
+    2\uBC88 \uACF5\uACA9\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uD790\uB7EC\tHealer\t1\t8\t\uBC94\uC704
+    \uB0B4 \uC544\uAD70\uC774 \uB370\uBBF8\uC9C0\uB97C \uC785\uC744 \uC2DC\t\uC544\uAD70
+    \uD53C 1 \uD68C\uBCF5\t1\uCE78\t\t\t\t\t\t\t\t\t\uB9C8\uBC95\uBD09\uC744 \uB4E0
+    \uCC9C\uC0AC\thttps://i.namu.wiki/i/mh-wr0cXgKYCeFxK12zIB-BSO5xVo4D9Zf01zaCuFi152KkyZ2sLJkFt2niaw3QBv7i_Pwjnx8d-Rz3ddF3hbiGr1IP1qNHgZHnR81Kh9JRLfBw1s5FNHUAK6PMlH5iKYeqO2jaLD2T-oX1HqdzslA.webp\t\uACF5\uACA9
+    \uBC94\uC704\uC758 \uC544\uAD70\uC774 \uD53C\uD574\uB97C \uC785\uC73C\uBA74 \uB2E4\uC74C
+    \uD134\uC5D0 \uC544\uAD70\uC758 \uCCB4\uB825\uC744 \uD68C\uBCF5\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\thttps://cdn.crowdpic.net/detail-thumb/thumb_d_7A886EDAE5F7FCDC400F8D7CEBB85CAE.png\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC790\uB3D9
+    \uCD94\uAC00 \uACF5\uACA9 \uC720\uB2DB\tAuto\t1\t3\t\uC544\uAD70\uC774 \uB370\uBBF8\uC9C0\uB97C
+    \uC92C\uC744\uB54C\t\"\uC790\uB3D9 \uCD94\uAC00 \uC720\uB3C4 \uACF5\uACA9\n(\uB9CC\uC57D
+    \uB458 \uC774\uC0C1\uC758 \uC778\uC6D0\uC774 \uB370\uBBF8\uC9C0\uB97C \uC92C\uC744\uB584\uB294
+    \uB458\uC911 \uD558\uB098\uC5D0\uAC8C\uB9CC \uB79C\uB364\uC73C\uB85C \uC801\uC6A9)\"\t0\uCE78\t\t\t\t\uAE30\uBCF8
+    \uACF5\uACA9X\t\t\t\t\t\uACE0\uC815\uB418\uC5B4 \uBBF8\uC0AC\uC77C\uC744 \uBC1C\uC0AC\uD558\uB294
+    \uBC1C\uC0AC\uB300 \uB290\uB08C\t\uBE0C\uB808\uC774\uC988 \uCE90\uB17C - \uB098\uBB34\uC704\uD0A4\t\uC544\uAD70\uC774
+    \uC801\uAD70\uC5D0\uAC8C \uD53C\uD574\uB97C \uC785\uD788\uBA74 \uC790\uB3D9\uC73C\uB85C
+    \uCD94\uAC00 \uC720\uB3C4 \uACF5\uACA9\uC744 \uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uAE61\uD1B5\uB85C\uBD07\tCanrob\t3\t10\t\uCCB4\uB825\uC774
+    ~\uC774\uD558\uB85C \uB5A8\uC5B4\uC84C\uC744\uB54C\t2\uD68C \uACF5\uACA9 \uBC0F
+    \uC0AC\uAC70\uB9AC \uBC0F \uC774\uB3D9\uAC70\uB9AC \uC99D\uAC00\t1\uCE78 (3\uCE78)\t\t\t\t\t\t(\uB298\uC5B4\uB09C
+    \uC0AC\uAC70\uB9AC)\t\t\t\uC624\uC988\uC758 \uB9C8\uBC95\uC0AC\uC758 \uC591\uCCA0\uB098\uBB34\uAFBC
+    \uB290\uB08C\t\uC591\uCCA0\uB098\uBB34\uAFBC\t\uCCB4\uB825\uC774 (4) \uC774\uD558\uB85C
+    \uB5A8\uC5B4\uC9C0\uBA74 2\uBC88 \uACF5\uACA9\uD558\uACE0 \uC0AC\uAC70\uB9AC\uC640
+    \uC774\uB3D9\uAC70\uB9AC\uAC00 \uC99D\uAC00\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uB2CC\uB2CC\tNinja\t5\t3\t1/3
+    \uD655\uB960\uB85C \t\uC0C1\uB300 \uACF5\uACA9 \uD68C\uD53C\t4\uCE78\t\t\t\t\t\t\t\t\t\uB2CC\uC790(
+    \uB2CC\uC790\uB9DB \uCFE0\uD0A4)\t\uB2CC\uC790\uB9DB \uCFE0\uD0A4 - \uB098\uBB34\uC704\uD0A4\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uD53C\uD574\uB97C \uC785\uC744 \uB54C 1/3 \uD655\uB960\uB85C
+    \uC0C1\uB300\uC758 \uACF5\uACA9\uC744 \uD68C\uD53C\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uACE0\uCFE0\tGoku\t6\t5\t\uD134
+    \uC2DC\uC791\uC2DC -> \uB77C\uC6B4\uB4DC \uC2DC\uC791\uC2DC\t\"\uBD84\uC2E0 \uC18C\uD658(\uC720\uB2DB\uC774
+    \uBCF4\uB294 \uBC29\uD5A5 \uBC18\uB300 \uB300\uAC01\uC120 2\uAC1C\uC5D0 2\uAC1C
+    \uC18C\uD658)\n(\uBD84\uC2E0 : \uCCB4\uB825\uC740 2 \uACF5\uACA9\uB825\uC740
+    3 \uC774\uB3D9 \uCE78 2\uCE78)\uD2B9\uC218\uB2A5\uB825 \uC5C6\uC74C \"\t2\uCE78\t\t\t\t\t\t\t\t\t\uC190\uC624\uACF5\t\uC190\uC624\uACF5
+    - \uB098\uBB34\uC704\uD0A4\t\uB77C\uC6B4\uB4DC\uAC00 \uC2DC\uC791\uD560 \uB54C
+    (\uCCB4\uB825 2 / \uACF5\uACA9\uB825 3)\uC778 \uBD84\uC2E0\uC744 \uC18C\uD658\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBCFC\uB9C1\uB9E8\tBowling\t4\t5\t\uD53C\uD574\uB97C
+    \uC92C\uC744 \uB54C \t\uC0C1\uB300 \uC720\uB2DB \uC870\uC885 \uBD88\uAC00(\uB370\uBBF8\uC9C0\uB97C
+    \uC785\uC740 \uC0C1\uB300\uAC00 \uB79C\uB364\uD558\uAC8C \uC6C0\uC9C1\uC784)\t2\uCE78\t\t\t\t\t\t\t\t\t\uADFC\uC721
+    \uBE75\uBE75\uD55C \uC0AC\uB78C\thttps://i.namu.wiki/i/AZURHMe2xitkI1181CleHcwjRsqiPe-l-Pg0YdoDuGnCXhSclWSBeZXQ3z9OcDZ0B0y5GzLQer3M61OuFdaY4W5Wd9QzAWdp9BkmiAot2AFRJ-1wel9bmeEI4nTOh1O93QjKm-hA2EbQugfWXD2AEQ.webp\t\uC801\uAD70
+    \uC720\uB2DB\uC5D0\uAC8C \uD53C\uD574\uB97C \uC8FC\uBA74 \uD574\uB2F9 \uC801\uAD70
+    \uC720\uB2DB\uC774 \uB79C\uB364\uC73C\uB85C \uC6C0\uC9C1\uC785\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uAE08\uAC15\uBD88\uAD34\tGeumgang\t3\t5\t\uD53C\uD574\uB97C
+    \uC785\uC5C8\uC744 \uB54C\t\uACF5\uACA9\uB825 1 \uC99D\uAC00\t2\uCE78\t\t\t\t\t\t\t\t\t\uBD80\uCC98\uB2D8
+    \uAC19\uC740 \uB290\uB08C\t\uBD93\uB2E4 - \uB098\uBB34\uC704\uD0A4\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uD53C\uD574\uB97C \uC785\uC73C\uBA74 \uACF5\uACA9\uB825\uC774
+    \uC99D\uAC00\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uACE0\uC2B4\uD3ED\uBC1C\tsuicidebomb\t0\t5\t\uD53C\uD574\uB97C
+    \uC785\uC5C8\uC744 \uB54C\t\uC0C1\uB300\uC640 \uC790\uC2E0 \uB3D9\uC2DC \uC989\uC0AC\t2\uCE78\t\t\t\t\t\t\t\t\t\uAC00\uC2DC\uAC00
+    \uBC14\uC9DD \uC120 \uACE0\uC2B4\uB3C4\uCE58\thttps://media.istockphoto.com/id/472291951/ko/%EB%B2%A1%ED%84%B0/%EA%B3%A0%EC%8A%B4%EB%8F%84%EC%B9%98.jpg?s=1024x1024&w=is&k=20&c=85nLVDZJ2XhDpgfhilniHWq_bFIUzqLIfEcp7bNlvCo=\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uD53C\uD574\uB97C \uC785\uC73C\uBA74 \uD53C\uD574\uB97C \uC785\uD78C
+    \uC801\uAD70\uACFC \uAC19\uC774 \uC0AC\uB9DD\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC639\uACE8\uCC38\uCC38\uCC38\tGongcham\t1\t2\t\uC989\uC0AC
+    \uD53C\uD574\uB97C \uC785\uC5C8\uC744\uB54C\t1\uBC88 \uBC84\uD300\t1\uCE78\t\t\t\t\t\t\t\t\t\uBC14\uC704\uC758
+    \uC9D1\uD569\uCCB4 \uAC19\uC740 \uB290\uB08C (ex \uD3EC\uCF13\uBAAC \uC11D\uD0C4\uC0B0)\thttps://i.namu.wiki/i/Yp2oDXF-bfnhn8pLbsaBHR1iixFQtYHs_oHG_Kmfu5-nwmbjbZYaYyaWR9cuhsvAkE2w_RoRgmWxto9Pj8ZsmRpeFWvisgqZ_hxHpAhGEi3n_LRRXDOJJUZ41qQksohnt_9r7hEFmfh3_OEx0aVnQQ.webp\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uC989\uC0AC \uD53C\uD574\uB97C 1\uBC88 \uBB34\uD6A8\uD654
+    \uC2DC\uD0B5\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBCA0\uD0DC\uB791
+    \uD574\uC801\uBAA8\uC790\tBettypiratehat\t5\t4\t\uC804\uD22C \uC911 \uC7AC\uD654
+    \uCD94\uAC00 \uD68D\uB4DD \uC2DC\t\uBC29\uC5B4\uB825 \uC99D\uAC00\t1\uCE78\t\t\t\t\t\t\t\t\t\uBAA8\uC790\uB97C
+    \uC4F0\uACE0 \uCF67\uC218\uC5FC\uC774 \uC788\uB294 \uD574\uC801 \uAC80\uC744
+    \uB4E4\uC74C\thttps://i.namu.wiki/i/dF1aTtJoP1zOaJFODLsYelgIJH11rWTfsRQTsZ_QCYi6K0wHXp0i5NJJ66cLuC7lqHdvYAgDRLnIptQ7Ae7B0BQC3UbCMK7oyCMfuFs1KwV2zAsXjsszHxyMQvhdAOMfwkfJFwV2rrgAjF6GvoFW7g.webp\t\uC804\uD22C
+    \uC911 \uC7AC\uD654\uB97C \uCD94\uAC00\uB85C \uD68D\uB4DD\uD560 \uC2DC \uD574\uB2F9
+    \uC720\uB2DB\uC758 \uBC29\uC5B4\uB825\uC774 \uC99D\uAC00\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\uBC29\uC5B4\uB825\uC5D0
+    \uB300\uD55C \uAC1C\uB150\uC5D0 \uB300\uD55C \uC124\uBA85\uC758 \uBD80\uC7AC\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\uBC29\uC5B4\uB825\uC774
+    \uC601\uAD6C\uC801\uC73C\uB85C \uBC1B\uB294 \uB370\uBBF8\uC9C0\uAC00 \uAC10\uC18C\uD558\uB294\uAC00?\t\uACF5\uB825\uB825-\uBC29\uC5B4\uB825=\uB370\uBBF8\uC9C0
+    \uC774\uB807\uAC8C\uB294 \uC548\uB420\uAE4C\uC694\t\t\t\t\t\t\t\t\t\t\t\r\n\t\uC774
+    \uC774\uB984\uC740 \uC880 \uC544\uB2CC\uAC70 \uAC19\uC544\uC694\t\t\t\t\uD639\uC740
+    \uCD5C\uB300\uCCB4\uB825 \uAC1C\uB150\uC73C\uB85C \uB298\uC5B4\uB098\uB294\uAC00?\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC2DC\uCCB4\uAD6C\uB369\uC774\tCorpse\t3\t5\t\uC2DC\uCCB4
+    \uC704\uB85C \uC62C\uB77C\uAC08 \uC2DC\t\uACF5\uACA9\uB825 3\uC99D\uAC00\t1\uCE78\t\t\t\t\t\t\t\t\t\uB124\uD06C\uB85C
+    \uBA58\uC11C \uD574\uACE8\uB85C\uB41C \uC9C0\uD321\uC774\uB97C \uB4E4\uC74C\thttps://i.namu.wiki/i/WTsyzIhEy57ZYU744r8OwXm-ah3IHyRLOYhGAXTG5L1vJwOdvHZmXapymAdQ3Ft8E_zIEB0eXbnJNBLBLUBm0qoTxk8-hDViK1_TRoyJh9SawjMt4Ov2L7_XyVjffusQMufkpKOBJWlX8SlbwpKIug.webp\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uC544\uAD70/\uC801\uAD70\uC758 \uC2DC\uCCB4 \uC704\uC5D0
+    \uC62C\uB77C\uAC08 \uC2DC \uACF5\uACA9\uB825\uC774 \uC99D\uAC00\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC815\uC2E0\uC774\uC0C1\uC790\tJoker\t10\t10\t\uACF5\uACA9
+    \uD0A4\uB97C \uB20C\uB800\uC744 \uB584\t\uB79C\uB364\uD55C \uD328\uD134\uC73C\uB85C
+    \uACF5\uACA9\t3\uCE78\t\t\t\t\t\uB79C\uB364 \uD328\uD134\uC73C\uB85C \uACF5\uACA9(\uB2E4\uB978
+    \uC720\uB2DB\uB4E4 \uACF5\uACA9 \uD328\uD134\uC911 \uD558\uB098\uB85C)\t\t\t\t\t`\t\uACF5\uACA9\uD588\uC744
+    \uB54C.......\r\n\t\t\t\t\t\uB79C\uB364\uD55C \uD328\uD134\uC774 \uB9CC\uB4E4\uC5B4\uC838\uC788\uC9C0
+    \uC54A\uC74C\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uB300\uC2E0\uC8FD\uB294\uC790\tvictim\t1\t7\t\uC0AC\uB9DD\uC2DC
+    \t\uC544\uAD70 \uBD80\uD65C\t2\uCE78\t\t\t\t\t\t\t\t\t\uAC81\uC7C1\uC774 \uB108\uB4DC
+    \uAC19\uC740 \uBAA8\uC2B5\thttps://i.namu.wiki/i/Rgv3_rNfYLoiXsUsrDVDj6GdX1PGwamoEtGq0GeSlOxcfyd3d9KZCCURcHwVgPIFrmdkMSISjnXDljONcFGa4FCt7w5jWrHP1Ns2IbGDufBknRxLDT2RpBwdbMbWvDuWZ6415DIy7oAi71-TlQwEGg.webp\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uC804\uD22C\uBD88\uAC00 \uC0C1\uD0DC\uAC00 \uB418\uBA74 \uB79C\uB364\uD55C
+    \uC544\uAD70\uC774 \uBD80\uD65C\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBD80\uD65C\uCCB4\tresurrection\t0\t4\t\uC544\uAD70
+    \uC2DC\uCCB4 \uC704\uC5D0 \uC62C\uB77C\uAC14\uB2E4\uAC00 \uC774\uB3D9\uD560 \uB54C\t\uC2DC\uCCB4
+    \uC544\uAD70 \uBD80\uD65C\t2\uCE78\t\t\t\t\t\uAE30\uBCF8\uACF5\uACA9 x\t\t\t\t\uC628\uBAB8\uC5D0\uC11C
+    \uC2E0\uC131\uD55C \uAE30\uC6B4\uC774 \uB098\uC624\uB294 \uB290\uB08C\thttps://i.namu.wiki/i/VVnYNlMFKZU9Exe6ojbHOzaxZkThcJMXMfv9mYY_aiP4-W9glPty2PLdYg2IUIyjMqoslS5D3TUJxJ1iIbe_cWP3H9Cl_Ru_7RGYvaxKKJdMEppKq53woRjhL06w3WzZwJmAz2l7JEs-aamWbkh4Hw.webp\t\uC544\uAD70
+    \uC720\uB2DB\uC758 \uC2DC\uCCB4 \uC704\uC5D0\uC11C \uC774\uB3D9\uD560 \uC2DC
+    \uC2DC\uCCB4 \uC544\uAD70\uC774 \uBD80\uD65C\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uCC9C\uC0C1\uC758
+    \uBCF4\uD638\uB9C9\theavenlyshield\t6\t3\t2\uCE78 \uC774\uB3D9\uC2DC\t1\uBC88
+    \uACF5\uACA9\uC744 \uB9C9\uC544\uC8FC\uB294 \uBCF4\uD638\uB9C9 \uC0DD\uC131\t1\uCE78\t\t\t\t\t\t\t\t\t\uC131\uAE30\uC0AC
+    \thttps://i.namu.wiki/i/hu0RqzOgQ0FJG5GhyDHY7hwaYQZuZx5uTtMB0CRSLI12mCeYpot3koaVdunwENY5FUVZGAX7OPqp1jaQFagQye8VLvaMQQ1APR6bjHiiuc2M_Pb96qh7dIdgRCwge5ejModsiNklp2Q8QiPi9BfzJA.webp\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 2\uCE78 \uC774\uB3D9\uD560 \uB54C \uACF5\uACA9\uC744 \uB9C9\uC544\uC8FC\uB294
+    \uC77C\uD68C\uC131 \uBCF4\uD638\uB9C9\uC744 \uC0DD\uC131\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC800\uACA9\uC655\tsniperking\t5\t2\t\uC720\uB2DB\uC744
+    \uC8FD\uC600\uC744\uB584(\uC544\uAD70 \uC801\uAD70 \uBB34\uAD00)\t\uACF5\uACA9\uB825
+    1\uC99D\uAC00\t1\uCE78\t\t\t\t\t\t\t\t\t\uAE34 \uC7A5\uCD1D\uC744 \uC9C0\uB2CC
+    \uC800\uACA9\uC218 \thttps://i.namu.wiki/i/sKOte-QZnKSOGun7rHpg1kzOFJy5dmKpl3OC-K5PmxHKfrF2xrGWugqxv8GAvhatq2BX55JB0VTe-GqpyuekNzTR4xC3gqv-Nn4WOr6kENrSlwtzKLZAF4pLenFF6FL1wruugGTGMP1pNzWaHsW7yA.webp\t\uC544\uAD70/\uC801\uAD70
+    \uC720\uB2DB\uC744 \uC0AC\uB9DD\uD558\uAC8C \uD560 \uACBD\uC6B0 \uACF5\uACA9\uB825\uC774
+    \uC99D\uAC00\uD569\uB2C8\uB2E4."
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 46df95ff4b0d0a7428db714abe4601d7, type: 2}
+  m_sharedMaterial: {fileID: -1216133755635328112, guid: 46df95ff4b0d0a7428db714abe4601d7, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &1632954111262760049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7455164738086906378}
+  - component: {fileID: 6817395314837153885}
+  - component: {fileID: 7341059194696644797}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7455164738086906378
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632954111262760049}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6926389393002445992}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 431, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6817395314837153885
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632954111262760049}
+  m_CullTransparentMesh: 1
+--- !u!114 &7341059194696644797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632954111262760049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "\uAC08\uACE0\uB9AC\uB9E8\thook\t1\t5\t\uC544\uAD70 \uC720\uB2DB\uACFC
+    \uADFC\uC811\uD588\uC744 \uB54C\t\uAC00\uC7A5 \uBA3C \uC801\uAD70 \uB04C\uC5B4\uB2F9\uAE30\uAE30\t1\uCE78\t\t\t\t\t\t\t\t\t\uB09A\uC2DC\uAFBC\uC774
+    \uAC08\uACE0\uB9AC\uB9CC \uB4E4\uACE0\uC788\uB294 \uB290\uB08C\t\uB09A\uC2DC\uAFBC(\uD074\uB798\uC2DC
+    \uB85C\uC584) - \uB098\uBB34\uC704\uD0A4\t\uC544\uAD70 \uC720\uB2DB\uC774 \uADFC\uCC98\uC5D0
+    \uC788\uB2E4\uBA74 \uAC00\uC7A5 \uBA3C \uC801\uAD70\uC744 \uB04C\uC5B4\uB2F9\uAE41\uB2C8\uB2E4.\r\n\t\t\t\t\t\uC2ED\uC790\uAC00\uC5D0
+    \uC788\uB294 \uC720\uB2DB\uC911 \uAC00\uC7A5 \uBA3C \uC720\uB2DB\uB9CC? \uADF8\uB9AC\uACE0
+    \uBCF4\uACE0 \uC788\uB294 \uBC29\uD5A5\uB9CC?\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC190\uBC14\uB2E5\tPalm\t2\t5\t\uD53C\uD574\uB97C
+    \uC92C\uC744\uB54C\t1\uCE78 \uBC00\uC5B4\uB0B4\uAE30(\uCE90\uB9AD\uD130\uAC00
+    \uBCF4\uB294\uCABD)\t1\uCE78\t\t\t\t\t\t\t\t\t\uD3C9\uBC94\uD55C \uC0AC\uB78C\uC778\uB370
+    \uC190\uBC14\uB2E5\uC774 \uC5C4\uCCAD \uD06C\uAC8C \uAC15\uC870\uB41C \uB290\uB08C\thttps://i.namu.wiki/i/pOgRHHFgenWoCSL0Luah16Iz1iN8UjGnhEvfLf_V1LnwiIGSAtdKMTRXbRCl0i6npL9PMTDIS5IKCW-TjHm6xTEgIR9-A3vfCZpDMta0UFbGW8jieEfC5PfOPtfv3ThoBOqncVEGxifNe8lHh67Ugw.webp\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uC801\uAD70\uC5D0\uAC8C \uD53C\uD574\uB97C \uC8FC\uBA74 \uC720\uB2DB\uC774
+    \uBCF4\uB294 \uBC29\uD5A5\uC73C\uB85C 1\uCE78 \uBC00\uC5B4\uB0C5\uB2C8\uB2E4.\r\n\t\t\t\t\t1\uCE78
+    \uBC00\uC5B4\uB0BC \uB54C \uBCBD\uC774\uB098 \uC720\uB2DB\uC774 \uC788\uB294
+    \uACBD\uC6B0 \uADF8 \uB4A4\uB85C? \uD639\uC740 \uC548\uBC00\uB9AC\uAC8C?\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t->
+    \uBCBD\uC774\uB098 \uC720\uB2DB\uC774 \uC788\uB294 \uACBD\uC6B0 \uC548 \uBC00\uB9AC\uAC8C\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uD3ED\uD0C4\uB9C8\uB9C8\uB9D8\tBomberman\t2\t5\t1\uCE78
+    \uC774\uB3D9\uC2DC\t\uB79C\uB364 \uD544\uB4DC(1\uCE78)\uC5D0 \uC790\uB3D9 \uD3ED\uBC1C\t1\uCE78\t\t\t\t\t\t\t\t\t\uAC78\uC5B4\uB2E4\uB2C8\uB294
+    \uD3ED\uD0C4\t\uB9C8\uB9AC\uC624 \uD3ED\uD0C4\uBCD1\t\uD574\uB2F9 \uC720\uB2DB\uC774
+    1\uCE78 \uC774\uB3D9\uD560 \uB54C\uB9C8\uB2E4 \uD544\uB4DC \uC911 1\uCE78\uC774
+    \uB79C\uB364\uC73C\uB85C \uD3ED\uBC1C\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBC29\uD328\tShield\t2\t4\t\uC544\uAD70\uC774
+    \uB370\uBBF8\uC9C0\uB97C \uC785\uC744 \uC2DC\t\uB79C\uB364 \uC544\uAD70\uC774\uBCF4\uACE0\uC788\uB294
+    \uC55E\uC73C\uB85C \uC774\uB3D9\t2\uCE78\t\t\t\t\t\t\t\t\t\uAC70\uB300\uD55C
+    \uBC29\uD328\uB97C \uB4E4\uACE0\uC788\uB294 \uB290\uB08C(ex\uBE0C\uB77C\uC6C0)\t\uBE0C\uB77C\uC6C0
+    - \uB098\uBB34\uC704\uD0A4\t\uC544\uAD70 \uC720\uB2DB\uC774 \uB370\uBBF8\uC9C0\uB97C
+    \uC785\uC73C\uBA74 \uD574\uB2F9 \uC720\uB2DB\uC774 \uB79C\uB364 \uC544\uAD70\uC758
+    \uC55E\uC73C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\nMoney\tMoney\t2\t3\t\uC8FD\uC744
+    \uB54C\t\uCD94\uAC00 \uC7AC\uD654 \uD68D\uB4DD (2\uC6D0)\t1\uCE78\t\t\t\t\t\t\t\t\t\uC0C1\uC778\uC774
+    \uB3C8 \uC8FC\uBA38\uB2C8\uB97C \uB4E4\uACE0 \uC788\uB294 \uBAA8\uC2B5\t\uC911\uC138\uC0C1\uC778\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uC804\uD22C\uBD88\uAC00 \uC0C1\uD0DC\uAC00 \uB418\uBA74 \uCD94\uAC00
+    \uC7AC\uD654\uB97C \uD68D\uB4DD\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uAC70\uC6B8\tMirror\t2\t4\t\uD134
+    \uC2DC\uC791 \uC2DC\t\uC0C1\uB300 \uC720\uB2DB \uC774\uB3D9 \uBC18\uC804\t1\uCE78\t\t\t\t\t\t\t\t\t\uAC70\uC6B8
+    \uC18D\uC5D0 \uD45C\uC815\uC774 \uC788\uB294 \uBC31\uC124\uACF5\uC8FC \uB9C8\uBC95\uAC70\uC6B8
+    \uB290\uB08C\thttps://d15f34w2p8l1cc.cloudfront.net/hearthstone/120f13ba1de120a1a8ce932d992b828f02e9a8ba65c161daa6115b8ddff4ed8c.png\t\uD134\uC774
+    \uC2DC\uC791\uB420 \uB54C \uACF5\uACA9 \uBC94\uC704\uC5D0 \uC788\uB294 \uC801\uAD70
+    \uC720\uB2DB\uC758 \uC774\uB3D9\uC774 \uBC18\uC804\uB429\uB2C8\uB2E4.\r\n\t\t\t\t\t\uC0C1\uB300
+    \uC720\uB2DB \uC804\uBD80?? -> \uACF5\uACA9 \uBC94\uC704\uC5D0 \uC788\uB294 \uCE5C\uAD6C\uB9CC\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\uC804\uBD80\uB77C\uBA74
+    \uC774 \uC720\uB2DB \uC8FD\uC744\uB54C\uAE4C\uC9C0 \uBC18\uB300\uAC00 \uB428\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBA85\uC778\tMaster\t1\t5\t\uC544\uAD70\uC5D0\uAC8C
+    \uD53C\uD574\uB97C \uC92C\uC744 \uB54C\t\uC774 \uCE90\uB9AD\uD130\uC5D0\uAC8C
+    \uD53C\uD574\uB97C \uBC1B\uC740 \uC544\uAD70 \uCCB4\uB825, \uACF5\uACA9\uB825
+    1 \uC0C1\uC2B9\t2\uCE78\t\t\t\t\t\t\t\t\t\uC218\uB3C4\uC2B9 \uB290\uB08C\thttps://i.namu.wiki/i/ezQQE7hSKx61HKeKyjK4OovX0TD_5kP8f6X4-2NPDGArASzB9Dgo0jpIYOeBKIuK0uDGdNXJbWlo0TzfjbSoskntf-fRSQd28AoiEJnW3vKJLOsXrdOZ0Wagsi7GbHlqmvBKd8mQkAeYPlpH9m3iaw.webp\t\uC544\uAD70\uC5D0\uAC8C
+    \uD53C\uD574\uB97C \uC8FC\uBA74 \uD53C\uD574\uB97C \uC785\uC740 \uC544\uAD70\uC758
+    \uCCB4\uB825\uACFC \uACF5\uACA9\uB825\uC774 \uC0C1\uC2B9\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uAD11\uB780\uC790\tmadman\t5\t15\t\uACF5\uACA9
+    \uD0A4\uB97C \uB20C\uB800\uC744 \uB54C\t\uC790\uC2E0\uC5D0\uAC8C \uD53C\uD574(3\uB370\uBBF8\uC9C0)\t2\uCE78\t\t\t\t\t\t\t\t\t\uC624\uD06C\uAC00
+    \uAC70\uB300\uD55C \uB3C4\uB07C\uB97C \uB4E4\uACE0\uC788\uB294 \uB290\uB08C(ex
+    wow \uAC00\uB85C\uC26C)\t\uAC00\uB85C\uC26C \uD5EC\uC2A4\uD06C\uB9BC - \uB098\uBB34\uC704\uD0A4\t\uACF5\uACA9
+    \uD589\uB3D9\uC744 \uD588\uC744 \uB54C \uC790\uC2E0\uC5D0\uAC8C \uD53C\uD574\uB97C
+    \uC785\uD799\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uB3CC\uACA9\uB300\uC7A5\tchargecaptain\t2\t3\t\uC0AC\uB9DD
+    \uC2DC\t\uC544\uAD70 \uACF5\uACA9\uB825 2 \uC99D\uAC00\t1\uCE78\t\t\t\t\t\t\t\t\t\uAC11\uC637\uC744
+    \uC785\uC740 \uCE7C\uC744\uB4E4\uC740 \uC815\uC11D\uC801\uC778 \uAE30\uC0AC(ex
+    \uC720\uD76C\uC655 \uC120\uBD09\uB300\uC7A5)\t\uC120\uBD09 \uB300\uC7A5 - \uB098\uBB34\uC704\uD0A4\t\uC804\uD22C\uBD88\uAC00
+    \uC0C1\uD0DC\uAC00 \uB418\uBA74 \uC544\uAD70\uC758 \uACF5\uACA9\uB825\uC744 \uC99D\uAC00\uC2DC\uD0B5\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC694\uC0C8\tCastle\t1\t5\t\uD53C\uD574\uB97C
+    \uBC1B\uC558\uC744 \uB54C\t\uCCB4\uB825 1~2 \uB79C\uB364 \uD68C\uBCF5\t1\uCE78\t\t\t\t\t\t\t\t\t\uC6C0\uC9C1\uC774\uB294
+    \uC791\uC740 \uC131 \uB290\uB08C\thttps://i.namu.wiki/i/Mus30FHPtrh2EmJvY4oGRvbAJLCrHebn6iYjdWFt8NN5jC9H6aWQri5GuiX353tnAoUceEirT0g4QphY5H7XhfJ2_n8chVku5_ANcYdSqtMlKpQuXOX5_epgihOD74sOUXRRLMhRHCS_Fo000rqDhg.webp\t\uD53C\uD574\uB97C
+    \uC785\uC73C\uBA74 \uCCB4\uB825\uC744 \uD68C\uBCF5\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBC84\uC12F\uD3EC\uC790\tspores\t1\t3\t\uD53C\uD574\uB97C
+    \uC785\uC5C8\uC744 \uB54C\t\uC790\uC2E0\uC5D0\uAC8C \uD53C\uD574\uB97C \uC785\uD78C
+    \uC0C1\uB300 \uAE30\uC808 (1\uD134)\t1\uCE78\t\t\t\t\t\t\t\t\t\uB3C5\uBC84\uC12F\t\uB9C8\uB9AC\uC624
+    \uB3C5\uBC84\uC12F\t\uD53C\uD574\uB97C \uC785\uC73C\uBA74 \uACF5\uACA9\uD55C
+    \uC801\uAD70 \uC720\uB2DB\uC774 (1\uD134) \uAE30\uC808\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBFC5\uB9DD\uCE58\tblowout\t2\t4\t\uD134
+    \uC2DC\uC791 \uC2DC\t\uB79C\uB364 \uC0C1\uB300 1\uD134 \uAE30\uC808\t1\uCE78\t\t\t\t\t\t\t\t\t\uBFC5\uB9DD\uCE58\uB97C
+    \uB4E0 \uAE30\uC0AC\thttps://play-lh.googleusercontent.com/O_Rrpp3TyC8H1EV2JbrGrb8zTmYxSalv4t29-Kq7eWpfYbVuRefk6PFRoiXtJEh0FDU\t\uD134\uC774
+    \uC2DC\uC791\uD560 \uB54C \uB79C\uB364 \uC801\uAD70 \uC720\uB2DB\uC774 (1\uD134)
+    \uAE30\uC808\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBCF5\uC218\uC790\tavenger\t1\t5\t\uBD80\uD65C\uC2DC
+    \t\uACF5\uACA9\uB825 5 \uCD5C\uB300 \uCCB4\uB825 5\uC99D\uAC00 \uC774\uB3D9\uCE78
+    1\uCE78 \uC99D\uAC00\t1\uCE78\t\t\t\t\t\t\t\t\t\uC601\uD654 \uD504\uB9AC\uC2A4\uD2B8
+    \uB290\uB08C\thttps://i.namu.wiki/i/PVi4L1ZFEPgvJLWmY8KHCIM8YqrT3wDuIzgTz-UOsyX9UOin0xc2Io13BIj6ofFNSenKnOrkAy6JBfcdZJ1rOg0_BYl_nfzUdBI-PWp8bE_fSUV0zysb52dcfL5AR9PVqulMc99e003Ilz4YsUAMHw.webp\t\uBD80\uD65C\uD558\uBA74
+    \uACF5\uACA9\uB825 5, \uCD5C\uB300\uCCB4\uB825 5, \uC774\uB3D9\uCE78 1\uCE78
+    \uC99D\uAC00\uB97C \uC5BB\uC2B5\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uB3D9\uB8CC\tMate\t2\t4\t\uD55C
+    \uCE78 \uB4A4 \uC544\uAD70\uC774 \uACF5\uACA9\uD588\uC744 \uB54C\t\uB370\uBBF8\uC9C0
+    1\uC99D\uAC00\t1\uCE78\t\t\t\t\t\t\t\t\t\uAC11\uC637\uC744 \uC785\uC740 \uBCD1\uC0AC\uAC00
+    3\uBA85 \uB098\uB780\uD788 \uC11C \uC788\uC74C\thttps://i.namu.wiki/i/oxrkwYyuOmaEoVFeYp09lP2S20z8fd2YcTaDF2hVEqb-lbgEeM9jPxw7mZ3LLBvjo_5koFmkiu2g91SN9GK1r0t4AqEoKGz9wCMqjgK9BsKVpoalWYehyebthBUDfPovEWomckY4jV4wmrpEroDqBA.webp\t\uD55C
+    \uCE78 \uB4A4 \uC544\uAD70\uC774 \uACF5\uACA9\uD558\uBA74 \uC790\uC2E0\uC758
+    \uACF5\uACA9\uB825\uC774 \uC0C1\uC2B9\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\uD55C\uCE78\uB4A4\uAC00
+    \uBCF4\uACE0 \uC788\uB294 \uBC29\uD5A5\uC758 \uD55C\uCE78 \uB4A4?\t-> \uB3D9\uB8CC
+    \uC720\uB2DB\uC774 \uB4F1\uC9C0\uACE0 \uC788\uB294 \uC720\uB2DB\uC774\uC694\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC2E0\uCC38
+    \uD574\uC801\uB450\uAC74\tNewRedHood\t1\t5\t\uC7AC\uD654\uAC00 10 \uC774\uD558\uC77C
+    \uB54C\t2\uBC88 \uACF5\uACA9\t1\uCE78\t\t\t\t\t\t\t\t\t\uB450\uAC74\uC744 \uC4F4
+    \uB808\uC774\uD53C\uC5B4\uB97C \uB4E4\uC740 \uD574\uC801(ex \uBA54\uC774\uD50C
+    \uBAAC\uC2A4\uD130 \uD06C\uB8E8)\t\uD06C\uB8E8 | \uBA54\uC774\uD50C\uC2A4\uD1A0\uB9ACM
+    \uC704\uD0A4 | Fandom\t\uBCF4\uC720 \uC7AC\uD654\uAC00 10 \uBBF8\uB9CC\uC77C\uB54C
+    2\uBC88 \uACF5\uACA9\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uD790\uB7EC\tHealer\t1\t8\t\uBC94\uC704
+    \uB0B4 \uC544\uAD70\uC774 \uB370\uBBF8\uC9C0\uB97C \uC785\uC744 \uC2DC\t\uC544\uAD70
+    \uD53C 1 \uD68C\uBCF5\t1\uCE78\t\t\t\t\t\t\t\t\t\uB9C8\uBC95\uBD09\uC744 \uB4E0
+    \uCC9C\uC0AC\thttps://i.namu.wiki/i/mh-wr0cXgKYCeFxK12zIB-BSO5xVo4D9Zf01zaCuFi152KkyZ2sLJkFt2niaw3QBv7i_Pwjnx8d-Rz3ddF3hbiGr1IP1qNHgZHnR81Kh9JRLfBw1s5FNHUAK6PMlH5iKYeqO2jaLD2T-oX1HqdzslA.webp\t\uACF5\uACA9
+    \uBC94\uC704\uC758 \uC544\uAD70\uC774 \uD53C\uD574\uB97C \uC785\uC73C\uBA74 \uB2E4\uC74C
+    \uD134\uC5D0 \uC544\uAD70\uC758 \uCCB4\uB825\uC744 \uD68C\uBCF5\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\thttps://cdn.crowdpic.net/detail-thumb/thumb_d_7A886EDAE5F7FCDC400F8D7CEBB85CAE.png\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC790\uB3D9
+    \uCD94\uAC00 \uACF5\uACA9 \uC720\uB2DB\tAuto\t1\t3\t\uC544\uAD70\uC774 \uB370\uBBF8\uC9C0\uB97C
+    \uC92C\uC744\uB54C\t\"\uC790\uB3D9 \uCD94\uAC00 \uC720\uB3C4 \uACF5\uACA9\n(\uB9CC\uC57D
+    \uB458 \uC774\uC0C1\uC758 \uC778\uC6D0\uC774 \uB370\uBBF8\uC9C0\uB97C \uC92C\uC744\uB584\uB294
+    \uB458\uC911 \uD558\uB098\uC5D0\uAC8C\uB9CC \uB79C\uB364\uC73C\uB85C \uC801\uC6A9)\"\t0\uCE78\t\t\t\t\uAE30\uBCF8
+    \uACF5\uACA9X\t\t\t\t\t\uACE0\uC815\uB418\uC5B4 \uBBF8\uC0AC\uC77C\uC744 \uBC1C\uC0AC\uD558\uB294
+    \uBC1C\uC0AC\uB300 \uB290\uB08C\t\uBE0C\uB808\uC774\uC988 \uCE90\uB17C - \uB098\uBB34\uC704\uD0A4\t\uC544\uAD70\uC774
+    \uC801\uAD70\uC5D0\uAC8C \uD53C\uD574\uB97C \uC785\uD788\uBA74 \uC790\uB3D9\uC73C\uB85C
+    \uCD94\uAC00 \uC720\uB3C4 \uACF5\uACA9\uC744 \uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uAE61\uD1B5\uB85C\uBD07\tCanrob\t3\t10\t\uCCB4\uB825\uC774
+    ~\uC774\uD558\uB85C \uB5A8\uC5B4\uC84C\uC744\uB54C\t2\uD68C \uACF5\uACA9 \uBC0F
+    \uC0AC\uAC70\uB9AC \uBC0F \uC774\uB3D9\uAC70\uB9AC \uC99D\uAC00\t1\uCE78 (3\uCE78)\t\t\t\t\t\t(\uB298\uC5B4\uB09C
+    \uC0AC\uAC70\uB9AC)\t\t\t\uC624\uC988\uC758 \uB9C8\uBC95\uC0AC\uC758 \uC591\uCCA0\uB098\uBB34\uAFBC
+    \uB290\uB08C\t\uC591\uCCA0\uB098\uBB34\uAFBC\t\uCCB4\uB825\uC774 (4) \uC774\uD558\uB85C
+    \uB5A8\uC5B4\uC9C0\uBA74 2\uBC88 \uACF5\uACA9\uD558\uACE0 \uC0AC\uAC70\uB9AC\uC640
+    \uC774\uB3D9\uAC70\uB9AC\uAC00 \uC99D\uAC00\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uB2CC\uB2CC\tNinja\t5\t3\t1/3
+    \uD655\uB960\uB85C \t\uC0C1\uB300 \uACF5\uACA9 \uD68C\uD53C\t4\uCE78\t\t\t\t\t\t\t\t\t\uB2CC\uC790(
+    \uB2CC\uC790\uB9DB \uCFE0\uD0A4)\t\uB2CC\uC790\uB9DB \uCFE0\uD0A4 - \uB098\uBB34\uC704\uD0A4\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uD53C\uD574\uB97C \uC785\uC744 \uB54C 1/3 \uD655\uB960\uB85C
+    \uC0C1\uB300\uC758 \uACF5\uACA9\uC744 \uD68C\uD53C\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uACE0\uCFE0\tGoku\t6\t5\t\uD134
+    \uC2DC\uC791\uC2DC -> \uB77C\uC6B4\uB4DC \uC2DC\uC791\uC2DC\t\"\uBD84\uC2E0 \uC18C\uD658(\uC720\uB2DB\uC774
+    \uBCF4\uB294 \uBC29\uD5A5 \uBC18\uB300 \uB300\uAC01\uC120 2\uAC1C\uC5D0 2\uAC1C
+    \uC18C\uD658)\n(\uBD84\uC2E0 : \uCCB4\uB825\uC740 2 \uACF5\uACA9\uB825\uC740
+    3 \uC774\uB3D9 \uCE78 2\uCE78)\uD2B9\uC218\uB2A5\uB825 \uC5C6\uC74C \"\t2\uCE78\t\t\t\t\t\t\t\t\t\uC190\uC624\uACF5\t\uC190\uC624\uACF5
+    - \uB098\uBB34\uC704\uD0A4\t\uB77C\uC6B4\uB4DC\uAC00 \uC2DC\uC791\uD560 \uB54C
+    (\uCCB4\uB825 2 / \uACF5\uACA9\uB825 3)\uC778 \uBD84\uC2E0\uC744 \uC18C\uD658\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBCFC\uB9C1\uB9E8\tBowling\t4\t5\t\uD53C\uD574\uB97C
+    \uC92C\uC744 \uB54C \t\uC0C1\uB300 \uC720\uB2DB \uC870\uC885 \uBD88\uAC00(\uB370\uBBF8\uC9C0\uB97C
+    \uC785\uC740 \uC0C1\uB300\uAC00 \uB79C\uB364\uD558\uAC8C \uC6C0\uC9C1\uC784)\t2\uCE78\t\t\t\t\t\t\t\t\t\uADFC\uC721
+    \uBE75\uBE75\uD55C \uC0AC\uB78C\thttps://i.namu.wiki/i/AZURHMe2xitkI1181CleHcwjRsqiPe-l-Pg0YdoDuGnCXhSclWSBeZXQ3z9OcDZ0B0y5GzLQer3M61OuFdaY4W5Wd9QzAWdp9BkmiAot2AFRJ-1wel9bmeEI4nTOh1O93QjKm-hA2EbQugfWXD2AEQ.webp\t\uC801\uAD70
+    \uC720\uB2DB\uC5D0\uAC8C \uD53C\uD574\uB97C \uC8FC\uBA74 \uD574\uB2F9 \uC801\uAD70
+    \uC720\uB2DB\uC774 \uB79C\uB364\uC73C\uB85C \uC6C0\uC9C1\uC785\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uAE08\uAC15\uBD88\uAD34\tGeumgang\t3\t5\t\uD53C\uD574\uB97C
+    \uC785\uC5C8\uC744 \uB54C\t\uACF5\uACA9\uB825 1 \uC99D\uAC00\t2\uCE78\t\t\t\t\t\t\t\t\t\uBD80\uCC98\uB2D8
+    \uAC19\uC740 \uB290\uB08C\t\uBD93\uB2E4 - \uB098\uBB34\uC704\uD0A4\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uD53C\uD574\uB97C \uC785\uC73C\uBA74 \uACF5\uACA9\uB825\uC774
+    \uC99D\uAC00\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uACE0\uC2B4\uD3ED\uBC1C\tsuicidebomb\t0\t5\t\uD53C\uD574\uB97C
+    \uC785\uC5C8\uC744 \uB54C\t\uC0C1\uB300\uC640 \uC790\uC2E0 \uB3D9\uC2DC \uC989\uC0AC\t2\uCE78\t\t\t\t\t\t\t\t\t\uAC00\uC2DC\uAC00
+    \uBC14\uC9DD \uC120 \uACE0\uC2B4\uB3C4\uCE58\thttps://media.istockphoto.com/id/472291951/ko/%EB%B2%A1%ED%84%B0/%EA%B3%A0%EC%8A%B4%EB%8F%84%EC%B9%98.jpg?s=1024x1024&w=is&k=20&c=85nLVDZJ2XhDpgfhilniHWq_bFIUzqLIfEcp7bNlvCo=\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uD53C\uD574\uB97C \uC785\uC73C\uBA74 \uD53C\uD574\uB97C \uC785\uD78C
+    \uC801\uAD70\uACFC \uAC19\uC774 \uC0AC\uB9DD\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC639\uACE8\uCC38\uCC38\uCC38\tGongcham\t1\t2\t\uC989\uC0AC
+    \uD53C\uD574\uB97C \uC785\uC5C8\uC744\uB54C\t1\uBC88 \uBC84\uD300\t1\uCE78\t\t\t\t\t\t\t\t\t\uBC14\uC704\uC758
+    \uC9D1\uD569\uCCB4 \uAC19\uC740 \uB290\uB08C (ex \uD3EC\uCF13\uBAAC \uC11D\uD0C4\uC0B0)\thttps://i.namu.wiki/i/Yp2oDXF-bfnhn8pLbsaBHR1iixFQtYHs_oHG_Kmfu5-nwmbjbZYaYyaWR9cuhsvAkE2w_RoRgmWxto9Pj8ZsmRpeFWvisgqZ_hxHpAhGEi3n_LRRXDOJJUZ41qQksohnt_9r7hEFmfh3_OEx0aVnQQ.webp\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uC989\uC0AC \uD53C\uD574\uB97C 1\uBC88 \uBB34\uD6A8\uD654
+    \uC2DC\uD0B5\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBCA0\uD0DC\uB791
+    \uD574\uC801\uBAA8\uC790\tBettypiratehat\t5\t4\t\uC804\uD22C \uC911 \uC7AC\uD654
+    \uCD94\uAC00 \uD68D\uB4DD \uC2DC\t\uBC29\uC5B4\uB825 \uC99D\uAC00\t1\uCE78\t\t\t\t\t\t\t\t\t\uBAA8\uC790\uB97C
+    \uC4F0\uACE0 \uCF67\uC218\uC5FC\uC774 \uC788\uB294 \uD574\uC801 \uAC80\uC744
+    \uB4E4\uC74C\thttps://i.namu.wiki/i/dF1aTtJoP1zOaJFODLsYelgIJH11rWTfsRQTsZ_QCYi6K0wHXp0i5NJJ66cLuC7lqHdvYAgDRLnIptQ7Ae7B0BQC3UbCMK7oyCMfuFs1KwV2zAsXjsszHxyMQvhdAOMfwkfJFwV2rrgAjF6GvoFW7g.webp\t\uC804\uD22C
+    \uC911 \uC7AC\uD654\uB97C \uCD94\uAC00\uB85C \uD68D\uB4DD\uD560 \uC2DC \uD574\uB2F9
+    \uC720\uB2DB\uC758 \uBC29\uC5B4\uB825\uC774 \uC99D\uAC00\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\uBC29\uC5B4\uB825\uC5D0
+    \uB300\uD55C \uAC1C\uB150\uC5D0 \uB300\uD55C \uC124\uBA85\uC758 \uBD80\uC7AC\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\uBC29\uC5B4\uB825\uC774
+    \uC601\uAD6C\uC801\uC73C\uB85C \uBC1B\uB294 \uB370\uBBF8\uC9C0\uAC00 \uAC10\uC18C\uD558\uB294\uAC00?\t\uACF5\uB825\uB825-\uBC29\uC5B4\uB825=\uB370\uBBF8\uC9C0
+    \uC774\uB807\uAC8C\uB294 \uC548\uB420\uAE4C\uC694\t\t\t\t\t\t\t\t\t\t\t\r\n\t\uC774
+    \uC774\uB984\uC740 \uC880 \uC544\uB2CC\uAC70 \uAC19\uC544\uC694\t\t\t\t\uD639\uC740
+    \uCD5C\uB300\uCCB4\uB825 \uAC1C\uB150\uC73C\uB85C \uB298\uC5B4\uB098\uB294\uAC00?\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC2DC\uCCB4\uAD6C\uB369\uC774\tCorpse\t3\t5\t\uC2DC\uCCB4
+    \uC704\uB85C \uC62C\uB77C\uAC08 \uC2DC\t\uACF5\uACA9\uB825 3\uC99D\uAC00\t1\uCE78\t\t\t\t\t\t\t\t\t\uB124\uD06C\uB85C
+    \uBA58\uC11C \uD574\uACE8\uB85C\uB41C \uC9C0\uD321\uC774\uB97C \uB4E4\uC74C\thttps://i.namu.wiki/i/WTsyzIhEy57ZYU744r8OwXm-ah3IHyRLOYhGAXTG5L1vJwOdvHZmXapymAdQ3Ft8E_zIEB0eXbnJNBLBLUBm0qoTxk8-hDViK1_TRoyJh9SawjMt4Ov2L7_XyVjffusQMufkpKOBJWlX8SlbwpKIug.webp\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uC544\uAD70/\uC801\uAD70\uC758 \uC2DC\uCCB4 \uC704\uC5D0
+    \uC62C\uB77C\uAC08 \uC2DC \uACF5\uACA9\uB825\uC774 \uC99D\uAC00\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC815\uC2E0\uC774\uC0C1\uC790\tJoker\t10\t10\t\uACF5\uACA9
+    \uD0A4\uB97C \uB20C\uB800\uC744 \uB584\t\uB79C\uB364\uD55C \uD328\uD134\uC73C\uB85C
+    \uACF5\uACA9\t3\uCE78\t\t\t\t\t\uB79C\uB364 \uD328\uD134\uC73C\uB85C \uACF5\uACA9(\uB2E4\uB978
+    \uC720\uB2DB\uB4E4 \uACF5\uACA9 \uD328\uD134\uC911 \uD558\uB098\uB85C)\t\t\t\t\t`\t\uACF5\uACA9\uD588\uC744
+    \uB54C.......\r\n\t\t\t\t\t\uB79C\uB364\uD55C \uD328\uD134\uC774 \uB9CC\uB4E4\uC5B4\uC838\uC788\uC9C0
+    \uC54A\uC74C\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uB300\uC2E0\uC8FD\uB294\uC790\tvictim\t1\t7\t\uC0AC\uB9DD\uC2DC
+    \t\uC544\uAD70 \uBD80\uD65C\t2\uCE78\t\t\t\t\t\t\t\t\t\uAC81\uC7C1\uC774 \uB108\uB4DC
+    \uAC19\uC740 \uBAA8\uC2B5\thttps://i.namu.wiki/i/Rgv3_rNfYLoiXsUsrDVDj6GdX1PGwamoEtGq0GeSlOxcfyd3d9KZCCURcHwVgPIFrmdkMSISjnXDljONcFGa4FCt7w5jWrHP1Ns2IbGDufBknRxLDT2RpBwdbMbWvDuWZ6415DIy7oAi71-TlQwEGg.webp\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uC804\uD22C\uBD88\uAC00 \uC0C1\uD0DC\uAC00 \uB418\uBA74 \uB79C\uB364\uD55C
+    \uC544\uAD70\uC774 \uBD80\uD65C\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBD80\uD65C\uCCB4\tresurrection\t0\t4\t\uC544\uAD70
+    \uC2DC\uCCB4 \uC704\uC5D0 \uC62C\uB77C\uAC14\uB2E4\uAC00 \uC774\uB3D9\uD560 \uB54C\t\uC2DC\uCCB4
+    \uC544\uAD70 \uBD80\uD65C\t2\uCE78\t\t\t\t\t\uAE30\uBCF8\uACF5\uACA9 x\t\t\t\t\uC628\uBAB8\uC5D0\uC11C
+    \uC2E0\uC131\uD55C \uAE30\uC6B4\uC774 \uB098\uC624\uB294 \uB290\uB08C\thttps://i.namu.wiki/i/VVnYNlMFKZU9Exe6ojbHOzaxZkThcJMXMfv9mYY_aiP4-W9glPty2PLdYg2IUIyjMqoslS5D3TUJxJ1iIbe_cWP3H9Cl_Ru_7RGYvaxKKJdMEppKq53woRjhL06w3WzZwJmAz2l7JEs-aamWbkh4Hw.webp\t\uC544\uAD70
+    \uC720\uB2DB\uC758 \uC2DC\uCCB4 \uC704\uC5D0\uC11C \uC774\uB3D9\uD560 \uC2DC
+    \uC2DC\uCCB4 \uC544\uAD70\uC774 \uBD80\uD65C\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uCC9C\uC0C1\uC758
+    \uBCF4\uD638\uB9C9\theavenlyshield\t6\t3\t2\uCE78 \uC774\uB3D9\uC2DC\t1\uBC88
+    \uACF5\uACA9\uC744 \uB9C9\uC544\uC8FC\uB294 \uBCF4\uD638\uB9C9 \uC0DD\uC131\t1\uCE78\t\t\t\t\t\t\t\t\t\uC131\uAE30\uC0AC
+    \thttps://i.namu.wiki/i/hu0RqzOgQ0FJG5GhyDHY7hwaYQZuZx5uTtMB0CRSLI12mCeYpot3koaVdunwENY5FUVZGAX7OPqp1jaQFagQye8VLvaMQQ1APR6bjHiiuc2M_Pb96qh7dIdgRCwge5ejModsiNklp2Q8QiPi9BfzJA.webp\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 2\uCE78 \uC774\uB3D9\uD560 \uB54C \uACF5\uACA9\uC744 \uB9C9\uC544\uC8FC\uB294
+    \uC77C\uD68C\uC131 \uBCF4\uD638\uB9C9\uC744 \uC0DD\uC131\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC800\uACA9\uC655\tsniperking\t5\t2\t\uC720\uB2DB\uC744
+    \uC8FD\uC600\uC744\uB584(\uC544\uAD70 \uC801\uAD70 \uBB34\uAD00)\t\uACF5\uACA9\uB825
+    1\uC99D\uAC00\t1\uCE78\t\t\t\t\t\t\t\t\t\uAE34 \uC7A5\uCD1D\uC744 \uC9C0\uB2CC
+    \uC800\uACA9\uC218 \thttps://i.namu.wiki/i/sKOte-QZnKSOGun7rHpg1kzOFJy5dmKpl3OC-K5PmxHKfrF2xrGWugqxv8GAvhatq2BX55JB0VTe-GqpyuekNzTR4xC3gqv-Nn4WOr6kENrSlwtzKLZAF4pLenFF6FL1wruugGTGMP1pNzWaHsW7yA.webp\t\uC544\uAD70/\uC801\uAD70
+    \uC720\uB2DB\uC744 \uC0AC\uB9DD\uD558\uAC8C \uD560 \uACBD\uC6B0 \uACF5\uACA9\uB825\uC774
+    \uC99D\uAC00\uD569\uB2C8\uB2E4."
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: fd26b910b9bcd1c499862c144919df04, type: 2}
+  m_sharedMaterial: {fileID: -1486422039987995347, guid: fd26b910b9bcd1c499862c144919df04, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &5377283007204866187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 141006497063989859}
+  - component: {fileID: 5601558600400020994}
+  - component: {fileID: 4834411593763795920}
+  m_Layer: 5
+  m_Name: Text (TMP) (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &141006497063989859
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5377283007204866187}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6926389393002445992}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 734, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5601558600400020994
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5377283007204866187}
+  m_CullTransparentMesh: 1
+--- !u!114 &4834411593763795920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5377283007204866187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "\uAC08\uACE0\uB9AC\uB9E8\thook\t1\t5\t\uC544\uAD70 \uC720\uB2DB\uACFC
+    \uADFC\uC811\uD588\uC744 \uB54C\t\uAC00\uC7A5 \uBA3C \uC801\uAD70 \uB04C\uC5B4\uB2F9\uAE30\uAE30\t1\uCE78\t\t\t\t\t\t\t\t\t\uB09A\uC2DC\uAFBC\uC774
+    \uAC08\uACE0\uB9AC\uB9CC \uB4E4\uACE0\uC788\uB294 \uB290\uB08C\t\uB09A\uC2DC\uAFBC(\uD074\uB798\uC2DC
+    \uB85C\uC584) - \uB098\uBB34\uC704\uD0A4\t\uC544\uAD70 \uC720\uB2DB\uC774 \uADFC\uCC98\uC5D0
+    \uC788\uB2E4\uBA74 \uAC00\uC7A5 \uBA3C \uC801\uAD70\uC744 \uB04C\uC5B4\uB2F9\uAE41\uB2C8\uB2E4.\r\n\t\t\t\t\t\uC2ED\uC790\uAC00\uC5D0
+    \uC788\uB294 \uC720\uB2DB\uC911 \uAC00\uC7A5 \uBA3C \uC720\uB2DB\uB9CC? \uADF8\uB9AC\uACE0
+    \uBCF4\uACE0 \uC788\uB294 \uBC29\uD5A5\uB9CC?\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC190\uBC14\uB2E5\tPalm\t2\t5\t\uD53C\uD574\uB97C
+    \uC92C\uC744\uB54C\t1\uCE78 \uBC00\uC5B4\uB0B4\uAE30(\uCE90\uB9AD\uD130\uAC00
+    \uBCF4\uB294\uCABD)\t1\uCE78\t\t\t\t\t\t\t\t\t\uD3C9\uBC94\uD55C \uC0AC\uB78C\uC778\uB370
+    \uC190\uBC14\uB2E5\uC774 \uC5C4\uCCAD \uD06C\uAC8C \uAC15\uC870\uB41C \uB290\uB08C\thttps://i.namu.wiki/i/pOgRHHFgenWoCSL0Luah16Iz1iN8UjGnhEvfLf_V1LnwiIGSAtdKMTRXbRCl0i6npL9PMTDIS5IKCW-TjHm6xTEgIR9-A3vfCZpDMta0UFbGW8jieEfC5PfOPtfv3ThoBOqncVEGxifNe8lHh67Ugw.webp\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uC801\uAD70\uC5D0\uAC8C \uD53C\uD574\uB97C \uC8FC\uBA74 \uC720\uB2DB\uC774
+    \uBCF4\uB294 \uBC29\uD5A5\uC73C\uB85C 1\uCE78 \uBC00\uC5B4\uB0C5\uB2C8\uB2E4.\r\n\t\t\t\t\t1\uCE78
+    \uBC00\uC5B4\uB0BC \uB54C \uBCBD\uC774\uB098 \uC720\uB2DB\uC774 \uC788\uB294
+    \uACBD\uC6B0 \uADF8 \uB4A4\uB85C? \uD639\uC740 \uC548\uBC00\uB9AC\uAC8C?\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t->
+    \uBCBD\uC774\uB098 \uC720\uB2DB\uC774 \uC788\uB294 \uACBD\uC6B0 \uC548 \uBC00\uB9AC\uAC8C\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uD3ED\uD0C4\uB9C8\uB9C8\uB9D8\tBomberman\t2\t5\t1\uCE78
+    \uC774\uB3D9\uC2DC\t\uB79C\uB364 \uD544\uB4DC(1\uCE78)\uC5D0 \uC790\uB3D9 \uD3ED\uBC1C\t1\uCE78\t\t\t\t\t\t\t\t\t\uAC78\uC5B4\uB2E4\uB2C8\uB294
+    \uD3ED\uD0C4\t\uB9C8\uB9AC\uC624 \uD3ED\uD0C4\uBCD1\t\uD574\uB2F9 \uC720\uB2DB\uC774
+    1\uCE78 \uC774\uB3D9\uD560 \uB54C\uB9C8\uB2E4 \uD544\uB4DC \uC911 1\uCE78\uC774
+    \uB79C\uB364\uC73C\uB85C \uD3ED\uBC1C\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBC29\uD328\tShield\t2\t4\t\uC544\uAD70\uC774
+    \uB370\uBBF8\uC9C0\uB97C \uC785\uC744 \uC2DC\t\uB79C\uB364 \uC544\uAD70\uC774\uBCF4\uACE0\uC788\uB294
+    \uC55E\uC73C\uB85C \uC774\uB3D9\t2\uCE78\t\t\t\t\t\t\t\t\t\uAC70\uB300\uD55C
+    \uBC29\uD328\uB97C \uB4E4\uACE0\uC788\uB294 \uB290\uB08C(ex\uBE0C\uB77C\uC6C0)\t\uBE0C\uB77C\uC6C0
+    - \uB098\uBB34\uC704\uD0A4\t\uC544\uAD70 \uC720\uB2DB\uC774 \uB370\uBBF8\uC9C0\uB97C
+    \uC785\uC73C\uBA74 \uD574\uB2F9 \uC720\uB2DB\uC774 \uB79C\uB364 \uC544\uAD70\uC758
+    \uC55E\uC73C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\nMoney\tMoney\t2\t3\t\uC8FD\uC744
+    \uB54C\t\uCD94\uAC00 \uC7AC\uD654 \uD68D\uB4DD (2\uC6D0)\t1\uCE78\t\t\t\t\t\t\t\t\t\uC0C1\uC778\uC774
+    \uB3C8 \uC8FC\uBA38\uB2C8\uB97C \uB4E4\uACE0 \uC788\uB294 \uBAA8\uC2B5\t\uC911\uC138\uC0C1\uC778\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uC804\uD22C\uBD88\uAC00 \uC0C1\uD0DC\uAC00 \uB418\uBA74 \uCD94\uAC00
+    \uC7AC\uD654\uB97C \uD68D\uB4DD\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uAC70\uC6B8\tMirror\t2\t4\t\uD134
+    \uC2DC\uC791 \uC2DC\t\uC0C1\uB300 \uC720\uB2DB \uC774\uB3D9 \uBC18\uC804\t1\uCE78\t\t\t\t\t\t\t\t\t\uAC70\uC6B8
+    \uC18D\uC5D0 \uD45C\uC815\uC774 \uC788\uB294 \uBC31\uC124\uACF5\uC8FC \uB9C8\uBC95\uAC70\uC6B8
+    \uB290\uB08C\thttps://d15f34w2p8l1cc.cloudfront.net/hearthstone/120f13ba1de120a1a8ce932d992b828f02e9a8ba65c161daa6115b8ddff4ed8c.png\t\uD134\uC774
+    \uC2DC\uC791\uB420 \uB54C \uACF5\uACA9 \uBC94\uC704\uC5D0 \uC788\uB294 \uC801\uAD70
+    \uC720\uB2DB\uC758 \uC774\uB3D9\uC774 \uBC18\uC804\uB429\uB2C8\uB2E4.\r\n\t\t\t\t\t\uC0C1\uB300
+    \uC720\uB2DB \uC804\uBD80?? -> \uACF5\uACA9 \uBC94\uC704\uC5D0 \uC788\uB294 \uCE5C\uAD6C\uB9CC\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\uC804\uBD80\uB77C\uBA74
+    \uC774 \uC720\uB2DB \uC8FD\uC744\uB54C\uAE4C\uC9C0 \uBC18\uB300\uAC00 \uB428\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBA85\uC778\tMaster\t1\t5\t\uC544\uAD70\uC5D0\uAC8C
+    \uD53C\uD574\uB97C \uC92C\uC744 \uB54C\t\uC774 \uCE90\uB9AD\uD130\uC5D0\uAC8C
+    \uD53C\uD574\uB97C \uBC1B\uC740 \uC544\uAD70 \uCCB4\uB825, \uACF5\uACA9\uB825
+    1 \uC0C1\uC2B9\t2\uCE78\t\t\t\t\t\t\t\t\t\uC218\uB3C4\uC2B9 \uB290\uB08C\thttps://i.namu.wiki/i/ezQQE7hSKx61HKeKyjK4OovX0TD_5kP8f6X4-2NPDGArASzB9Dgo0jpIYOeBKIuK0uDGdNXJbWlo0TzfjbSoskntf-fRSQd28AoiEJnW3vKJLOsXrdOZ0Wagsi7GbHlqmvBKd8mQkAeYPlpH9m3iaw.webp\t\uC544\uAD70\uC5D0\uAC8C
+    \uD53C\uD574\uB97C \uC8FC\uBA74 \uD53C\uD574\uB97C \uC785\uC740 \uC544\uAD70\uC758
+    \uCCB4\uB825\uACFC \uACF5\uACA9\uB825\uC774 \uC0C1\uC2B9\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uAD11\uB780\uC790\tmadman\t5\t15\t\uACF5\uACA9
+    \uD0A4\uB97C \uB20C\uB800\uC744 \uB54C\t\uC790\uC2E0\uC5D0\uAC8C \uD53C\uD574(3\uB370\uBBF8\uC9C0)\t2\uCE78\t\t\t\t\t\t\t\t\t\uC624\uD06C\uAC00
+    \uAC70\uB300\uD55C \uB3C4\uB07C\uB97C \uB4E4\uACE0\uC788\uB294 \uB290\uB08C(ex
+    wow \uAC00\uB85C\uC26C)\t\uAC00\uB85C\uC26C \uD5EC\uC2A4\uD06C\uB9BC - \uB098\uBB34\uC704\uD0A4\t\uACF5\uACA9
+    \uD589\uB3D9\uC744 \uD588\uC744 \uB54C \uC790\uC2E0\uC5D0\uAC8C \uD53C\uD574\uB97C
+    \uC785\uD799\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uB3CC\uACA9\uB300\uC7A5\tchargecaptain\t2\t3\t\uC0AC\uB9DD
+    \uC2DC\t\uC544\uAD70 \uACF5\uACA9\uB825 2 \uC99D\uAC00\t1\uCE78\t\t\t\t\t\t\t\t\t\uAC11\uC637\uC744
+    \uC785\uC740 \uCE7C\uC744\uB4E4\uC740 \uC815\uC11D\uC801\uC778 \uAE30\uC0AC(ex
+    \uC720\uD76C\uC655 \uC120\uBD09\uB300\uC7A5)\t\uC120\uBD09 \uB300\uC7A5 - \uB098\uBB34\uC704\uD0A4\t\uC804\uD22C\uBD88\uAC00
+    \uC0C1\uD0DC\uAC00 \uB418\uBA74 \uC544\uAD70\uC758 \uACF5\uACA9\uB825\uC744 \uC99D\uAC00\uC2DC\uD0B5\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC694\uC0C8\tCastle\t1\t5\t\uD53C\uD574\uB97C
+    \uBC1B\uC558\uC744 \uB54C\t\uCCB4\uB825 1~2 \uB79C\uB364 \uD68C\uBCF5\t1\uCE78\t\t\t\t\t\t\t\t\t\uC6C0\uC9C1\uC774\uB294
+    \uC791\uC740 \uC131 \uB290\uB08C\thttps://i.namu.wiki/i/Mus30FHPtrh2EmJvY4oGRvbAJLCrHebn6iYjdWFt8NN5jC9H6aWQri5GuiX353tnAoUceEirT0g4QphY5H7XhfJ2_n8chVku5_ANcYdSqtMlKpQuXOX5_epgihOD74sOUXRRLMhRHCS_Fo000rqDhg.webp\t\uD53C\uD574\uB97C
+    \uC785\uC73C\uBA74 \uCCB4\uB825\uC744 \uD68C\uBCF5\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBC84\uC12F\uD3EC\uC790\tspores\t1\t3\t\uD53C\uD574\uB97C
+    \uC785\uC5C8\uC744 \uB54C\t\uC790\uC2E0\uC5D0\uAC8C \uD53C\uD574\uB97C \uC785\uD78C
+    \uC0C1\uB300 \uAE30\uC808 (1\uD134)\t1\uCE78\t\t\t\t\t\t\t\t\t\uB3C5\uBC84\uC12F\t\uB9C8\uB9AC\uC624
+    \uB3C5\uBC84\uC12F\t\uD53C\uD574\uB97C \uC785\uC73C\uBA74 \uACF5\uACA9\uD55C
+    \uC801\uAD70 \uC720\uB2DB\uC774 (1\uD134) \uAE30\uC808\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBFC5\uB9DD\uCE58\tblowout\t2\t4\t\uD134
+    \uC2DC\uC791 \uC2DC\t\uB79C\uB364 \uC0C1\uB300 1\uD134 \uAE30\uC808\t1\uCE78\t\t\t\t\t\t\t\t\t\uBFC5\uB9DD\uCE58\uB97C
+    \uB4E0 \uAE30\uC0AC\thttps://play-lh.googleusercontent.com/O_Rrpp3TyC8H1EV2JbrGrb8zTmYxSalv4t29-Kq7eWpfYbVuRefk6PFRoiXtJEh0FDU\t\uD134\uC774
+    \uC2DC\uC791\uD560 \uB54C \uB79C\uB364 \uC801\uAD70 \uC720\uB2DB\uC774 (1\uD134)
+    \uAE30\uC808\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBCF5\uC218\uC790\tavenger\t1\t5\t\uBD80\uD65C\uC2DC
+    \t\uACF5\uACA9\uB825 5 \uCD5C\uB300 \uCCB4\uB825 5\uC99D\uAC00 \uC774\uB3D9\uCE78
+    1\uCE78 \uC99D\uAC00\t1\uCE78\t\t\t\t\t\t\t\t\t\uC601\uD654 \uD504\uB9AC\uC2A4\uD2B8
+    \uB290\uB08C\thttps://i.namu.wiki/i/PVi4L1ZFEPgvJLWmY8KHCIM8YqrT3wDuIzgTz-UOsyX9UOin0xc2Io13BIj6ofFNSenKnOrkAy6JBfcdZJ1rOg0_BYl_nfzUdBI-PWp8bE_fSUV0zysb52dcfL5AR9PVqulMc99e003Ilz4YsUAMHw.webp\t\uBD80\uD65C\uD558\uBA74
+    \uACF5\uACA9\uB825 5, \uCD5C\uB300\uCCB4\uB825 5, \uC774\uB3D9\uCE78 1\uCE78
+    \uC99D\uAC00\uB97C \uC5BB\uC2B5\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uB3D9\uB8CC\tMate\t2\t4\t\uD55C
+    \uCE78 \uB4A4 \uC544\uAD70\uC774 \uACF5\uACA9\uD588\uC744 \uB54C\t\uB370\uBBF8\uC9C0
+    1\uC99D\uAC00\t1\uCE78\t\t\t\t\t\t\t\t\t\uAC11\uC637\uC744 \uC785\uC740 \uBCD1\uC0AC\uAC00
+    3\uBA85 \uB098\uB780\uD788 \uC11C \uC788\uC74C\thttps://i.namu.wiki/i/oxrkwYyuOmaEoVFeYp09lP2S20z8fd2YcTaDF2hVEqb-lbgEeM9jPxw7mZ3LLBvjo_5koFmkiu2g91SN9GK1r0t4AqEoKGz9wCMqjgK9BsKVpoalWYehyebthBUDfPovEWomckY4jV4wmrpEroDqBA.webp\t\uD55C
+    \uCE78 \uB4A4 \uC544\uAD70\uC774 \uACF5\uACA9\uD558\uBA74 \uC790\uC2E0\uC758
+    \uACF5\uACA9\uB825\uC774 \uC0C1\uC2B9\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\uD55C\uCE78\uB4A4\uAC00
+    \uBCF4\uACE0 \uC788\uB294 \uBC29\uD5A5\uC758 \uD55C\uCE78 \uB4A4?\t-> \uB3D9\uB8CC
+    \uC720\uB2DB\uC774 \uB4F1\uC9C0\uACE0 \uC788\uB294 \uC720\uB2DB\uC774\uC694\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC2E0\uCC38
+    \uD574\uC801\uB450\uAC74\tNewRedHood\t1\t5\t\uC7AC\uD654\uAC00 10 \uC774\uD558\uC77C
+    \uB54C\t2\uBC88 \uACF5\uACA9\t1\uCE78\t\t\t\t\t\t\t\t\t\uB450\uAC74\uC744 \uC4F4
+    \uB808\uC774\uD53C\uC5B4\uB97C \uB4E4\uC740 \uD574\uC801(ex \uBA54\uC774\uD50C
+    \uBAAC\uC2A4\uD130 \uD06C\uB8E8)\t\uD06C\uB8E8 | \uBA54\uC774\uD50C\uC2A4\uD1A0\uB9ACM
+    \uC704\uD0A4 | Fandom\t\uBCF4\uC720 \uC7AC\uD654\uAC00 10 \uBBF8\uB9CC\uC77C\uB54C
+    2\uBC88 \uACF5\uACA9\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uD790\uB7EC\tHealer\t1\t8\t\uBC94\uC704
+    \uB0B4 \uC544\uAD70\uC774 \uB370\uBBF8\uC9C0\uB97C \uC785\uC744 \uC2DC\t\uC544\uAD70
+    \uD53C 1 \uD68C\uBCF5\t1\uCE78\t\t\t\t\t\t\t\t\t\uB9C8\uBC95\uBD09\uC744 \uB4E0
+    \uCC9C\uC0AC\thttps://i.namu.wiki/i/mh-wr0cXgKYCeFxK12zIB-BSO5xVo4D9Zf01zaCuFi152KkyZ2sLJkFt2niaw3QBv7i_Pwjnx8d-Rz3ddF3hbiGr1IP1qNHgZHnR81Kh9JRLfBw1s5FNHUAK6PMlH5iKYeqO2jaLD2T-oX1HqdzslA.webp\t\uACF5\uACA9
+    \uBC94\uC704\uC758 \uC544\uAD70\uC774 \uD53C\uD574\uB97C \uC785\uC73C\uBA74 \uB2E4\uC74C
+    \uD134\uC5D0 \uC544\uAD70\uC758 \uCCB4\uB825\uC744 \uD68C\uBCF5\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\thttps://cdn.crowdpic.net/detail-thumb/thumb_d_7A886EDAE5F7FCDC400F8D7CEBB85CAE.png\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC790\uB3D9
+    \uCD94\uAC00 \uACF5\uACA9 \uC720\uB2DB\tAuto\t1\t3\t\uC544\uAD70\uC774 \uB370\uBBF8\uC9C0\uB97C
+    \uC92C\uC744\uB54C\t\"\uC790\uB3D9 \uCD94\uAC00 \uC720\uB3C4 \uACF5\uACA9\n(\uB9CC\uC57D
+    \uB458 \uC774\uC0C1\uC758 \uC778\uC6D0\uC774 \uB370\uBBF8\uC9C0\uB97C \uC92C\uC744\uB584\uB294
+    \uB458\uC911 \uD558\uB098\uC5D0\uAC8C\uB9CC \uB79C\uB364\uC73C\uB85C \uC801\uC6A9)\"\t0\uCE78\t\t\t\t\uAE30\uBCF8
+    \uACF5\uACA9X\t\t\t\t\t\uACE0\uC815\uB418\uC5B4 \uBBF8\uC0AC\uC77C\uC744 \uBC1C\uC0AC\uD558\uB294
+    \uBC1C\uC0AC\uB300 \uB290\uB08C\t\uBE0C\uB808\uC774\uC988 \uCE90\uB17C - \uB098\uBB34\uC704\uD0A4\t\uC544\uAD70\uC774
+    \uC801\uAD70\uC5D0\uAC8C \uD53C\uD574\uB97C \uC785\uD788\uBA74 \uC790\uB3D9\uC73C\uB85C
+    \uCD94\uAC00 \uC720\uB3C4 \uACF5\uACA9\uC744 \uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uAE61\uD1B5\uB85C\uBD07\tCanrob\t3\t10\t\uCCB4\uB825\uC774
+    ~\uC774\uD558\uB85C \uB5A8\uC5B4\uC84C\uC744\uB54C\t2\uD68C \uACF5\uACA9 \uBC0F
+    \uC0AC\uAC70\uB9AC \uBC0F \uC774\uB3D9\uAC70\uB9AC \uC99D\uAC00\t1\uCE78 (3\uCE78)\t\t\t\t\t\t(\uB298\uC5B4\uB09C
+    \uC0AC\uAC70\uB9AC)\t\t\t\uC624\uC988\uC758 \uB9C8\uBC95\uC0AC\uC758 \uC591\uCCA0\uB098\uBB34\uAFBC
+    \uB290\uB08C\t\uC591\uCCA0\uB098\uBB34\uAFBC\t\uCCB4\uB825\uC774 (4) \uC774\uD558\uB85C
+    \uB5A8\uC5B4\uC9C0\uBA74 2\uBC88 \uACF5\uACA9\uD558\uACE0 \uC0AC\uAC70\uB9AC\uC640
+    \uC774\uB3D9\uAC70\uB9AC\uAC00 \uC99D\uAC00\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uB2CC\uB2CC\tNinja\t5\t3\t1/3
+    \uD655\uB960\uB85C \t\uC0C1\uB300 \uACF5\uACA9 \uD68C\uD53C\t4\uCE78\t\t\t\t\t\t\t\t\t\uB2CC\uC790(
+    \uB2CC\uC790\uB9DB \uCFE0\uD0A4)\t\uB2CC\uC790\uB9DB \uCFE0\uD0A4 - \uB098\uBB34\uC704\uD0A4\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uD53C\uD574\uB97C \uC785\uC744 \uB54C 1/3 \uD655\uB960\uB85C
+    \uC0C1\uB300\uC758 \uACF5\uACA9\uC744 \uD68C\uD53C\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uACE0\uCFE0\tGoku\t6\t5\t\uD134
+    \uC2DC\uC791\uC2DC -> \uB77C\uC6B4\uB4DC \uC2DC\uC791\uC2DC\t\"\uBD84\uC2E0 \uC18C\uD658(\uC720\uB2DB\uC774
+    \uBCF4\uB294 \uBC29\uD5A5 \uBC18\uB300 \uB300\uAC01\uC120 2\uAC1C\uC5D0 2\uAC1C
+    \uC18C\uD658)\n(\uBD84\uC2E0 : \uCCB4\uB825\uC740 2 \uACF5\uACA9\uB825\uC740
+    3 \uC774\uB3D9 \uCE78 2\uCE78)\uD2B9\uC218\uB2A5\uB825 \uC5C6\uC74C \"\t2\uCE78\t\t\t\t\t\t\t\t\t\uC190\uC624\uACF5\t\uC190\uC624\uACF5
+    - \uB098\uBB34\uC704\uD0A4\t\uB77C\uC6B4\uB4DC\uAC00 \uC2DC\uC791\uD560 \uB54C
+    (\uCCB4\uB825 2 / \uACF5\uACA9\uB825 3)\uC778 \uBD84\uC2E0\uC744 \uC18C\uD658\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBCFC\uB9C1\uB9E8\tBowling\t4\t5\t\uD53C\uD574\uB97C
+    \uC92C\uC744 \uB54C \t\uC0C1\uB300 \uC720\uB2DB \uC870\uC885 \uBD88\uAC00(\uB370\uBBF8\uC9C0\uB97C
+    \uC785\uC740 \uC0C1\uB300\uAC00 \uB79C\uB364\uD558\uAC8C \uC6C0\uC9C1\uC784)\t2\uCE78\t\t\t\t\t\t\t\t\t\uADFC\uC721
+    \uBE75\uBE75\uD55C \uC0AC\uB78C\thttps://i.namu.wiki/i/AZURHMe2xitkI1181CleHcwjRsqiPe-l-Pg0YdoDuGnCXhSclWSBeZXQ3z9OcDZ0B0y5GzLQer3M61OuFdaY4W5Wd9QzAWdp9BkmiAot2AFRJ-1wel9bmeEI4nTOh1O93QjKm-hA2EbQugfWXD2AEQ.webp\t\uC801\uAD70
+    \uC720\uB2DB\uC5D0\uAC8C \uD53C\uD574\uB97C \uC8FC\uBA74 \uD574\uB2F9 \uC801\uAD70
+    \uC720\uB2DB\uC774 \uB79C\uB364\uC73C\uB85C \uC6C0\uC9C1\uC785\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uAE08\uAC15\uBD88\uAD34\tGeumgang\t3\t5\t\uD53C\uD574\uB97C
+    \uC785\uC5C8\uC744 \uB54C\t\uACF5\uACA9\uB825 1 \uC99D\uAC00\t2\uCE78\t\t\t\t\t\t\t\t\t\uBD80\uCC98\uB2D8
+    \uAC19\uC740 \uB290\uB08C\t\uBD93\uB2E4 - \uB098\uBB34\uC704\uD0A4\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uD53C\uD574\uB97C \uC785\uC73C\uBA74 \uACF5\uACA9\uB825\uC774
+    \uC99D\uAC00\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uACE0\uC2B4\uD3ED\uBC1C\tsuicidebomb\t0\t5\t\uD53C\uD574\uB97C
+    \uC785\uC5C8\uC744 \uB54C\t\uC0C1\uB300\uC640 \uC790\uC2E0 \uB3D9\uC2DC \uC989\uC0AC\t2\uCE78\t\t\t\t\t\t\t\t\t\uAC00\uC2DC\uAC00
+    \uBC14\uC9DD \uC120 \uACE0\uC2B4\uB3C4\uCE58\thttps://media.istockphoto.com/id/472291951/ko/%EB%B2%A1%ED%84%B0/%EA%B3%A0%EC%8A%B4%EB%8F%84%EC%B9%98.jpg?s=1024x1024&w=is&k=20&c=85nLVDZJ2XhDpgfhilniHWq_bFIUzqLIfEcp7bNlvCo=\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uD53C\uD574\uB97C \uC785\uC73C\uBA74 \uD53C\uD574\uB97C \uC785\uD78C
+    \uC801\uAD70\uACFC \uAC19\uC774 \uC0AC\uB9DD\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC639\uACE8\uCC38\uCC38\uCC38\tGongcham\t1\t2\t\uC989\uC0AC
+    \uD53C\uD574\uB97C \uC785\uC5C8\uC744\uB54C\t1\uBC88 \uBC84\uD300\t1\uCE78\t\t\t\t\t\t\t\t\t\uBC14\uC704\uC758
+    \uC9D1\uD569\uCCB4 \uAC19\uC740 \uB290\uB08C (ex \uD3EC\uCF13\uBAAC \uC11D\uD0C4\uC0B0)\thttps://i.namu.wiki/i/Yp2oDXF-bfnhn8pLbsaBHR1iixFQtYHs_oHG_Kmfu5-nwmbjbZYaYyaWR9cuhsvAkE2w_RoRgmWxto9Pj8ZsmRpeFWvisgqZ_hxHpAhGEi3n_LRRXDOJJUZ41qQksohnt_9r7hEFmfh3_OEx0aVnQQ.webp\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uC989\uC0AC \uD53C\uD574\uB97C 1\uBC88 \uBB34\uD6A8\uD654
+    \uC2DC\uD0B5\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBCA0\uD0DC\uB791
+    \uD574\uC801\uBAA8\uC790\tBettypiratehat\t5\t4\t\uC804\uD22C \uC911 \uC7AC\uD654
+    \uCD94\uAC00 \uD68D\uB4DD \uC2DC\t\uBC29\uC5B4\uB825 \uC99D\uAC00\t1\uCE78\t\t\t\t\t\t\t\t\t\uBAA8\uC790\uB97C
+    \uC4F0\uACE0 \uCF67\uC218\uC5FC\uC774 \uC788\uB294 \uD574\uC801 \uAC80\uC744
+    \uB4E4\uC74C\thttps://i.namu.wiki/i/dF1aTtJoP1zOaJFODLsYelgIJH11rWTfsRQTsZ_QCYi6K0wHXp0i5NJJ66cLuC7lqHdvYAgDRLnIptQ7Ae7B0BQC3UbCMK7oyCMfuFs1KwV2zAsXjsszHxyMQvhdAOMfwkfJFwV2rrgAjF6GvoFW7g.webp\t\uC804\uD22C
+    \uC911 \uC7AC\uD654\uB97C \uCD94\uAC00\uB85C \uD68D\uB4DD\uD560 \uC2DC \uD574\uB2F9
+    \uC720\uB2DB\uC758 \uBC29\uC5B4\uB825\uC774 \uC99D\uAC00\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\uBC29\uC5B4\uB825\uC5D0
+    \uB300\uD55C \uAC1C\uB150\uC5D0 \uB300\uD55C \uC124\uBA85\uC758 \uBD80\uC7AC\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\uBC29\uC5B4\uB825\uC774
+    \uC601\uAD6C\uC801\uC73C\uB85C \uBC1B\uB294 \uB370\uBBF8\uC9C0\uAC00 \uAC10\uC18C\uD558\uB294\uAC00?\t\uACF5\uB825\uB825-\uBC29\uC5B4\uB825=\uB370\uBBF8\uC9C0
+    \uC774\uB807\uAC8C\uB294 \uC548\uB420\uAE4C\uC694\t\t\t\t\t\t\t\t\t\t\t\r\n\t\uC774
+    \uC774\uB984\uC740 \uC880 \uC544\uB2CC\uAC70 \uAC19\uC544\uC694\t\t\t\t\uD639\uC740
+    \uCD5C\uB300\uCCB4\uB825 \uAC1C\uB150\uC73C\uB85C \uB298\uC5B4\uB098\uB294\uAC00?\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC2DC\uCCB4\uAD6C\uB369\uC774\tCorpse\t3\t5\t\uC2DC\uCCB4
+    \uC704\uB85C \uC62C\uB77C\uAC08 \uC2DC\t\uACF5\uACA9\uB825 3\uC99D\uAC00\t1\uCE78\t\t\t\t\t\t\t\t\t\uB124\uD06C\uB85C
+    \uBA58\uC11C \uD574\uACE8\uB85C\uB41C \uC9C0\uD321\uC774\uB97C \uB4E4\uC74C\thttps://i.namu.wiki/i/WTsyzIhEy57ZYU744r8OwXm-ah3IHyRLOYhGAXTG5L1vJwOdvHZmXapymAdQ3Ft8E_zIEB0eXbnJNBLBLUBm0qoTxk8-hDViK1_TRoyJh9SawjMt4Ov2L7_XyVjffusQMufkpKOBJWlX8SlbwpKIug.webp\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uC544\uAD70/\uC801\uAD70\uC758 \uC2DC\uCCB4 \uC704\uC5D0
+    \uC62C\uB77C\uAC08 \uC2DC \uACF5\uACA9\uB825\uC774 \uC99D\uAC00\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC815\uC2E0\uC774\uC0C1\uC790\tJoker\t10\t10\t\uACF5\uACA9
+    \uD0A4\uB97C \uB20C\uB800\uC744 \uB584\t\uB79C\uB364\uD55C \uD328\uD134\uC73C\uB85C
+    \uACF5\uACA9\t3\uCE78\t\t\t\t\t\uB79C\uB364 \uD328\uD134\uC73C\uB85C \uACF5\uACA9(\uB2E4\uB978
+    \uC720\uB2DB\uB4E4 \uACF5\uACA9 \uD328\uD134\uC911 \uD558\uB098\uB85C)\t\t\t\t\t`\t\uACF5\uACA9\uD588\uC744
+    \uB54C.......\r\n\t\t\t\t\t\uB79C\uB364\uD55C \uD328\uD134\uC774 \uB9CC\uB4E4\uC5B4\uC838\uC788\uC9C0
+    \uC54A\uC74C\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uB300\uC2E0\uC8FD\uB294\uC790\tvictim\t1\t7\t\uC0AC\uB9DD\uC2DC
+    \t\uC544\uAD70 \uBD80\uD65C\t2\uCE78\t\t\t\t\t\t\t\t\t\uAC81\uC7C1\uC774 \uB108\uB4DC
+    \uAC19\uC740 \uBAA8\uC2B5\thttps://i.namu.wiki/i/Rgv3_rNfYLoiXsUsrDVDj6GdX1PGwamoEtGq0GeSlOxcfyd3d9KZCCURcHwVgPIFrmdkMSISjnXDljONcFGa4FCt7w5jWrHP1Ns2IbGDufBknRxLDT2RpBwdbMbWvDuWZ6415DIy7oAi71-TlQwEGg.webp\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 \uC804\uD22C\uBD88\uAC00 \uC0C1\uD0DC\uAC00 \uB418\uBA74 \uB79C\uB364\uD55C
+    \uC544\uAD70\uC774 \uBD80\uD65C\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uBD80\uD65C\uCCB4\tresurrection\t0\t4\t\uC544\uAD70
+    \uC2DC\uCCB4 \uC704\uC5D0 \uC62C\uB77C\uAC14\uB2E4\uAC00 \uC774\uB3D9\uD560 \uB54C\t\uC2DC\uCCB4
+    \uC544\uAD70 \uBD80\uD65C\t2\uCE78\t\t\t\t\t\uAE30\uBCF8\uACF5\uACA9 x\t\t\t\t\uC628\uBAB8\uC5D0\uC11C
+    \uC2E0\uC131\uD55C \uAE30\uC6B4\uC774 \uB098\uC624\uB294 \uB290\uB08C\thttps://i.namu.wiki/i/VVnYNlMFKZU9Exe6ojbHOzaxZkThcJMXMfv9mYY_aiP4-W9glPty2PLdYg2IUIyjMqoslS5D3TUJxJ1iIbe_cWP3H9Cl_Ru_7RGYvaxKKJdMEppKq53woRjhL06w3WzZwJmAz2l7JEs-aamWbkh4Hw.webp\t\uC544\uAD70
+    \uC720\uB2DB\uC758 \uC2DC\uCCB4 \uC704\uC5D0\uC11C \uC774\uB3D9\uD560 \uC2DC
+    \uC2DC\uCCB4 \uC544\uAD70\uC774 \uBD80\uD65C\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uCC9C\uC0C1\uC758
+    \uBCF4\uD638\uB9C9\theavenlyshield\t6\t3\t2\uCE78 \uC774\uB3D9\uC2DC\t1\uBC88
+    \uACF5\uACA9\uC744 \uB9C9\uC544\uC8FC\uB294 \uBCF4\uD638\uB9C9 \uC0DD\uC131\t1\uCE78\t\t\t\t\t\t\t\t\t\uC131\uAE30\uC0AC
+    \thttps://i.namu.wiki/i/hu0RqzOgQ0FJG5GhyDHY7hwaYQZuZx5uTtMB0CRSLI12mCeYpot3koaVdunwENY5FUVZGAX7OPqp1jaQFagQye8VLvaMQQ1APR6bjHiiuc2M_Pb96qh7dIdgRCwge5ejModsiNklp2Q8QiPi9BfzJA.webp\t\uD574\uB2F9
+    \uC720\uB2DB\uC774 2\uCE78 \uC774\uB3D9\uD560 \uB54C \uACF5\uACA9\uC744 \uB9C9\uC544\uC8FC\uB294
+    \uC77C\uD68C\uC131 \uBCF4\uD638\uB9C9\uC744 \uC0DD\uC131\uD569\uB2C8\uB2E4.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\uC800\uACA9\uC655\tsniperking\t5\t2\t\uC720\uB2DB\uC744
+    \uC8FD\uC600\uC744\uB584(\uC544\uAD70 \uC801\uAD70 \uBB34\uAD00)\t\uACF5\uACA9\uB825
+    1\uC99D\uAC00\t1\uCE78\t\t\t\t\t\t\t\t\t\uAE34 \uC7A5\uCD1D\uC744 \uC9C0\uB2CC
+    \uC800\uACA9\uC218 \thttps://i.namu.wiki/i/sKOte-QZnKSOGun7rHpg1kzOFJy5dmKpl3OC-K5PmxHKfrF2xrGWugqxv8GAvhatq2BX55JB0VTe-GqpyuekNzTR4xC3gqv-Nn4WOr6kENrSlwtzKLZAF4pLenFF6FL1wruugGTGMP1pNzWaHsW7yA.webp\t\uC544\uAD70/\uC801\uAD70
+    \uC720\uB2DB\uC744 \uC0AC\uB9DD\uD558\uAC8C \uD560 \uACBD\uC6B0 \uACF5\uACA9\uB825\uC774
+    \uC99D\uAC00\uD569\uB2C8\uB2E4."
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 9f0701465a81c2445ab437866da97f53, type: 2}
+  m_sharedMaterial: {fileID: -4393545408772984009, guid: 9f0701465a81c2445ab437866da97f53, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}

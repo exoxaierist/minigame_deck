@@ -25,9 +25,9 @@ public class FieldManager : MonoBehaviour
 
     public Vector2 GetEmptyTileP1()
     {
-        for (int x = 1; x <= Mathf.Floor(Global.fieldSize.x/2); x++)
+        for (int x = 3; x-3 <= Mathf.Floor(Global.fieldSize.x/2); x++)
         {
-            for (int y = 1; y <= (int)Global.fieldSize.y; y++)
+            for (int y = 5; y-5 <= (int)Global.fieldSize.y; y++)
             {
                 if (!Physics2D.OverlapCircle(new(x, y), 0.3f)) return (new(x, y));
             }
@@ -37,9 +37,9 @@ public class FieldManager : MonoBehaviour
 
     public Vector2 GetEmptyTileP2()
     {
-        for (int x = (int)Mathf.Ceil(Global.fieldSize.x/2); x <= Global.fieldSize.x; x++)
+        for (int x = (int)Mathf.Ceil(Global.fieldSize.x/2)+3; x <= Global.fieldSize.x; x++)
         {
-            for (int y = 1; y <= (int)Global.fieldSize.y; y++)
+            for (int y = 5; y <= (int)Global.fieldSize.y; y++)
             {
                 if (!Physics2D.OverlapCircle(new(x, y), 0.3f)) return (new(x, y));
             }

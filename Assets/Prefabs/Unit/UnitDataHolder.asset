@@ -227,7 +227,7 @@ MonoBehaviour:
     name: "\uC639\uACE8\uCC38\uCC38\uCC38"
     tier: 2
     image1: {fileID: 21300000, guid: 8d9dccd8144af6a46a44e89e03a5dc18, type: 3}
-    image2: {fileID: 21300000, guid: f4df4b1e82566bb429fc4a62bff27ee4, type: 3}
+    image2: {fileID: 21300000, guid: e63ad12065e33394580e193111a188e6, type: 3}
     health: 2
     power: 1
     price: 2
